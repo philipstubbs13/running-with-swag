@@ -43,6 +43,18 @@ img {
     grid-area: welcome;
 }
 
+.events {
+    grid-area:events;
+}
+
+.blog {
+    grid-area: blog;
+}
+
+.reviews {
+    grid-area: reviews;
+}
+
 
 /* Media Queries */
 @media(max-width: 700px) {

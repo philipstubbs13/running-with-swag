@@ -32,8 +32,8 @@ class NavBar extends Component {
         url: '/reviews',
       },
       {
-        label: 'Help',
-        url: '/help',
+        label: 'Contact',
+        url: '/contact',
       },
       ],
     };

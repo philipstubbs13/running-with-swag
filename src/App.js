@@ -18,8 +18,8 @@ import Home from './containers/Home';
 import About from './containers/About';
 // import Blog page
 import Blog from './containers/Blog';
-// import Help page
-import Help from './containers/Help';
+// import Contact page
+import Contact from './containers/Contact';
 // import Reviews page
 import Reviews from './containers/Reviews';
 // import Events page
@@ -39,7 +39,7 @@ class App extends Component {
                 <Route exact path="/events" component={Events} />
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/reviews" component={Reviews} />
-                <Route exact path="/help" component={Help} />
+                <Route exact path="/contact" component={Contact} />
               </Switch>
             </div>
           </BrowserRouter>
