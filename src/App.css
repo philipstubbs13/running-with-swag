@@ -12,6 +12,10 @@ html {
   color: var(--dark) !important;
 }
 
+body {
+  background: #ccc;
+}
+
 /*Sticky footer*/
 .Site {
     /* display: flex; */
@@ -39,4 +43,9 @@ html {
   .btn:hover {
     background: var(--light) !important;
     color: var(--dark) !important;
+  }
+
+  .card {
+    background: var(--primary) !important;
+    box-shadow: var(--shadow) !important;
   }
