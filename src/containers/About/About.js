@@ -12,14 +12,21 @@ class About extends Component {
     return (
       <div className="about-container">
         <div className="about-image-div">
-          <img src={ Runner } alt="runner stretching on bridge" className="about-image" />
+          <img src={Runner} alt="runner stretching on bridge" className="about-image" />
         </div>
         <Fieldset legend="About this site" className="about-content">
-          The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. 
-          His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. 
-          Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, 
-          kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
-        </Fieldset>   
+          <p>
+          I created this site because I love to run. Running is my passion. When I run, I feel God's strength in my legs, and that's why I continue to train every day so that I can run faster and farther than ever before. I have always liked running since I was a kid, but in 2018, I started to train and run competitively in different short distance (3-6 mile) races. My ultimate goal is to train my way up to running and finishing a marathon.
+          </p>
+          
+          <p>
+            I not only created this site to share my running adventures and experiences, but I also want to create an online community for runners to learn more about different running topics, find out about upcoming running events, and just have a place where runners can come together to share and exchange information with one another.
+          </p>
+
+          <p>
+          I graduated from the University of Minnesota Full Stack Web Development program in May 2018, and I have been wanting to create a site like this for quite some time now. Now that I have graduated, I thought now would be a good time to start it up. This site's development will be ongoing and open source. So, if you are a runner and/or web developer and would like to contribute to this project, contact me at philipstubbs13@gmail.com.
+          </p>
+        </Fieldset> 
       </div>
     );
   }
