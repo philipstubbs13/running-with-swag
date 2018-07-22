@@ -12,6 +12,6 @@ html {
   .main-content-section {
     flex: 1;
     min-height: 60vh;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     margin-top: 10px;
   }

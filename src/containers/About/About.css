@@ -1,0 +1,17 @@
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+}
+
+.about-image {
+    width: 500px;
+}
+
+.about-image-div {
+    margin-left: 2rem;
+}
+
+.about-content {
+    margin-right: 2rem;
+}
