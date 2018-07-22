@@ -1,86 +1,41 @@
+// import React
 import React, { Component } from 'react';
+// import third party linking library.
 import { Link } from 'react-router-dom';
+// import components from PrimeReact.
 import { Button } from 'primereact/button';
-import { InputText } from 'primereact/inputtext';
 import { Menubar } from '../../../node_modules/primereact/components/menubar/Menubar';
+// import NavBar css file
+import './NavBar.css';
 
+// Define NavBar component
 class NavBar extends Component {
   constructor() {
     super();
     this.state = {
       items: [{
-        label: 'File',
-        icon: 'fa fa-fw fa-file-o',
-        items: [{
-          label: 'New',
-          icon: 'fa fa-fw fa-plus',
-          items: [
-            { label: 'Project' },
-            { label: 'Other' },
-          ],
-        },
-        { label: 'Open' },
-        { separator: true },
-        { label: 'Quit' },
-        ],
+        label: 'Home',
+        icon: 'fa fa-fw fa-home',
       },
       {
-        label: 'Edit',
-        icon: 'fa fa-fw fa-edit',
-        items: [
-          { label: 'Undo', icon: 'fa fa-fw fa-mail-forward' },
-          { label: 'Redo', icon: 'fa fa-fw fa-mail-reply' },
-        ],
+        label: 'About',
+        icon: 'fa fa-fw fa-info',
       },
       {
-        label: 'Help',
+        label: 'Events',
+        icon: 'fa fa-fw fa-calendar-alt',
+      },
+      {
+        label: 'Blog',
+        icon: 'fa fa-fw fa-pen-alt',
+      },
+      {
+        label: 'Reviews',
+        icon: 'fa fa-fw fa-phone',
+      },
+      {
+        label: 'Help', 
         icon: 'fa fa-fw fa-question',
-        items: [
-          {
-            label: 'Contents',
-          },
-          {
-            label: 'Search',
-            icon: 'fa fa-fw fa-search',
-            items: [
-              {
-                label: 'Text',
-                items: [
-                  {
-                    label: 'Workspace',
-                  },
-                ],
-              },
-              {
-                label: 'File',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Actions',
-        icon: 'fa fa-fw fa-gear',
-        items: [
-          {
-            label: 'Edit',
-            icon: 'fa fa-fw fa-refresh',
-            items: [
-              { label: 'Save', icon: 'fa fa-fw fa-save' },
-              { label: 'Update', icon: 'fa fa-fw fa-save' },
-            ],
-          },
-          {
-            label: 'Other',
-            icon: 'fa fa-fw fa-phone',
-            items: [
-              { label: 'Delete', icon: 'fa fa-fw fa-minus' },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Quit', icon: 'fa fa-fw fa-minus',
       },
       ],
     };
@@ -91,14 +46,13 @@ class NavBar extends Component {
       <div>
         <div className="content-section introduction">
           <div className="feature-intro">
-            <h1>Menubar</h1>
-            <p>Menubar is a horizontal menu component.</p>
+            <h1>Running with Swag</h1>
+            <p>Your stop for running events, blog posts, reviews, tips, and more</p>
           </div>
         </div>
         <div className="content-section implementation">
-          <Menubar model={this.state.items}>
-            <InputText placeholder="Search" type="text" />
-            <Button label="Logout" icon="fa fa-sign-out" style={{ marginLeft: 4 }} />
+          <Menubar model={this.state.items} className="menu-items">
+            <Button label="Logout" icon="fa fa-sign-out" />
           </Menubar>
         </div>
       </div>
@@ -106,4 +60,5 @@ class NavBar extends Component {
   }
 }
 
+// Export the NavBar component so that the app can render it to the page.
 export default NavBar;
