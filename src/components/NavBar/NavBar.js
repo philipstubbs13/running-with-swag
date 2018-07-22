@@ -13,32 +13,26 @@ class NavBar extends Component {
     this.state = {
       items: [{
         label: 'Home',
-        icon: 'fa fa-fw fa-home',
         url: '/',
       },
       {
         label: 'About',
-        icon: 'fa fa-fw fa-info',
         url: '/about',
       },
       {
         label: 'Events',
-        icon: 'fa fa-fw fa-calendar-alt',
         url: '/events',
       },
       {
         label: 'Blog',
-        icon: 'fa fa-fw fa-pen-alt',
         url: '/blog',
       },
       {
         label: 'Reviews',
-        icon: 'fa fa-fw fa-phone',
         url: '/reviews',
       },
       {
         label: 'Help',
-        icon: 'fa fa-fw fa-question',
         url: '/help',
       },
       ],
@@ -53,7 +47,7 @@ class NavBar extends Component {
       <div>
         <div className="content-section implementation">
           <Menubar model={items} className="menu-items">
-            <Button label="Logout" icon="fa fa-sign-out" className="btn" />
+            <Button label="Logout" icon="fa fa-sign-out" />
           </Menubar>
         </div>
       </div>

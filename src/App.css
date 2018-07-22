@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: #ccc;
+  background: #fff;
 }
 
 /*Sticky footer*/
@@ -46,6 +46,8 @@ body {
   }
 
   .card {
-    background: var(--primary) !important;
+    background: var(--light) !important;
     box-shadow: var(--shadow) !important;
+    text-align: center;
+
   }
