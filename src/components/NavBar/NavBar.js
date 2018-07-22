@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 // import third party linking library.
 import { Link } from 'react-router-dom';
+import { browserHistory } from 'react-router';
 // import components from PrimeReact.
 import { Button } from 'primereact/button';
 import { Menubar } from '../../../node_modules/primereact/components/menubar/Menubar';
@@ -16,26 +17,32 @@ class NavBar extends Component {
       items: [{
         label: 'Home',
         icon: 'fa fa-fw fa-home',
+        url: '/',
       },
       {
         label: 'About',
         icon: 'fa fa-fw fa-info',
+        url: '/about',
       },
       {
         label: 'Events',
         icon: 'fa fa-fw fa-calendar-alt',
+        url: '/events',
       },
       {
         label: 'Blog',
         icon: 'fa fa-fw fa-pen-alt',
+        url: '/blog',
       },
       {
         label: 'Reviews',
         icon: 'fa fa-fw fa-phone',
+        url: '/reviews',
       },
       {
         label: 'Help', 
         icon: 'fa fa-fw fa-question',
+        url: '/help',
       },
       ],
     };
