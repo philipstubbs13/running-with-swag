@@ -51,15 +51,9 @@ class NavBar extends Component {
 
     return (
       <div>
-        <div className="content-section introduction">
-          <div className="feature-intro">
-            <h1>Running with Swag</h1>
-            <p>Your stop for running events, blog posts, reviews, tips, and more</p>
-          </div>
-        </div>
         <div className="content-section implementation">
           <Menubar model={items} className="menu-items">
-            <Button label="Logout" icon="fa fa-sign-out" />
+            <Button label="Logout" icon="fa fa-sign-out" className="btn" />
           </Menubar>
         </div>
       </div>

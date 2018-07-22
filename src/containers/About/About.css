@@ -1,26 +1,13 @@
-/* CSS Varibles  */
-:root {
-    --primary: #ddd;
-    --dark: #333;
-    --light: #fff;
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
+
 
 .about-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-top: 3rem;
     grid-gap: 30px;
-    padding: 3rem;
-    margin: 3rem;
 }
 
 .about-image {
     max-width: 100%;
-}
-
-.about-content {
-    margin-right: 2rem;
 }
 
 /* Media Queries */
