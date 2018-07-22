@@ -1,8 +1,5 @@
 // import React
 import React, { Component } from 'react';
-// import third party linking library.
-import { Link } from 'react-router-dom';
-import { browserHistory } from 'react-router';
 // import components from PrimeReact.
 import { Button } from 'primereact/button';
 import { Menubar } from '../../../node_modules/primereact/components/menubar/Menubar';
@@ -40,7 +37,7 @@ class NavBar extends Component {
         url: '/reviews',
       },
       {
-        label: 'Help', 
+        label: 'Help',
         icon: 'fa fa-fw fa-question',
         url: '/help',
       },
@@ -49,6 +46,9 @@ class NavBar extends Component {
   }
 
   render() {
+    // ES6 destructuring
+    const { items } = this.state;
+
     return (
       <div>
         <div className="content-section introduction">
@@ -58,7 +58,7 @@ class NavBar extends Component {
           </div>
         </div>
         <div className="content-section implementation">
-          <Menubar model={this.state.items} className="menu-items">
+          <Menubar model={items} className="menu-items">
             <Button label="Logout" icon="fa fa-sign-out" />
           </Menubar>
         </div>
