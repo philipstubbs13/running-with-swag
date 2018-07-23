@@ -47,3 +47,25 @@
 #contact-btn {
     grid-area: button;
 }
+
+@media(max-width: 700px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'content'
+      'form';
+  }
+
+  .contact-form {
+    grid-template-areas:
+    'name name name'
+    'email email email'
+    'phone phone phone'
+    'message message message'
+    'button button button';
+  }
+
+  .ui-inputtext {
+      width: 100%;
+  }
+}

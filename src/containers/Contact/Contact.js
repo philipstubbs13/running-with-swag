@@ -26,7 +26,7 @@ class Contact extends Component {
             regarding something you saw on the site.
           </p>
           <p>If you have any ideas to make this site better,
-            don't hesitate to reach out. We welcome your feedback.
+            don't hesitate to reach out. Your feedback is greatly appreciated!
           </p>
         </div>
         <form className="contact-form">
