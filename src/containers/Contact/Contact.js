@@ -32,7 +32,7 @@ class Contact extends Component {
     event.preventDefault();
     // ES6 destructuring
     const {
-      name, nameError, email, emailError, subject, subjectError, message, messageError,
+      name, nameError, email, emailError, phone, subject, subjectError, message, messageError,
     } = this.state;
 
     // If name field is blank, show validation error
@@ -61,17 +61,26 @@ class Contact extends Component {
       this.setState({
         messageError: 'Message is required',
       });
-    }
-
-    else {
+    } else {
+      // Save message to backend database if form is filled out.
       console.log('Form valid.');
+      console.log(`Name: ${name}. Email: ${email}. Phone: ${phone}.`);
+      console.log(`Subject: ${subject}. Message: ${message}`);
+      this.setState({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      });
     }
   }
 
   render() {
     // ES6 destructuring
     const {
-      name, nameError, email, emailError, phone, phoneError, subject, subjectError, message, messageError,
+      name, nameError, email, emailError, phone, phoneError,
+      subject, subjectError, message, messageError,
     } = this.state;
     return (
       <div className="contact-container">
