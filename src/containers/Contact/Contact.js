@@ -13,17 +13,66 @@ class Contact extends Component {
   constructor() {
     super();
     this.state = {
-      name: null,
-      email: null,
-      phone: null,
-      subject: null,
-      message: null,
+      name: '',
+      nameError: '',
+      email: '',
+      emailError: '',
+      phone: '',
+      phoneError: '',
+      subject: '',
+      subjectError: '',
+      message: '',
+      messageError: '',
     };
+  }
+
+  // On click handler for when user trys to submit contact form
+  handleContactSubmit = (event) => {
+    // Prevent the form from submitting itself.
+    event.preventDefault();
+    // ES6 destructuring
+    const {
+      name, nameError, email, emailError, subject, subjectError, message, messageError,
+    } = this.state;
+
+    // If name field is blank, show validation error
+    if (name === '') {
+      this.setState({
+        nameError: 'Name is required',
+      });
+    }
+
+    // If email field is blank, show validation error
+    if (email === '') {
+      this.setState({
+        emailError: 'Email is required',
+      });
+    }
+
+    // If subject field is blank, show validation error
+    if (subject === '') {
+      this.setState({
+        subjectError: 'Subject is required',
+      });
+    }
+
+    // If messsage field is blank, show validation error
+    if (message === '') {
+      this.setState({
+        messageError: 'Message is required',
+      });
+    }
+
+    else {
+      console.log('Form valid.');
+    }
   }
 
   render() {
     // ES6 destructuring
-    const { name, email, phone, subject, message } = this.state;
+    const {
+      name, nameError, email, emailError, phone, phoneError, subject, subjectError, message, messageError,
+    } = this.state;
     return (
       <div className="contact-container">
         {/* General information about contacting us goes here. */}
@@ -41,20 +90,21 @@ class Contact extends Component {
         <form className="contact-form">
           {/* Contact form - Name field */}
           <div id="contact-name">
-            <label htmlFor="name">Name*</label>
+            <label htmlFor="name">Name* </label>
             <br />
-            <InputText 
+            <InputText
               id="name"
               name="name"
               type="text"
               placeholder="John Smith"
               value={name}
-              onChange={(e) => this.setState({ name: e.target.value })} 
+              onChange={(e) => this.setState({ name: e.target.value })}
             />
+            <small className="contact-form-error">{nameError}</small>
           </div>
           {/* Contact form - Email field */}
           <div id="contact-email">
-            <label htmlFor="email">Email*</label>
+            <label htmlFor="email">Email* </label>
             <br />
             <InputText
               id="email"
@@ -64,6 +114,7 @@ class Contact extends Component {
               value={email}
               onChange={(e) => this.setState({ email: e.target.value })}
             />
+            <small className="contact-form-error">{emailError}</small>
           </div>
           {/* Contact form - Phone field */}
           <div id="contact-phone">
@@ -76,6 +127,7 @@ class Contact extends Component {
               placeholder="(999) 999-9999"
               onChange={(e) => this.setState({ phone: e.value })}
             />
+            <small className="contact-form-error">{phoneError}</small>
           </div>
           {/* Contact form - Subject field */}
           <div id="contact-subject">
@@ -89,6 +141,7 @@ class Contact extends Component {
               value={subject}
               onChange={(e) => this.setState({ subject: e.target.value })}
             />
+            <small className="contact-form-error">{subjectError}</small>
           </div>
           <br />
           {/* Contact form - Message field */}
@@ -103,6 +156,9 @@ class Contact extends Component {
               onChange={(e) => this.setState({ message: e.target.value })}
               autoResize={true}
             />
+            <small className="contact-form-error">{messageError}</small>
+            <br />
+            <br />
             <small>* Required field</small>
           </div>
           <br />
@@ -110,7 +166,7 @@ class Contact extends Component {
           {/* Contact form - Send/Submit button */}
           <Button
             label="Send your message"
-            onClick={this.handleClick}
+            onClick={this.handleContactSubmit}
             className="btn"
             type="submit"
             id="contact-btn"
