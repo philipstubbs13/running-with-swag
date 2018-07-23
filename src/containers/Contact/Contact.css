@@ -1,3 +1,7 @@
+/* Main container for the contact page. */
+/* Will have two columns */
+/* Contact content will be on the left and take up 3 fr units. */
+/* Contact form will be on the right and take up 2 fr units. */
 .contact-container {
     display: grid;
     grid-gap: 35px;
@@ -6,12 +10,14 @@
     'content form';
 }
 
+/* Contact content information will be on the left. */
 .contact-content {
     grid-area: content;
     justify-content: center;
     align-content: center;
 }
 
+/* Contact form */
 .contact-form {
     grid-area: form;
     display: grid;
@@ -24,30 +30,38 @@
     'button button button';
 }
 
+/* Contact form - Name field */
 #contact-name {
   grid-area: name;
 }
 
+/* Contact form - Email field */
 #contact-email {
   grid-area: email;
 }
 
+/* Contact form - Phone field */
 #contact-phone {
   grid-area: phone;
 }
 
+/* Contact form - Message field */
 #contact-message {
   grid-area: message;
 }
 
+/* Message field should span width of its container. */
 .ui-inputtextarea {
     width: 100%;
 }
 
+/* Contact form - Submit/send button */
 #contact-btn {
     grid-area: button;
 }
 
+/* Media Query - 700px screen or smaller */
+/* Contact page is one column with content and form stacked on top of one another. */
 @media(max-width: 700px) {
   .contact-container {
     grid-template-columns: 1fr;
@@ -56,6 +70,7 @@
       'form';
   }
 
+  /* Contact form - Fields are stacked on top of one another */
   .contact-form {
     grid-template-areas:
     'name name name'
@@ -65,6 +80,7 @@
     'button button button';
   }
 
+  /* Fields should take up 100% width of their container */
   .ui-inputtext {
       width: 100%;
   }

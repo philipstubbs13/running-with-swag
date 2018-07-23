@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 // import css
 import './Contact.css';
 
+// Define Contact component.
 class Contact extends Component {
   constructor() {
     super();
@@ -16,9 +17,11 @@ class Contact extends Component {
   }
 
   render() {
+    // ES6 destructuring
     const { value } = this.state;
     return (
       <div className="contact-container">
+        {/* General information about contacting us goes here. */}
         <div className="contact-content">
           <h1>Contact us today</h1>
           <p>We'd love to hear from you!
@@ -29,22 +32,27 @@ class Contact extends Component {
             don't hesitate to reach out. Your feedback is greatly appreciated!
           </p>
         </div>
+        {/* Contact form */}
         <form className="contact-form">
+          {/* Contact form - Name field */}
           <div id="contact-name">
             <label htmlFor="name">Name</label>
             <br />
             <InputText id="name" name="name" type="text" placeholder="John Smith" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
           </div>
+          {/* Contact form - Email field */}
           <div id="contact-email">
             <label htmlFor="email">Email</label>
             <br />
             <InputText id="email" name="email" type="email" placeholder="jsmith@gmail.com" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
           </div>
+          {/* Contact form - Phone field */}
           <div id="contact-phone">
             <label htmlFor="phone">Phone</label>
             <br />
             <InputText id="phone" name="phone" type="number" placeholder="" value={this.state.phone} onChange={(e) => this.setState({ phone: e.target.value })} />
           </div>
+          {/* Contact form - Message field */}
           <div id="contact-message">
             <label htmlFor="message">Message</label>
             <br />
@@ -57,6 +65,7 @@ class Contact extends Component {
             />
           </div>
           <br />
+          {/* Contact form - Send/Submit button */}
           <Button 
             label="Send"
             onClick={this.handleClick}
@@ -70,4 +79,5 @@ class Contact extends Component {
   }
 }
 
+// Export the Contact component so that the app can render it to the page.
 export default Contact;
