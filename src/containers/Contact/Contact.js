@@ -23,7 +23,7 @@ class Contact extends Component {
       <div className="contact-container">
         {/* General information about contacting us goes here. */}
         <div className="contact-content">
-          <h1>Contact us today</h1>
+          <h1><i className="fas fa-envelope"></i> Contact us today</h1>
           <p>We'd love to hear from you!
             Contact us if you have a question or comment
             regarding something you saw on the site.
@@ -36,13 +36,13 @@ class Contact extends Component {
         <form className="contact-form">
           {/* Contact form - Name field */}
           <div id="contact-name">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name*</label>
             <br />
             <InputText id="name" name="name" type="text" placeholder="John Smith" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
           </div>
           {/* Contact form - Email field */}
           <div id="contact-email">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email*</label>
             <br />
             <InputText id="email" name="email" type="email" placeholder="jsmith@gmail.com" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
           </div>
@@ -52,22 +52,32 @@ class Contact extends Component {
             <br />
             <InputText id="phone" name="phone" type="number" placeholder="" value={this.state.phone} onChange={(e) => this.setState({ phone: e.target.value })} />
           </div>
+          {/* Contact form - Subject field */}
+          <div id="contact-subject">
+            <label htmlFor="subject">Subject*</label>
+            <br />
+            <InputText id="subject" name="subject" type="text" placeholder="Subject" value={this.state.subject} onChange={(e) => this.setState({ subject: e.target.value })} />
+          </div>
+          <br />
           {/* Contact form - Message field */}
           <div id="contact-message">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message*</label>
             <br />
             <InputTextarea
               rows={5}
               cols={30}
               value={this.state.message}
+              placeholder="Your message"
               onChange={(e) => this.setState({ message: e.target.value })}
               autoResize={true}
             />
+            <small>* Required field</small>
           </div>
+          <br />
           <br />
           {/* Contact form - Send/Submit button */}
           <Button 
-            label="Send"
+            label="Send your message"
             onClick={this.handleClick}
             className="btn"
             type="submit"

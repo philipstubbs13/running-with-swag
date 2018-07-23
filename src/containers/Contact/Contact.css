@@ -26,6 +26,7 @@
     justify-content: center;
     grid-template-areas:
     'name email phone'
+    'subject subject subject'
     'message message message'
     'button button button';
 }
@@ -43,6 +44,16 @@
 /* Contact form - Phone field */
 #contact-phone {
   grid-area: phone;
+}
+
+/* Contact form - Subject field */
+#contact-subject {
+  grid-area: subject;
+}
+
+/* Subject field should span width of its container. */
+#subject {
+  width: 100%;
 }
 
 /* Contact form - Message field */
@@ -76,6 +87,7 @@
     'name name name'
     'email email email'
     'phone phone phone'
+    'subject subject subject'
     'message message message'
     'button button button';
   }
