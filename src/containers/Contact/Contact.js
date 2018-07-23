@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
+import { InputMask } from 'primereact/inputmask';
 // import css
 import './Contact.css';
 
@@ -12,13 +13,17 @@ class Contact extends Component {
   constructor() {
     super();
     this.state = {
-      value: null,
+      name: null,
+      email: null,
+      phone: null,
+      subject: null,
+      message: null,
     };
   }
 
   render() {
     // ES6 destructuring
-    const { value } = this.state;
+    const { name, email, phone, subject, message } = this.state;
     return (
       <div className="contact-container">
         {/* General information about contacting us goes here. */}
@@ -38,25 +43,52 @@ class Contact extends Component {
           <div id="contact-name">
             <label htmlFor="name">Name*</label>
             <br />
-            <InputText id="name" name="name" type="text" placeholder="John Smith" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
+            <InputText 
+              id="name"
+              name="name"
+              type="text"
+              placeholder="John Smith"
+              value={name}
+              onChange={(e) => this.setState({ name: e.target.value })} 
+            />
           </div>
           {/* Contact form - Email field */}
           <div id="contact-email">
             <label htmlFor="email">Email*</label>
             <br />
-            <InputText id="email" name="email" type="email" placeholder="jsmith@gmail.com" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+            <InputText
+              id="email"
+              name="email"
+              type="email"
+              placeholder="jsmith@gmail.com"
+              value={email}
+              onChange={(e) => this.setState({ email: e.target.value })}
+            />
           </div>
           {/* Contact form - Phone field */}
           <div id="contact-phone">
             <label htmlFor="phone">Phone</label>
             <br />
-            <InputText id="phone" name="phone" type="number" placeholder="" value={this.state.phone} onChange={(e) => this.setState({ phone: e.target.value })} />
+            <InputMask
+              id="phone"
+              mask="(999) 999-9999"
+              value={phone}
+              placeholder="(999) 999-9999"
+              onChange={(e) => this.setState({ phone: e.value })}
+            />
           </div>
           {/* Contact form - Subject field */}
           <div id="contact-subject">
             <label htmlFor="subject">Subject*</label>
             <br />
-            <InputText id="subject" name="subject" type="text" placeholder="Subject" value={this.state.subject} onChange={(e) => this.setState({ subject: e.target.value })} />
+            <InputText
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => this.setState({ subject: e.target.value })}
+            />
           </div>
           <br />
           {/* Contact form - Message field */}
@@ -66,7 +98,7 @@ class Contact extends Component {
             <InputTextarea
               rows={5}
               cols={30}
-              value={this.state.message}
+              value={message}
               placeholder="Your message"
               onChange={(e) => this.setState({ message: e.target.value })}
               autoResize={true}
@@ -76,7 +108,7 @@ class Contact extends Component {
           <br />
           <br />
           {/* Contact form - Send/Submit button */}
-          <Button 
+          <Button
             label="Send your message"
             onClick={this.handleClick}
             className="btn"
