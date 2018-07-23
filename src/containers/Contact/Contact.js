@@ -23,6 +23,7 @@ class Contact extends Component {
       subjectError: '',
       message: '',
       messageError: '',
+      formSuccess: '',
     };
   }
 
@@ -32,7 +33,8 @@ class Contact extends Component {
     event.preventDefault();
     // ES6 destructuring
     const {
-      name, nameError, email, emailError, phone, subject, subjectError, message, messageError,
+      name, nameError, email, emailError, phone, subject,
+      subjectError, message, messageError, formSuccess,
     } = this.state;
 
     // If name field is blank, show validation error
@@ -67,6 +69,7 @@ class Contact extends Component {
       console.log(`Name: ${name}. Email: ${email}. Phone: ${phone}.`);
       console.log(`Subject: ${subject}. Message: ${message}`);
       this.setState({
+        formSuccess: 'Thanks for the message! We will get back to you within 48 hours.',
         name: '',
         email: '',
         phone: '',
@@ -80,7 +83,7 @@ class Contact extends Component {
     // ES6 destructuring
     const {
       name, nameError, email, emailError, phone, phoneError,
-      subject, subjectError, message, messageError,
+      subject, subjectError, message, messageError, formSuccess,
     } = this.state;
     return (
       <div className="contact-container">
@@ -172,6 +175,7 @@ class Contact extends Component {
           </div>
           <br />
           <br />
+          <div className="form-success-message">{formSuccess}</div>
           {/* Contact form - Send/Submit button */}
           <Button
             label="Send your message"

@@ -28,7 +28,8 @@
     'phone phone'
     'subject subject'
     'message message'
-    'button button';
+    'button button'
+    'success success';
 }
 
 /* Contact form - Name field */
@@ -74,6 +75,10 @@
 /* Contact form - Submit/send button */
 #contact-btn {
     grid-area: button;
+}
+
+.form-success-message {
+  grid-area: success;
 }
 
 /* Media Query - 700px screen or smaller */
