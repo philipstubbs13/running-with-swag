@@ -1,0 +1,49 @@
+.contact-container {
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+    'content form';
+}
+
+.contact-content {
+    grid-area: content;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact-form {
+    grid-area: form;
+    display: grid;
+    grid-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:
+    'name email phone'
+    'message message message'
+    'button button button';
+}
+
+#contact-name {
+  grid-area: name;
+}
+
+#contact-email {
+  grid-area: email;
+}
+
+#contact-phone {
+  grid-area: phone;
+}
+
+#contact-message {
+  grid-area: message;
+}
+
+.ui-inputtextarea {
+    width: 100%;
+}
+
+#contact-btn {
+    grid-area: button;
+}
