@@ -1,9 +1,13 @@
 // import React
 import React, { Component } from 'react';
+// import third party linking library to link pages.
+import { Link } from 'react-router-dom';
 // import UI components from PrimeReact.
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
+import {  Fieldset } from 'primereact/fieldset';
+
 // import css
 import './Events.css';
 // import API
@@ -102,13 +106,11 @@ class Events extends Component {
       { name: 'Other', code: 'other' },
     ];
     const {
-      zipCode, zipCodeError, zipRadius, zipRadiusError, eventType, eventTypeError,
+      zipCode, zipCodeError, zipRadius, zipRadiusError, eventType,
+      eventTypeError, races,
     } = this.state;
     return (
       <div className="events-container">
-        <div className="search-results">
-          <h1>Search results</h1>
-        </div>
         <form className="search-form">
           <h1 className="search-form-header">Search for upcoming races in your area</h1>
           <div id="event-zip-code search-field">
@@ -159,6 +161,20 @@ class Events extends Component {
             id="search-races-btn"
           />
         </form>
+        <div className="search-results">
+          {races.map(race => {
+            return ( 
+              <Fieldset legend={race.race.name} className="race-card" key={race.race.race_id}>
+                <h2>Location</h2>
+                <p>{race.race.address.street}</p>
+                <p>{race.race.address.city}, {race.race.address.state} {race.race.address.zipcode}</p>
+                <a href={race.race.url} target="_blank">
+                  <Button label="Sign up" className="btn" />
+                 </a>                  
+              </Fieldset>
+            );
+          })}
+        </div>
       </div>
     );
   }

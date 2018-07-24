@@ -37,5 +37,16 @@
 
 .search-results {
     grid-area: results;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.results-header {
+    grid-area: resultsheader;
+}
+
+.race-card {
+    grid-area: racecard;
+    margin-top: 40px;
 }
 
