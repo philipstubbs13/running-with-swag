@@ -8,7 +8,32 @@
 
 .search-form {
     grid-area: form;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'header header header'
+    'zip radius type';
 }
+
+.search-form-header {
+    grid-area: header;
+}
+
+#event-zip-code {
+    grid-area: zip;
+    width: 100%;
+}
+
+#event-zip-radius {
+    grid-area: radius;
+}
+
+#event-type {
+    grid-area: type;
+}
+
+
 
 .search-results {
     grid-area: results;

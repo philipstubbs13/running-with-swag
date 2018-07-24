@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import UI components from PrimeReact.
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
+import { Button } from 'primereact/button';
 // import css
 import './Events.css';
 
@@ -28,6 +29,45 @@ class Events extends Component {
 
   onEventTypeChange(e) {
     this.setState({ eventType: e.value });
+  }
+
+  // On click handler for when user trys to search for races
+  handleSearchRaces = (event) => {
+    // Prevent the form from submitting itself.
+    event.preventDefault();
+    // ES6 destructuring
+    const {
+      zipCode, zipCodeError, zipRadius, zipRadiusError, eventType, eventTypeError,
+    } = this.state;
+
+    // if zip code field is blank, show validation error.
+    if (zipCode === '') {
+      this.setState({
+        zipCodeError: 'Zip code is required.',
+      });
+    }
+
+    // if zip radius field is blank, show validation error.
+    if (zipRadius === '') {
+      this.setState({
+        zipRadiusError: 'Select a search radius.',
+      });
+    }
+
+    // if event type field is blank, show validation error.
+    if (eventType === '') {
+      this.setState({
+        eventTypeError: 'Select an event type.',
+      });
+    } else {
+      // Else, if form is filled out, display search results.
+      console.log("Searching...");
+      this.setState({
+        zipCodeError: '',
+        zipRadiusError: '',
+        eventTypeError: '',
+      });
+    }
   }
 
   render() {
@@ -61,51 +101,56 @@ class Events extends Component {
         <div className="search-results">
           <h1>Search results</h1>
         </div>
-        <div className="search-form">
-          <h1>Search for races in your area</h1>
-          <form>
-            <div id="event-zip-code">
-              <label htmlFor="zip-code">Zip code*</label>
-              <br />
-              <InputText
-                id="zip-code"
-                name="zip code"
-                type="number"
-                placeholder="Enter zip code to search in."
-                value={zipCode}
-                onChange={(e) => this.setState({ zipCode: e.target.value })}
-              />
-              <small className="events-form-error">{zipCodeError}</small>
-            </div>
+        <form className="search-form">
+          <h1 className="search-form-header">Search for upcoming races in your area</h1>
+          <div id="event-zip-code search-field">
+            <label htmlFor="zip-code">Zip code*</label>
+            <br />
+            <InputText
+              id="zip-code"
+              name="zip code"
+              type="number"
+              placeholder="Enter zip code"
+              value={zipCode}
+              onChange={(e) => this.setState({ zipCode: e.target.value })}
+            />
+            <small className="events-form-error">{zipCodeError}</small>
+          </div>
 
-            <div id="event-zip-radius">
-              <label htmlFor="zip-radius">`Search within*</label>
-              <br />
-              <Dropdown
-                value={zipRadius}
-                options={zipRadiusOptions}
-                style={{ width: '100%' }}
-                onChange={this.onZipRadiusChange}
-                placeholder="Search within"
-                optionLabel="name"
-              />
-              <small className="events-form-error">{zipRadiusError}</small>
-            </div>
-            <div id="event-type">
-              <label htmlFor="event-type">Event type*</label>
-              <br />
-              <Dropdown
-                value={eventType}
-                options={eventTypeOptions}
-                style={{ width: '100%' }}
-                onChange={this.onEventTypeChange}
-                placeholder="event type"
-                optionLabel="name"
-              />
-              <small className="events-form-error">{eventTypeError}</small>
-            </div>
-          </form>
-        </div>
+          <div id="event-zip-radius search-field">
+            <label htmlFor="zip-radius">`Search within*</label>
+            <br />
+            <Dropdown
+              value={zipRadius}
+              options={zipRadiusOptions}
+              style={{ width: '100%' }}
+              onChange={this.onZipRadiusChange}
+              placeholder="Select number of miles"
+              optionLabel="name"
+            />
+            <small className="events-form-error">{zipRadiusError}</small>
+          </div>
+          <div id="event-type search-field">
+            <label htmlFor="event-type">Event type*</label>
+            <br />
+            <Dropdown
+              value={eventType}
+              options={eventTypeOptions}
+              style={{ width: '100%' }}
+              onChange={this.onEventTypeChange}
+              placeholder="Select event type"
+              optionLabel="name"
+            />
+            <small className="events-form-error">{eventTypeError}</small>
+          </div>
+          <Button
+            label="Search for races"
+            onClick={this.handleSearchRaces}
+            className="btn"
+            type="submit"
+            id="search-races-btn"
+          />
+        </form>
       </div>
     );
   }
