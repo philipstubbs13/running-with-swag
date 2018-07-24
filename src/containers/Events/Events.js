@@ -165,6 +165,15 @@ class Events extends Component {
           {races.map(race => {
             return ( 
               <Fieldset legend={race.race.name} className="race-card" key={race.race.race_id}>
+                <h2>Events</h2>
+                  {race.race.events.map(event => {
+                    return (
+                      <div key={event.event_id}>
+                        <p>{event.name}</p>
+                        <p>{event.start_time}</p>
+                      </div>
+                    )
+                  })};
                 <h2>Location</h2>
                 <p>{race.race.address.street}</p>
                 <p>{race.race.address.city}, {race.race.address.state} {race.race.address.zipcode}</p>
