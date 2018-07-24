@@ -17,13 +17,17 @@ class Home extends Component {
         {/* Top header on homae page. */}
         <div className="home-header">
           <h1>Running with Swag</h1>
-          <p>Your stop for running events, blog posts, reviews, tips, and more</p>
+          <p>Your stop for running events, blog posts, reviews, tips, and more.</p>
         </div>
         <header className="showcase">
           {/* Background image is defined in the Home.css file. */}
         </header>
         {/* Welcome to my site card */}
         <Card title="Welcome" className="card welcome">
+          <p>Welcome to <b>Running with Swag</b> - an online community for runners.
+            Whether you are a competitive runner or just run for fun, this is the site for you.
+          </p>
+          <p>Click the button below to learn more.</p>
           <Link to="/about">
             <Button label="LEARN MORE" className="btn" />
           </Link>
