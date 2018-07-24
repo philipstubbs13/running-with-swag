@@ -1,0 +1,16 @@
+.events-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  'form form form'
+  'results results results';
+}
+
+.search-form {
+    grid-area: form;
+}
+
+.search-results {
+    grid-area: results;
+}
+
