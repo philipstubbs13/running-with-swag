@@ -6,6 +6,8 @@ import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 // import css
 import './Events.css';
+// import API
+import api from '../../utils/API';
 
 class Events extends Component {
   constructor() {
@@ -17,6 +19,7 @@ class Events extends Component {
       zipRadiusError: '',
       eventType: '',
       eventTypeError: '',
+      races: [],
     };
 
     this.onZipRadiusChange = this.onZipRadiusChange.bind(this);
@@ -38,6 +41,7 @@ class Events extends Component {
     // ES6 destructuring
     const {
       zipCode, zipCodeError, zipRadius, zipRadiusError, eventType, eventTypeError,
+      races,
     } = this.state;
 
     // if zip code field is blank, show validation error.
@@ -61,12 +65,16 @@ class Events extends Component {
       });
     } else {
       // Else, if form is filled out, display search results.
-      console.log("Searching...");
-      this.setState({
-        zipCodeError: '',
-        zipRadiusError: '',
-        eventTypeError: '',
-      });
+      console.log('Searching for races...');
+      console.log(zipCode);
+      console.log(zipRadius.code);
+      console.log(eventType.code);
+      api.getRaces(zipCode, zipRadius.code, eventType.code)
+        .then((res) => {
+          console.log(res.data);
+          this.setState({ races: res.data.races });
+          console.log('Races retrieved from API and stores in state:', races);
+        });
     }
   }
 
