@@ -2,13 +2,33 @@
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-  'showcase showcase welcome'
+  'header header welcome'
   'showcase showcase developer'
   'events blog reviews';
 }
 
 img {
     max-width: 100%;
+}
+
+.home-header {
+    grid-area: header;
+    background-color: var(--dark);
+    color: var(--primary);
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.home-header h1 {
+    font-size: 2rem;
+}
+
+.home-header p {
+    font-size: 1rem;
 }
 
 /* Showcase */
@@ -18,21 +38,7 @@ img {
     background: url(../../images/athlete.jpg);
     background-size: cover;
     background-position: center;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
     box-shadow: var(--shadow);
-    color: #fff;
-}
-
-.showcase h1 {
-    font-size: 4rem;
-}
-
-.showcase p {
-    font-size: 1.3rem;
 }
 
 .developer {

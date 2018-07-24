@@ -11,15 +11,17 @@ import './Home.css';
 class Home extends Component {
   render() {
     return (
-      <div className="home-container">
-        <header className="showcase">
+      <div className="home-container">     
+        <div className="home-header">
           <h1>Running with Swag</h1>
           <p>Your stop for running events, blog posts, reviews, tips, and more</p>
+        </div>
+        <header className="showcase">
+        </header>
+        <Card title="Welcome" className="card welcome">
           <Link to="/about">
            <Button label="LEARN MORE" className="btn" />
           </Link>
-        </header>
-        <Card title="Welcome" className="card welcome">
         </Card>
         <Card title="Looking for developers" className="card developer">
           <p>Are you a web developer interested in running and want to help build this site?</p>
