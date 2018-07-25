@@ -1,15 +1,10 @@
 // import React
 import React, { Component } from 'react';
-// import third party linking library to link pages.
-import { Link } from 'react-router-dom';
 // import UI components from PrimeReact.
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
-import {  Fieldset } from 'primereact/fieldset';
-import { Dialog } from 'primereact/dialog';
-import { Panel } from 'primereact/panel';
-import { DataView, DataViewLayoutOptions } from "primereact/dataview";
+import { Fieldset } from 'primereact/fieldset';
 
 // import css
 import './Events.css';
@@ -27,25 +22,10 @@ class Events extends Component {
       eventType: '',
       eventTypeError: '',
       races: [],
-      layout: 'list',
-      selectedRace: null, 
-      visible: false,
-      sortKey: null,
-      sortOrder: null,
     };
 
     this.onZipRadiusChange = this.onZipRadiusChange.bind(this);
     this.onEventTypeChange = this.onEventTypeChange.bind(this);
-    // this.itemTemplate = this.itemTemplate.bind(this);
-    // this.onSortChange = this.onSortChange.bind(this);
-  }
-
-  onZipRadiusChange(e) {
-    this.setState({ zipRadius: e.value });
-  }
-
-  onEventTypeChange(e) {
-    this.setState({ eventType: e.value });
   }
 
   componentDidMount() {
@@ -55,7 +35,15 @@ class Events extends Component {
         this.setState({ races: res.data.races });
         console.log('Races retrieved from API and stores in state:', this.state.races);
       });
-}
+  }
+
+  onZipRadiusChange(e) {
+    this.setState({ zipRadius: e.value });
+  }
+
+  onEventTypeChange(e) {
+    this.setState({ eventType: e.value });
+  }
 
   // On click handler for when user trys to search for races
   handleSearchRaces = (event) => {
@@ -128,6 +116,7 @@ class Events extends Component {
       zipCode, zipCodeError, zipRadius, zipRadiusError, eventType,
       eventTypeError, races,
     } = this.state;
+
     return (
       <div className="events-container">
         <form className="search-form">
@@ -141,7 +130,7 @@ class Events extends Component {
               type="number"
               placeholder="Enter zip code"
               value={zipCode}
-              onChange={(e) => this.setState({ zipCode: e.target.value })}
+              onChange={e => this.setState({ zipCode: e.target.value })}
             />
             <small className="events-form-error">{zipCodeError}</small>
           </div>
@@ -180,28 +169,27 @@ class Events extends Component {
             id="search-races-btn"
           />
         </form>
+
         <div className="search-results">
-          {races.map(race => {
-            return ( 
-              <Fieldset legend={race.race.name} className="race-card" key={race.race.race_id}>
-                <h2>Events</h2>
-                  {race.race.events.map(event => {
-                    return (
-                      <div key={event.event_id}>
-                        <p>{event.name}</p>
-                        <p>{event.start_time}</p>
-                      </div>
-                    )
-                  })};
-                <h2>Location</h2>
-                <p>{race.race.address.street}</p>
-                <p>{race.race.address.city}, {race.race.address.state} {race.race.address.zipcode}</p>
-                <a href={race.race.url} target="_blank">
-                  <Button label="Sign up" className="btn" />
-                 </a>                  
-              </Fieldset>
-            );
-          })}
+          {races.map(race => (
+            <Fieldset legend={race.race.name} className="race-card" key={race.race.race_id}>
+              <h2>Events</h2>
+              {race.race.events.map(event => (
+                <div key={event.event_id}>
+                  <p>{event.name}</p>
+                  <p>{event.start_time}</p>
+                </div>
+              ))};
+              <h2>Location</h2>
+              <p>{race.race.address.street}</p>
+              <p>{race.race.address.city},
+                {race.race.address.state} {race.race.address.zipcode}
+              </p>
+              <a href={race.race.url} target="_blank" rel="noopener noreferrer">
+                <Button label="Sign up" className="btn" />
+              </a>        
+            </Fieldset>
+          ))}
         </div>
       </div>
     );
