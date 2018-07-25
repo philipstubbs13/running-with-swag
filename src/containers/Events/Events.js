@@ -173,21 +173,28 @@ class Events extends Component {
         <div className="search-results">
           {races.map(race => (
             <Fieldset legend={race.race.name} className="race-card" key={race.race.race_id}>
-              <h2>Events</h2>
-              {race.race.events.map(event => (
-                <div key={event.event_id}>
-                  <p>{event.name}</p>
-                  <p>{event.start_time}</p>
-                </div>
-              ))};
-              <h2>Location</h2>
-              <p>{race.race.address.street}</p>
-              <p>{race.race.address.city},
-                {race.race.address.state} {race.race.address.zipcode}
-              </p>
-              <a href={race.race.url} target="_blank" rel="noopener noreferrer">
-                <Button label="Sign up" className="btn" />
-              </a>        
+              <div className="race-details">
+                <b>Race information</b>
+                {race.race.events.map(event => (
+                  <div key={event.event_id} className="event-listings">
+                      {event.name}
+                      <br />
+                      {event.start_time}
+                  </div>
+                ))}
+              </div>
+              <div className="race-address">
+                <b>Location</b>
+                <br />
+                {race.race.address.street}
+                <br />
+                {race.race.address.city}, {race.race.address.state} {race.race.address.zipcode}
+              </div>
+              <div className="signUp">
+                <a href={race.race.url} target="_blank" rel="noopener noreferrer">
+                  <Button label="Sign up" className="btn" />
+                </a>     
+              </div>   
             </Fieldset>
           ))}
         </div>
