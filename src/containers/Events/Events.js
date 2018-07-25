@@ -7,6 +7,9 @@ import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 import {  Fieldset } from 'primereact/fieldset';
+import { Dialog } from 'primereact/dialog';
+import { Panel } from 'primereact/panel';
+import { DataView, DataViewLayoutOptions } from "primereact/dataview";
 
 // import css
 import './Events.css';
@@ -24,10 +27,17 @@ class Events extends Component {
       eventType: '',
       eventTypeError: '',
       races: [],
+      layout: 'list',
+      selectedRace: null, 
+      visible: false,
+      sortKey: null,
+      sortOrder: null,
     };
 
     this.onZipRadiusChange = this.onZipRadiusChange.bind(this);
     this.onEventTypeChange = this.onEventTypeChange.bind(this);
+    // this.itemTemplate = this.itemTemplate.bind(this);
+    // this.onSortChange = this.onSortChange.bind(this);
   }
 
   onZipRadiusChange(e) {
@@ -37,6 +47,15 @@ class Events extends Component {
   onEventTypeChange(e) {
     this.setState({ eventType: e.value });
   }
+
+  componentDidMount() {
+    api.getRaces(55337, 30, 'running_race')
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ races: res.data.races });
+        console.log('Races retrieved from API and stores in state:', this.state.races);
+      });
+}
 
   // On click handler for when user trys to search for races
   handleSearchRaces = (event) => {
