@@ -29,10 +29,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
-        <div className="main-content-section">
-          <BrowserRouter>
-            <div>
+        <BrowserRouter>
+          <div className="entire-page">
+            <NavBar />
+            <div className="main-content-section">
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
@@ -42,9 +42,9 @@ class App extends Component {
                 <Route exact path="/contact" component={Contact} />
               </Switch>
             </div>
-          </BrowserRouter>
-        </div>
-        <Footer />
+            <Footer />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }

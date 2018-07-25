@@ -6,3 +6,28 @@
     margin-left: 5rem;
 }
 
+.navbar-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 20px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    grid-gap: 10px;
+}
+
+.nav-link {
+    width: 100%;
+}
+
+/* Media Queries */
+@media(max-width: 946px) {
+  .navbar-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(max-width: 795px) {
+    .navbar-container {
+        grid-template-columns: 1fr;
+    }
+}
+

@@ -1,54 +1,36 @@
 // import React
 import React, { Component } from 'react';
+// import third party linking library to link pages.
+import { Link } from 'react-router-dom';
 // import components from PrimeReact.
 import { Button } from 'primereact/button';
-import { Menubar } from '../../../node_modules/primereact/components/menubar/Menubar';
 // import NavBar css file
 import './NavBar.css';
 
 // Define NavBar component
 class NavBar extends Component {
-  constructor() {
-    super();
-    this.state = {
-      items: [{
-        label: 'Home',
-        url: '/',
-      },
-      {
-        label: 'About',
-        url: '/about',
-      },
-      {
-        label: 'Events',
-        url: '/events',
-      },
-      {
-        label: 'Blog',
-        url: '/blog',
-      },
-      {
-        label: 'Reviews',
-        url: '/reviews',
-      },
-      {
-        label: 'Contact',
-        url: '/contact',
-      },
-      ],
-    };
-  }
-
   render() {
-    // ES6 destructuring
-    const { items } = this.state;
-
     return (
       <div>
-        <div className="content-section implementation">
-          <Menubar model={items} className="menu-items">
-            <Button label="Logout" icon="fa fa-sign-out" />
-          </Menubar>
+        <div className="navbar-container">
+          <Link to="/">
+            <Button label="Home" className="btn nav-link" />
+          </Link>
+          <Link to="/about">
+            <Button label="About" className="btn nav-link" />
+          </Link>
+          <Link to="/events">
+            <Button label="Events" className="btn nav-link" />
+          </Link>
+          <Link to="/blog">
+            <Button label="Blog" className="btn nav-link" />
+          </Link>
+          <Link to="/reviews">
+            <Button label="Reviews" className="btn nav-link" />
+          </Link>
+          <Link to="/contact">
+            <Button label="Contact" className="btn nav-link" />
+          </Link>
         </div>
       </div>
     );
