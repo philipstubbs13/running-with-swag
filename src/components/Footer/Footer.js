@@ -9,10 +9,10 @@ import './Footer.css';
 function Footer() {
   return (
     <div>
-      <div className="content-section implementation">
-        <Panel header="Running with Swag">
+      <div className="footer">
+        <Panel>
+          <p>Running with Swag</p>
           <p>Your stop for running events, blog posts, reviews, tips, and more.</p>
-          <p>philipstubbs13@gmail.com</p>
           <br />
           <small>Copyright &copy; 2018</small>
         </Panel>
