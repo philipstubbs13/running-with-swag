@@ -1,10 +1,10 @@
-.events-container {
+/* .events-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
   'form form form'
   'results results results';
-}
+} */
 
 .search-form {
     grid-area: form;
@@ -36,17 +36,13 @@
 
 
 .search-results {
-    grid-area: results;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.results-header {
-    grid-area: resultsheader;
+    grid-area: form;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .race-card {
-    grid-area: racecard;
     margin-top: 40px;
 }
 
@@ -56,6 +52,10 @@
 
 .race-address, .signUp {
     margin-top: 20px;
+}
+
+.ui-button {
+    width: 100%;
 }
 
 

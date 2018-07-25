@@ -6,7 +6,7 @@ const api = {
   // Grabs races from the RunSignUp site using the the RunSignUp Race API.
   getRaces: function (zipcode, radius, event_type) {
     // API base url
-    const BASEURL = ' https://runsignup.com/Rest/races/?format=json&events=T&race_headings=T&race_links=T&include_waiver=T&include_event_days=T&page=1&results_per_page=50&sort=date+ASC&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&distance_units=K';
+    const BASEURL = ' http://runsignup.com/Rest/races/?format=json&events=T&race_headings=T&race_links=T&include_waiver=T&include_event_days=T&page=1&results_per_page=50&sort=date+ASC&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&distance_units=K';
     // Affiliate token
     const AFLT_TOKEN = 'feNdk8TA5z1OI0HdwCtTZan9n97ZRlo6';
     // API key

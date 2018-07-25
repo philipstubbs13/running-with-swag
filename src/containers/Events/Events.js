@@ -5,6 +5,7 @@ import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 import { Fieldset } from 'primereact/fieldset';
+import { Card } from 'primereact/card';
 
 // import css
 import './Events.css';
@@ -44,6 +45,7 @@ class Events extends Component {
   onEventTypeChange(e) {
     this.setState({ eventType: e.value });
   }
+
 
   // On click handler for when user trys to search for races
   handleSearchRaces = (event) => {
