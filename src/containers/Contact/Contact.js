@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
-import { InputMask } from 'primereact/inputmask';
 // import css
 import './Contact.css';
 
@@ -17,8 +16,6 @@ class Contact extends Component {
       nameError: '',
       email: '',
       emailError: '',
-      phone: '',
-      phoneError: '',
       subject: '',
       subjectError: '',
       message: '',
@@ -33,7 +30,7 @@ class Contact extends Component {
     event.preventDefault();
     // ES6 destructuring
     const {
-      name, nameError, email, emailError, phone, subject,
+      name, nameError, email, emailError, subject,
       subjectError, message, messageError, formSuccess,
     } = this.state;
 
@@ -66,13 +63,12 @@ class Contact extends Component {
     } else {
       // Save message to backend database if form is filled out.
       console.log('Form valid.');
-      console.log(`Name: ${name}. Email: ${email}. Phone: ${phone}.`);
+      console.log(`Name: ${name}. Email: ${email}.`);
       console.log(`Subject: ${subject}. Message: ${message}`);
       this.setState({
         formSuccess: 'Thanks for the message! We will get back to you within 48 hours.',
         name: '',
         email: '',
-        phone: '',
         subject: '',
         message: '',
       });
@@ -82,7 +78,7 @@ class Contact extends Component {
   render() {
     // ES6 destructuring
     const {
-      name, nameError, email, emailError, phone, phoneError,
+      name, nameError, email, emailError,
       subject, subjectError, message, messageError, formSuccess,
     } = this.state;
     return (
@@ -127,19 +123,6 @@ class Contact extends Component {
               onChange={(e) => this.setState({ email: e.target.value })}
             />
             <small className="contact-form-error">{emailError}</small>
-          </div>
-          {/* Contact form - Phone field */}
-          <div id="contact-phone">
-            <label htmlFor="phone">Phone</label>
-            <br />
-            <InputMask
-              id="phone"
-              mask="(999) 999-9999"
-              value={phone}
-              placeholder="(999) 999-9999"
-              onChange={(e) => this.setState({ phone: e.value })}
-            />
-            <small className="contact-form-error">{phoneError}</small>
           </div>
           {/* Contact form - Subject field */}
           <div id="contact-subject">

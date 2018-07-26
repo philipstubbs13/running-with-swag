@@ -26,7 +26,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
   'name email'
-  'phone phone'
   'subject subject'
   'message message'
   'button button'
@@ -41,11 +40,6 @@
 /* Contact form - Email field */
 #contact-email {
   grid-area: email;
-}
-
-/* Contact form - Phone field */
-#contact-phone {
-  grid-area: phone;
 }
 
 /* Contact form - Subject field */
@@ -97,7 +91,6 @@
     grid-template-areas:
     'name name name'
     'email email email'
-    'phone phone phone'
     'subject subject subject'
     'message message message'
     'button button button';
