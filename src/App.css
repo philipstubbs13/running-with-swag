@@ -1,57 +1,74 @@
-/* CSS Varibles  */
+/* Website color schemes - http://blog.visme.co/website-color-schemes/ */
+/* CSS Varibles - use variables if the css is repeated 
+and can be reused in more than one place across the app. */
 :root {
   --primary: #ddd;
-  --dark: #333;
+  --dark: #29648A;
   --light: #fff;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --hover: #AAABB8;
+  --text: #fff;
 }
 
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  /* color: var(--dark) !important; */
   line-height: 1.4rem;
 }
 
 body {
-  background: #fff;
+  background: #25274D;
 }
 
 /*Sticky footer*/
 .Site {
-    /* display: flex; */
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  /* display: flex; */
+  min-height: 100vh;
+  flex-direction: column;
+}
   
-  .main-content-section {
-    flex: 1;
-    min-height: 60vh;
-    margin-bottom: 65px;
-    padding: 3rem;
-  }
+.main-content-section {
+  flex: 1;
+  min-height: 60vh;
+  margin-bottom: 65px;
+  padding: 3rem;
+}
 
-  .entire-page {
-    margin-right: 3rem;
-    margin-left: 3rem;
-  }
+/* Left and right margin added to each page. */
+.entire-page {
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
 
-  .btn {
-    background: var(--dark) !important;
-    padding: 10px !important;
-    border: 0 !important;
-    text-transform: uppercase;
-  }
+/* CSS used for all buttons for consistency. */
+.btn {
+  background: var(--dark) !important;
+  padding: 10px !important;
+  border: 0 !important;
+  text-transform: uppercase;
+}
 
-  .btn:hover {
-    background: var(--light) !important;
-    color: var(--dark) !important;
-    border: 1px solid var(--dark) !important;
-  }
+/* CSS used when user hovers over a button in the app. */
+.btn:hover {
+  background: var(--hover) !important;
+  color: var(--dark) !important;
+  border: 1px solid var(--dark) !important;
+}
 
-  .card {
-    background: var(--light) !important;
-    box-shadow: var(--shadow) !important;
-    text-align: center;
+/* CSS for the card UI elements used in the app. */
+.card {
+  background: var(--light) !important;
+  box-shadow: var(--shadow) !important;
+  text-align: center;
+}
 
-  }
+/* CSS for the form label elements on the page. */
+label {
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+/* CSS for <small> text, such as "Required field" and form validation errors on forms. */
+small {
+  color: var(--text);
+}

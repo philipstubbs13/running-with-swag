@@ -3,33 +3,34 @@
 /* Contact content will be on the left and take up 3 fr units. */
 /* Contact form will be on the right and take up 2 fr units. */
 .contact-container {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 3fr 2fr 1fr;
-    grid-template-areas:
-    'content form form';
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-areas:
+  'content form form';
 }
 
 /* Contact content information will be on the left. */
 .contact-content {
-    grid-area: content;
-    justify-content: center;
-    align-content: center;
+  grid-area: content;
+  justify-content: center;
+  align-content: center;
+  color: var(--text);
 }
 
 /* Contact form */
 .contact-form {
-    grid-area: form;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    'name email'
-    'phone phone'
-    'subject subject'
-    'message message'
-    'button button'
-    'success success';
+  grid-area: form;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'name email'
+  'phone phone'
+  'subject subject'
+  'message message'
+  'button button'
+  'success success';
 }
 
 /* Contact form - Name field */

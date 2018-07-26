@@ -1,15 +1,15 @@
 .ui-panel-content {
-    background-color: #000 !important;
-    color: white !important;
-    text-align: center;
+  background-color: var(--dark) !important;
+  color: var(--text) !important;
+  text-align: center;
 }
 
 .ui-panel-titlebar {
-    text-align: center;
+  text-align: center;
 }
 
 .footer{
-    padding-left: 3rem;
-    padding-right: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 

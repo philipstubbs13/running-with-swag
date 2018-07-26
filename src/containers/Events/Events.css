@@ -1,62 +1,53 @@
-/* .events-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  'form form form'
-  'results results results';
-} */
-
 .search-form {
-    grid-area: form;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    'header header header'
-    'zip radius type';
+  grid-area: form;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  'header header header'
+  'zip radius type';
 }
 
 .search-form-header {
-    grid-area: header;
+  grid-area: header;
+  color: var(--text);
 }
 
 #event-zip-code {
-    grid-area: zip;
-    width: 100%;
+  grid-area: zip;
+  width: 100%;
 }
 
 #event-zip-radius {
-    grid-area: radius;
+  grid-area: radius;
 }
 
 #event-type {
-    grid-area: type;
+  grid-area: type;
 }
 
-
-
 .search-results {
-    grid-area: form;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-area: form;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .race-card {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .event-listings {
-    padding-top: 8px;
+  padding-top: 8px;
 }
 
 .race-address, .signUp {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-
+/* Have sign up button for each race span the width of its container 100%. */
 .ui-button {
-    width: 100%;
+  width: 100%;
 }
 
 
