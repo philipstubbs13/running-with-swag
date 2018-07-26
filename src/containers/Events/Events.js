@@ -85,7 +85,12 @@ class Events extends Component {
       api.getRaces(zipCode, zipRadius.code, eventType.code)
         .then((res) => {
           console.log(res.data);
-          this.setState({ races: res.data.races });
+          this.setState({ 
+            races: res.data.races,
+            zipCode: '',
+            zipRadius: '',
+            eventType: '',
+          });
           console.log('Races retrieved from API and stores in state:', races);
         });
     }
