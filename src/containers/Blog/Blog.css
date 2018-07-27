@@ -69,5 +69,15 @@
 
 .sidebar {
     grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr;
 }
+
+.about-blog {
+    background-color: var(--dark);
+    margin-top: 30px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    color: var(--primary);
+  }
 

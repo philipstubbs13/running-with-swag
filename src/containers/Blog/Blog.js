@@ -14,9 +14,6 @@ class Blog extends Component {
     return (
       <div className="blog-container">
         <div className="main">
-          <h1 className="page-title">Blog</h1>
-          <div className="blog-header-image">
-          </div>
           <div className="entries">
             <div className="blog-post">
               <div className="blog-image-div">
@@ -65,7 +62,15 @@ class Blog extends Component {
           </div>
         </div>
         <div className="sidebar">
-          <h1>Sidebar</h1>
+          <div className="about-blog">
+            <h1>About this blog</h1>
+            <div className="blog-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+              sed consequuntur error repudiandae numquam deserunt quisquam repellat
+              libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
+              cupiditate neque quas!
+            </div>
+          </div>
         </div>
       </div>
     );
