@@ -31,7 +31,7 @@
 
 .entries {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 }
 
@@ -42,18 +42,15 @@
   grid-gap: 30px;
   box-shadow: var(--shadow);
   padding: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
-  'image content'
-  'image button';
+  'content content'
+  'button button';
 }
 
-.blog-image-div {
-  grid-area: image;
-}
-
-.blog-image {
-    border: 2px solid  #25274D;
+.tmblr-full {
+    height: auto;
+    margin: 0;
 }
 
 .blog-content {

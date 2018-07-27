@@ -15,6 +15,15 @@ const api = {
     const APISECRET = '&api_secret=2GpUF3yO3WbSaDAZbFtRmEwYj6QsoJJG';
     return axios.get(BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + event_type + '&zipcode=' + zipcode + '&radius=' + radius + APIKEY + APISECRET);
   },
+
+  getPosts: function () {
+    // API base url
+    //https://api.tumblr.com/v2/blog/philipstubbs13.tumblr.com/posts/
+    const BASEURL = 'https://api.tumblr.com/v2/blog/philipstubbs13.tumblr.com/posts/';
+    // API key
+    const APIKEY = '?api_key=3AQ7olkZ3dMR6BwInSXIVipgI5ZMVofOYnfJTP0TMQbz5NSKhl';
+    return axios.get(BASEURL + APIKEY);
+  },
 };
 
 // Export API so that I can import it into the Events page.
