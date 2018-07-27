@@ -1,0 +1,35 @@
+.blog-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  'main main sidebar'
+  'main main sidebar'
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    'title title'
+    'header header'
+}
+
+.page-title {
+  grid-area: title;
+  color: var(--primary);
+}
+
+.blog-header-image {
+  grid-area: header;
+  background: url(../../images/start_line.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  box-shadow: var(--shadow);
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
