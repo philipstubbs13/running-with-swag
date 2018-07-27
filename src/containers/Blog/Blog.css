@@ -31,28 +31,40 @@
 
 .entries {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 30px;
 }
 
 .blog-post {
+  background-color: var(--dark);
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  'image content'
+  'image button';
+}
+
+.blog-image-div {
+  grid-area: image;
 }
 
 .blog-image {
-  grid-area: image;
+    border: 2px solid  #25274D;
 }
 
 .blog-content {
   grid-area: content;
   margin-top: 20px;
+  color: var(--primary);
 }
 
 .read-more-btn {
   grid-area: button;
-  margin-top: 20px;
+  background-color: #25274D !important;
 }
 
 .sidebar {
