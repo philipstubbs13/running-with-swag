@@ -2,12 +2,9 @@
 // import React
 import React, { Component } from 'react';
 // import UI components from PrimeReact.
-import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 // import css
 import './Blog.css';
-// import blog image
-import blogImage from '../../images/blog-img.jpg';
 // import API
 import api from '../../utils/API';
 
@@ -20,11 +17,12 @@ class Blog extends Component {
   }
 
   componentDidMount() {
+    const { posts } = this.state;
     api.getPosts()
       .then((res) => {
         console.log(res.data);
         this.setState({ posts: res.data.response.posts });
-        console.log('Posts retrieved from API and stored in state:', this.state.posts);
+        console.log('Posts retrieved from API and stored in state:', posts);
       });
   }
 
@@ -36,15 +34,12 @@ class Blog extends Component {
           <div className="entries">
             {posts.map(post => (
               <div className="blog-post">
-                {/* <div className="blog-image-div">
-                  <img src={blogImage} alt="blog image" className="blog-image" />
-                </div> */}
                 <div className="blog-content">
                   <h1>{post.summary}</h1>
-                  <div dangerouslySetInnerHTML={ {__html: post.body} } />
+                  <div dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
-                <a href={post.post_url}>
-                  <Button label="Continue reading" className="btn read-more-btn" />
+                <a href={post.post_url} target="_blank" rel="noopener noreferrer">
+                  <Button label="Go to blog" className="btn read-more-btn" />
                 </a>
               </div>
             ))};

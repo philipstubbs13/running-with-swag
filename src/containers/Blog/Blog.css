@@ -1,3 +1,4 @@
+/* Main container for the blog page */
 .blog-container {
   display: grid;
   grid-gap: 30px;
@@ -7,37 +8,23 @@
   'main main sidebar'
 }
 
+/* Part of the page where the tmblr blog posts will be rendered. */
 .main {
     grid-area: main;
     display: grid;
-    grid-template-areas: 
-    'title title'
-    'header header'
 }
 
-.page-title {
-  grid-area: title;
-  color: var(--primary);
-}
-
-.blog-header-image {
-  grid-area: header;
-  background: url(../../images/start_line.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 250px;
-  box-shadow: var(--shadow);
-}
-
+/* Container for blog entries */
 .entries {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 }
 
+/* CSS for each blog post that gets rendered to the page. */
 .blog-post {
   background-color: var(--dark);
-  margin-top: 30px;
+  margin-top: 20px;
   display: grid;
   grid-gap: 30px;
   box-shadow: var(--shadow);
@@ -48,28 +35,32 @@
   'button button';
 }
 
+/* CSS for blog image associated with blog post.*/
 .tmblr-full {
     height: auto;
     margin: 0;
 }
 
+/* CSS for actual blog content */
 .blog-content {
   grid-area: content;
-  margin-top: 20px;
   color: var(--primary);
 }
 
+/* Continue reading button - takes users away from site to the blog page on Tmblr. */
 .read-more-btn {
   grid-area: button;
   background-color: #25274D !important;
 }
 
+/* Sidebar on blog page */
 .sidebar {
     grid-area: sidebar;
     display: grid;
     grid-template-columns: 1fr;
 }
 
+/* About blog section in the sidebar */
 .about-blog {
     background-color: var(--dark);
     margin-top: 30px;

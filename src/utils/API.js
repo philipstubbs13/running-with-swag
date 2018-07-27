@@ -16,9 +16,9 @@ const api = {
     return axios.get(BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + event_type + '&zipcode=' + zipcode + '&radius=' + radius + APIKEY + APISECRET);
   },
 
+  // Query Tmblr API
+  // Grabs blog posts from the Tmblr blog site using the the Tmblr API.
   getPosts: function () {
-    // API base url
-    //https://api.tumblr.com/v2/blog/philipstubbs13.tumblr.com/posts/
     const BASEURL = 'https://api.tumblr.com/v2/blog/philipstubbs13.tumblr.com/posts/';
     // API key
     const APIKEY = '?api_key=3AQ7olkZ3dMR6BwInSXIVipgI5ZMVofOYnfJTP0TMQbz5NSKhl';

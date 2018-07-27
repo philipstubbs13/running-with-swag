@@ -85,7 +85,7 @@ class Events extends Component {
       api.getRaces(zipCode, zipRadius.code, eventType.code)
         .then((res) => {
           console.log(res.data);
-          this.setState({ 
+          this.setState({
             races: res.data.races,
             zipCode: '',
             zipRadius: '',
@@ -184,9 +184,9 @@ class Events extends Component {
                 <b>Race information</b>
                 {race.race.events.map(event => (
                   <div key={event.event_id} className="event-listings">
-                      {event.name}
-                      <br />
-                      {event.start_time}
+                    {event.name}
+                    <br />
+                    {event.start_time}
                   </div>
                 ))}
               </div>
@@ -200,8 +200,8 @@ class Events extends Component {
               <div className="signUp">
                 <a href={race.race.url} target="_blank" rel="noopener noreferrer">
                   <Button label="Sign up" className="btn" />
-                </a>     
-              </div>   
+                </a>  
+              </div>
             </Fieldset>
           ))}
         </div>
