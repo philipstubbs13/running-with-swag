@@ -8,7 +8,7 @@ const api = {
     // API base url
     const BASEURL = ' http://runsignup.com/Rest/races/?format=json&events=T&race_headings=T&race_links=T&include_waiver=T&include_event_days=T&page=1&results_per_page=50&sort=date+ASC&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&distance_units=K';
     // Affiliate token
-    const AFLT_TOKEN = 'feNdk8TA5z1OI0HdwCtTZan9n97ZRlo6';
+    const AFLT_TOKEN = process.env.RACE_AFLT_TOKEN;
     // API key
     const APIKEY = '&api_key=' + process.env.RACE_API_KEY;
     // API secret

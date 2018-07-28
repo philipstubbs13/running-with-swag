@@ -51,10 +51,10 @@ class Blog extends Component {
         <div className="main">
           <div className="entries">
             {posts.map(post => (
-              <div className="blog-post">
+              <div className="blog-post" key={post.id}>
                 <span className="tags">
                   {post.tags.map(tag => (
-                    <span className="blog-tag">#{tag}</span>
+                    <span className="blog-tag" key={post.tags.indexOf(tag)}>#{tag}</span>
                   ))}
                 </span>
                 <div className="blog-summary">
