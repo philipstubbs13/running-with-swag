@@ -49,17 +49,19 @@ class Blog extends Component {
           <div className="entries">
             {posts.map(post => (
               <div className="blog-post">
-                  <span>
-                    {post.tags.map(tag => (
-                      <div className="blog-tag">#{tag}</div>
-                    ))}
-                  </span>
-                <div className="blog-content">
+                <span className="tags">
+                  {post.tags.map(tag => (
+                    <span className="blog-tag">#{tag}</span>
+                  ))}
+                </span>
+                <div className="blog-summary">
                   <h1>{post.summary}</h1>
+                </div>
+                <div className="blog-content">
                   <div dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
                 <a href={post.post_url} target="_blank" rel="noopener noreferrer">
-                  <Button label="Go to blog" className="btn read-more-btn" />
+                  <Button label="Go to blog to like and leave a comment." className="btn read-more-btn" />
                 </a>
               </div>
             ))};

@@ -17,7 +17,7 @@
 /* Container for blog entries */
 .entries {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 30px;
 }
 
@@ -26,14 +26,15 @@
   background-color: var(--dark);
   margin-top: 20px;
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 0px;
   box-shadow: var(--shadow);
   padding: 1rem;
   grid-template-columns: 1fr;
   grid-template-areas:
+  'tags tags'
+  'summary summary'
   'content content'
-  'button button'
-  'tag tag';
+  'button button';
 }
 
 /* CSS for blog image associated with blog post.*/
@@ -45,6 +46,11 @@
 /* CSS for actual blog content */
 .blog-content {
   grid-area: content;
+  color: var(--primary);
+}
+
+.blog-summary {
+  grid-area: summary;
   color: var(--primary);
 }
 
@@ -64,15 +70,18 @@
 /* About blog section in the sidebar */
 .about-blog {
     background-color: var(--dark);
-    margin-top: 30px;
+    margin-top: 20px;
     box-shadow: var(--shadow);
     padding: 1rem;
     color: var(--primary);
   }
 
+  .tags {
+    grid-area: tags;
+  }
+
   /* CSS for blog tags */
   .blog-tag {
-    grid-area: tag;
     color: var(--primary);
     margin-top: 5px;
     padding: 10px;

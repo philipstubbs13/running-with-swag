@@ -10,6 +10,11 @@
     max-width: 100%;
 }
 
+.about-content {
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
 /* Media Queries */
 @media(max-width: 700px) {
   .about-container {
