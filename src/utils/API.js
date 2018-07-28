@@ -10,9 +10,9 @@ const api = {
     // Affiliate token
     const AFLT_TOKEN = 'feNdk8TA5z1OI0HdwCtTZan9n97ZRlo6';
     // API key
-    const APIKEY = '&api_key=0WzXp5Byj0Y6cwaysxHUZ1CzP9Ybl6E7';
+    const APIKEY = '&api_key=' + process.env.RACE_API_KEY;
     // API secret
-    const APISECRET = '&api_secret=2GpUF3yO3WbSaDAZbFtRmEwYj6QsoJJG';
+    const APISECRET = '&api_secret=' + process.env.RACE_API_SECRET;
     return axios.get(BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + event_type + '&zipcode=' + zipcode + '&radius=' + radius + APIKEY + APISECRET);
   },
 

@@ -13,10 +13,9 @@ class Blog extends Component {
     super();
     this.state = {
       posts: [],
-      likes: null,
-      totalposts: null,
-      updated: null,
-      url: null,
+      likes: '',
+      totalposts: '',
+      url: '',
     };
   }
 
@@ -31,13 +30,17 @@ class Blog extends Component {
     api.getInfo()
       .then((res) => {
         console.log(res.data);
+        console.log(res.data.response.blog.likes);
         this.setState({ 
           likes: res.data.response.blog.likes,
           totalposts: res.data.response.blog.posts,
           updated: res.data.response.blog.updated,
           url: res.data.response.blog.url,
         });
-        console.log('Blog info/stats:', likes, totalposts, updated, url);
+        console.log(likes);
+        console.log(totalposts);
+        console.log(updated);
+        console.log(url);
       });
   }
 
