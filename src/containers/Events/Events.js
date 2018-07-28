@@ -189,6 +189,7 @@ class Events extends Component {
                   </div>
                 ))}
               </div>
+              {/* <div dangerouslySetInnerHTML={{ __html: race.race.description }} /> */}
               <div className="race-address">
                 <b>Location</b>
                 <br />
