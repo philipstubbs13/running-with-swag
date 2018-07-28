@@ -32,7 +32,8 @@
   grid-template-columns: 1fr;
   grid-template-areas:
   'content content'
-  'button button';
+  'button button'
+  'tag tag';
 }
 
 /* CSS for blog image associated with blog post.*/
@@ -67,5 +68,15 @@
     box-shadow: var(--shadow);
     padding: 1rem;
     color: var(--primary);
+  }
+
+  /* CSS for blog tags */
+  .blog-tag {
+    grid-area: tag;
+    color: var(--primary);
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+
   }
 

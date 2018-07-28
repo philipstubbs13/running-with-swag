@@ -34,6 +34,11 @@ class Blog extends Component {
           <div className="entries">
             {posts.map(post => (
               <div className="blog-post">
+                  <span>
+                    {post.tags.map(tag => (
+                      <div className="blog-tag">#{tag}</div>
+                    ))}
+                  </span>
                 <div className="blog-content">
                   <h1>{post.summary}</h1>
                   <div dangerouslySetInnerHTML={{ __html: post.body }} />
