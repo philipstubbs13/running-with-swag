@@ -24,6 +24,14 @@ const api = {
     const APIKEY = '?api_key=3AQ7olkZ3dMR6BwInSXIVipgI5ZMVofOYnfJTP0TMQbz5NSKhl';
     return axios.get(BASEURL + APIKEY);
   },
+  // Query Tmblr API
+  // Grabs blog info/stats from the Tmblr blog site using the the Tmblr API.
+  getInfo: function () {
+    const BASEURL = 'https://api.tumblr.com/v2/blog/philipstubbs13.tumblr.com/info/';
+    // API key
+    const APIKEY = '?api_key=3AQ7olkZ3dMR6BwInSXIVipgI5ZMVofOYnfJTP0TMQbz5NSKhl';
+    return axios.get(BASEURL + APIKEY);
+  },
 };
 
 // Export API so that I can import it into the Events page.

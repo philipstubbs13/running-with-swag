@@ -13,16 +13,31 @@ class Blog extends Component {
     super();
     this.state = {
       posts: [],
+      likes: null,
+      totalposts: null,
+      updated: null,
+      url: null,
     };
   }
 
   componentDidMount() {
-    const { posts } = this.state;
+    const { posts, likes, totalposts, updated, url } = this.state;
     api.getPosts()
       .then((res) => {
         console.log(res.data);
         this.setState({ posts: res.data.response.posts });
         console.log('Posts retrieved from API and stored in state:', posts);
+      });
+    api.getInfo()
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ 
+          likes: res.data.response.blog.likes,
+          totalposts: res.data.response.blog.posts,
+          updated: res.data.response.blog.updated,
+          url: res.data.response.blog.url,
+        });
+        console.log('Blog info/stats:', likes, totalposts, updated, url);
       });
   }
 
