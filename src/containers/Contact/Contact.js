@@ -65,6 +65,12 @@ class Contact extends Component {
       console.log('Form valid.');
       console.log(`Name: ${name}. Email: ${email}.`);
       console.log(`Subject: ${subject}. Message: ${message}`);
+      this.props.firebase.ref('feedback').push({
+        name,
+        email,
+        subject,
+        message,
+      });
       this.setState({
         formSuccess: 'Thanks for the message! We will get back to you within 48 hours.',
         name: '',
