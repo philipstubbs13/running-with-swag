@@ -199,7 +199,7 @@ class Events extends Component {
               </div>
               <div className="signUp">
                 <a href={race.race.url} target="_blank" rel="noopener noreferrer">
-                  <Button label="Sign up" className="btn" />
+                  <Button label="Sign up" className="race-btn btn" />
                 </a>  
               </div>
             </Fieldset>

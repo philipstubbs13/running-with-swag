@@ -35,6 +35,8 @@
 
 .race-card {
   margin-top: 40px;
+  background-color: var(--dark);
+  color: var(--primary);
 }
 
 .event-listings {
@@ -43,6 +45,10 @@
 
 .race-address, .signUp {
   margin-top: 20px;
+}
+
+.race-btn {
+  background-color: #25274D !important;
 }
 
 /* Have sign up button for each race span the width of its container 100%. */
