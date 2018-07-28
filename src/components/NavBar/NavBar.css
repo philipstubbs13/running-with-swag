@@ -19,6 +19,10 @@
     width: 100%;
 }
 
+.nav-btn {
+    background: var(--dark) !important;
+}
+
 /* Media Queries */
 @media(max-width: 946px) {
   .navbar-container {

@@ -29,7 +29,7 @@ class Home extends Component {
           </p>
           <p>Click the button below to learn more.</p>
           <Link to="/about">
-            <Button label="LEARN MORE" className="btn" />
+            <Button label="LEARN MORE" className="btn home-btn" />
           </Link>
         </Card>
         {/* Looking for developers to work on site card */}
@@ -44,7 +44,7 @@ class Home extends Component {
           <i className="fas fa-calendar-alt fa-3x" />
           <h2>Events</h2>
           <Link to="/events">
-            <Button label="See events" className="btn" />
+            <Button label="See events" className="btn home-btn" />
           </Link>
           <p>Look for upcoming racing events in your area. 5K, 10K, 15K,
             half marathon, full marathon, and more.
@@ -55,7 +55,7 @@ class Home extends Component {
           <i className="fa fa-fw fa-pen-alt fa-3x" />
           <h2>Blog</h2>
           <Link to="/blog">
-            <Button label="Read blog" className="btn" />
+            <Button label="Read blog" className="btn home-btn" />
           </Link>
           <p>Read some swaggin' articles about running.
             Here, you will find race stories, running tips, and more.
@@ -66,7 +66,7 @@ class Home extends Component {
           <i className="fas fa-star fa-3x" />
           <h2>Reviews</h2>
           <Link to="/reviews">
-            <Button label="Check reviews" className="btn" />
+            <Button label="Check reviews" className="btn home-btn" />
           </Link>
           <p>Check out reviews of some of the races I ran as
             well as products I have bought to help me train.

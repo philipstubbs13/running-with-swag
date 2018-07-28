@@ -42,7 +42,7 @@ body {
 
 /* CSS used for all buttons for consistency. */
 .btn {
-  background:  #25274D !important;
+  background: var(--dark) !important;
   padding: 10px !important;
   border: 0 !important;
   text-transform: uppercase;

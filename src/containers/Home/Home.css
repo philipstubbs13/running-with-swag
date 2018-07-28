@@ -77,6 +77,10 @@ img {
     box-shadow: var(--shadow);
 }
 
+.home-btn {
+    background: #25274D !important;
+}
+
 
 /* Media Queries */
 @media(max-width: 700px) {
