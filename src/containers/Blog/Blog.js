@@ -20,7 +20,9 @@ class Blog extends Component {
   }
 
   componentDidMount() {
-    const { posts, likes, totalposts, updated, url } = this.state;
+    const {
+      posts, likes, totalposts, updated, url,
+    } = this.state;
     api.getPosts()
       .then((res) => {
         console.log(res.data);
@@ -31,7 +33,7 @@ class Blog extends Component {
       .then((res) => {
         console.log(res.data);
         console.log(res.data.response.blog.likes);
-        this.setState({ 
+        this.setState({
           likes: res.data.response.blog.likes,
           totalposts: res.data.response.blog.posts,
           updated: res.data.response.blog.updated,

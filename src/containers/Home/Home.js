@@ -17,7 +17,7 @@ class Home extends Component {
         {/* Top header on homae page. */}
         <div className="home-header">
           <h1>Running with Swag</h1>
-          <p>Your stop for running events, blog posts, reviews, tips, and more.</p>
+          <p>A site created by runners and for runners. Check out the latest running events, race reviews, running tips, product reviews, and more.</p>
         </div>
         <header className="showcase">
           {/* Background image is defined in the Home.css file. */}
@@ -32,12 +32,13 @@ class Home extends Component {
             <Button label="LEARN MORE" className="btn home-btn" />
           </Link>
         </Card>
-        {/* Looking for developers to work on site card */}
-        <Card title="Looking for developers" className="card developer">
-          <p>Are you a web developer interested in running and want to help build this site?</p>
-          <p>For more information on how you can contribute,
-            send an email to philipstubbs13@gmail.com.
-          </p>
+        {/* Contact card */}
+        <Card title="Contact us" className="card developer">
+          <p>We’d love to hear from you! Please contact us by clicking the link below and entering your comment or question in the provided form.</p>
+          <p>Don't hesitate to ask a question, drop a comment, or provide feedback regarding running or anything posted on this site.</p>
+          <Link to="/contact">
+            <Button label="Contact" className="btn home-btn" />
+          </Link>
         </Card>
         {/* Find races card */}
         <Card className="card events">
@@ -68,8 +69,7 @@ class Home extends Component {
           <Link to="/reviews">
             <Button label="Check reviews" className="btn home-btn" />
           </Link>
-          <p>Check out reviews of some of the races I ran as
-            well as products I have bought to help me train.
+          <p>Check out some reviews of the latest races and running swag.
           </p>
         </Card>
       </div>

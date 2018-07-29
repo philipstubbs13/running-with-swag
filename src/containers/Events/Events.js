@@ -5,7 +5,6 @@ import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
 import { Fieldset } from 'primereact/fieldset';
-
 // import css
 import './Events.css';
 // import API
@@ -22,10 +21,13 @@ class Events extends Component {
       eventType: '',
       eventTypeError: '',
       races: [],
+      visible: false,
     };
 
     this.onZipRadiusChange = this.onZipRadiusChange.bind(this);
     this.onEventTypeChange = this.onEventTypeChange.bind(this);
+    this.onClick = this.onClick.bind(this);
+    this.onHide = this.onHide.bind(this);
   }
 
   componentDidMount() {
@@ -43,6 +45,14 @@ class Events extends Component {
 
   onEventTypeChange(e) {
     this.setState({ eventType: e.value });
+  }
+
+  onClick(event) {
+    this.setState({ visible: true });
+  }
+
+  onHide(event) {
+    this.setState({ visible: false });
   }
 
 
@@ -189,7 +199,6 @@ class Events extends Component {
                   </div>
                 ))}
               </div>
-              {/* <div dangerouslySetInnerHTML={{ __html: race.race.description }} /> */}
               <div className="race-address">
                 <b>Location</b>
                 <br />

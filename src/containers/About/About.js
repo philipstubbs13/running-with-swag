@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 // import UI components from PrimeReact
 import { Fieldset } from 'primereact/fieldset';
+import { Button } from 'primereact/button';
+// import third party linking library to link pages.
+import { Link } from 'react-router-dom';
 // import css
 import './About.css';
 // import image
@@ -38,8 +41,11 @@ class About extends Component {
           time now. Now that I have graduated, I thought now would be a good time to start
           it up. This site's development will be ongoing and open source. So, if you are a
           runner and/or web developer and would like to contribute to this project, contact
-          me at philipstubbs13@gmail.com.
+          me using the link below.
           </p>
+          <Link to="/contact">
+            <Button label="Contact" className="btn home-btn" />
+          </Link>
         </Fieldset>
       </div>
     );
