@@ -29,17 +29,17 @@ class Contact extends Component {
       formSuccess: '',
       messagesRef: firebase.database().ref('messages'),
     };
-    console.log(this.state.messagesRef);
   }
 
   // Save message to firebase
   saveMessage = (name, email, subject, message) => {
-    var  newMessageRef = this.state.messagesRef.push();
+    const { messagesRef } = this.state;
+    const newMessageRef = messagesRef.push();
     newMessageRef.set({
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
+      name,
+      email,
+      subject,
+      message,
     });
   }
 
@@ -87,7 +87,7 @@ class Contact extends Component {
       // Save message
       this.saveMessage(name, email, subject, message);
       this.setState({
-        formSuccess: 'Thanks for the message! We will get back to you within 48 hours.',
+        formSuccess: 'Thanks for the message! We will get back to you shortly.',
         name: '',
         email: '',
         subject: '',
@@ -127,7 +127,7 @@ class Contact extends Component {
               type="text"
               placeholder="John Smith"
               value={name}
-              onChange={(e) => this.setState({ name: e.target.value })}
+              onChange={e => this.setState({ name: e.target.value })}
             />
             <small className="contact-form-error">{nameError}</small>
           </div>
@@ -141,7 +141,7 @@ class Contact extends Component {
               type="email"
               placeholder="jsmith@gmail.com"
               value={email}
-              onChange={(e) => this.setState({ email: e.target.value })}
+              onChange={e => this.setState({ email: e.target.value })}
             />
             <small className="contact-form-error">{emailError}</small>
           </div>
@@ -182,7 +182,7 @@ class Contact extends Component {
           <div className="form-success-message">{formSuccess}</div>
           {/* Contact form - Send/Submit button */}
           <Button
-            label="Send your message"
+            label="Send message"
             onClick={this.handleContactSubmit}
             className="btn"
             type="submit"
