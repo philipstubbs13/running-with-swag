@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
-import { Fieldset } from 'primereact/fieldset';
+import { Card } from 'primereact/card';
 // import css
 import './Events.css';
 // import API
@@ -152,7 +152,7 @@ class Events extends Component {
           </div>
 
           <div id="event-zip-radius search-field">
-            <label htmlFor="zip-radius">`Search within*</label>
+            <label htmlFor="zip-radius">Search within*</label>
             <br />
             <Dropdown
               value={zipRadius}
@@ -188,8 +188,16 @@ class Events extends Component {
 
         <div className="search-results">
           {races.map(race => (
-            <Fieldset legend={race.race.name} className="race-card" key={race.race.race_id}>
-              <div className="race-details">
+            <Card className="race-card" key={race.race.race_id}>
+              <div className="race-name">
+                <h4>{race.race.name}</h4>
+              </div>
+              <div className="signUp race-li">
+                <a href={race.race.url} target="_blank" rel="noopener noreferrer">
+                  <Button label="Sign up" className="race-btn btn" />
+                </a>
+              </div>
+              <div className="race-details race-li">
                 <b>Race information</b>
                 {race.race.events.map(event => (
                   <div key={event.event_id} className="event-listings">
@@ -199,19 +207,14 @@ class Events extends Component {
                   </div>
                 ))}
               </div>
-              <div className="race-address">
+              <div className="race-address race-li">
                 <b>Location</b>
                 <br />
                 {race.race.address.street}
                 <br />
                 {race.race.address.city}, {race.race.address.state} {race.race.address.zipcode}
               </div>
-              <div className="signUp">
-                <a href={race.race.url} target="_blank" rel="noopener noreferrer">
-                  <Button label="Sign up" className="race-btn btn" />
-                </a>
-              </div>
-            </Fieldset>
+            </Card>
           ))}
         </div>
       </div>

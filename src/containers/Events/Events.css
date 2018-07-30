@@ -34,22 +34,34 @@
 }
 
 .race-card {
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: var(--dark);
   color: var(--primary);
+  display: grid;
+  align-items: space-between;
 }
 
 .event-listings {
   padding-top: 8px;
 }
 
-.race-address, .signUp {
+.race-details {
+  margin-top: 30px;
+}
+
+.race-address {
   margin-top: 20px;
+}
+
+.signUp {
+  margin-top: 10px;
 }
 
 .race-btn {
   background-color: #25274D !important;
+  max-width: 50%;
 }
+
 
 /* Have sign up button for each race span the width of its container 100%. */
 .ui-button {
