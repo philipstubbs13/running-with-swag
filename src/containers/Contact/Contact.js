@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
+// import Firebase
+import firebase from '../../firebase-config';
 // import css
 import './Contact.css';
 
@@ -11,6 +13,10 @@ import './Contact.css';
 class Contact extends Component {
   constructor() {
     super();
+
+    console.log(firebase.name);
+    console.log(firebase.database());
+
     this.state = {
       name: '',
       nameError: '',
@@ -21,7 +27,20 @@ class Contact extends Component {
       message: '',
       messageError: '',
       formSuccess: '',
+      messagesRef: firebase.database().ref('messages'),
     };
+    console.log(this.state.messagesRef);
+  }
+
+  // Save message to firebase
+  saveMessage = (name, email, subject, message) => {
+    var  newMessageRef = this.state.messagesRef.push();
+    newMessageRef.set({
+        name: name,
+        email: email,
+        subject: subject,
+        message: message
+    });
   }
 
   // On click handler for when user trys to submit contact form
@@ -65,12 +84,8 @@ class Contact extends Component {
       console.log('Form valid.');
       console.log(`Name: ${name}. Email: ${email}.`);
       console.log(`Subject: ${subject}. Message: ${message}`);
-      this.props.firebase.ref('feedback').push({
-        name,
-        email,
-        subject,
-        message,
-      });
+      // Save message
+      this.saveMessage(name, email, subject, message);
       this.setState({
         formSuccess: 'Thanks for the message! We will get back to you within 48 hours.',
         name: '',
