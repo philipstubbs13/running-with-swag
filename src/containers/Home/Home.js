@@ -17,7 +17,7 @@ class Home extends Component {
         {/* Top header on homae page. */}
         <div className="home-header">
           <h1>Running with Swag</h1>
-          <p>A site created by runners and for runners. Check out the latest running events, race reviews, running tips, product reviews, and more.</p>
+          <p>A site created by runners, for runners. Check out the latest running events, race reviews, running tips, product reviews, and more.</p>
         </div>
         <header className="showcase">
           {/* Background image is defined in the Home.css file. */}

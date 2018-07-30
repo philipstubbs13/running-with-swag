@@ -7,8 +7,9 @@ import { Button } from 'primereact/button';
 import { Link } from 'react-router-dom';
 // import css
 import './About.css';
-// import image
+// import images
 import Runner from '../../images/runner_bridge.jpg';
+import Shoes from '../../images/shoes.jpg';
 
 class About extends Component {
   render() {
@@ -16,6 +17,7 @@ class About extends Component {
       <div className="about-container">
         <div className="about-image-div">
           <img src={Runner} alt="runner stretching on bridge" className="about-image" />
+          <img src={Shoes} alt="shoes" className="about-image" />
         </div>
         <Fieldset legend="About this site" className="about-content">
           <p>
