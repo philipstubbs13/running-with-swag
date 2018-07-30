@@ -37,7 +37,7 @@ class Home extends Component {
           <p>We’d love to hear from you! Please contact us by clicking the link below and entering your comment or question in the provided form.</p>
           <p>Don't hesitate to ask a question, drop a comment, or provide feedback regarding running or anything posted on this site.</p>
           <Link to="/contact">
-            <Button label="Contact" className="btn home-btn" />
+            <Button label="Contact" className="btn home-btn contact-home-btn" />
           </Link>
         </Card>
         {/* Find races card */}
