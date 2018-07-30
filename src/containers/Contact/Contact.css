@@ -72,8 +72,14 @@
     grid-area: button;
 }
 
+/* Contact form - CSS for success message that appears when form is submitted and saved to db successfully. */
 .form-success-message {
   grid-area: success;
+  text-align: center;
+  padding: 10px;
+  background: #79c879;
+  color: #fff;
+  margin-top: 10px;
 }
 
 /* Media Query - 700px screen or smaller */

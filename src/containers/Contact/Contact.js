@@ -14,9 +14,6 @@ class Contact extends Component {
   constructor() {
     super();
 
-    console.log(firebase.name);
-    console.log(firebase.database());
-
     this.state = {
       name: '',
       nameError: '',
@@ -28,6 +25,7 @@ class Contact extends Component {
       messageError: '',
       formSuccess: '',
       messagesRef: firebase.database().ref('messages'),
+      formSuccessMessageClass: '',
     };
   }
 
@@ -50,7 +48,7 @@ class Contact extends Component {
     // ES6 destructuring
     const {
       name, nameError, email, emailError, subject,
-      subjectError, message, messageError, formSuccess,
+      subjectError, message, messageError, formSuccess, formSuccessMessageClass,
     } = this.state;
 
     // If name field is blank, show validation error
@@ -81,18 +79,24 @@ class Contact extends Component {
       });
     } else {
       // Save message to backend database if form is filled out.
-      console.log('Form valid.');
-      console.log(`Name: ${name}. Email: ${email}.`);
-      console.log(`Subject: ${subject}. Message: ${message}`);
       // Save message
       this.saveMessage(name, email, subject, message);
       this.setState({
         formSuccess: 'Thanks for the message! We will get back to you shortly.',
+        formSuccessMessageClass: 'form-success-message',
         name: '',
         email: '',
         subject: '',
         message: '',
       });
+
+      // Hide form success message after 5 seconds
+      setTimeout(() => {
+        this.setState({
+          formSuccessMessageClass: '',
+          formSuccess: '',
+        });
+      }, 5000);
     }
   }
 
@@ -101,6 +105,7 @@ class Contact extends Component {
     const {
       name, nameError, email, emailError,
       subject, subjectError, message, messageError, formSuccess,
+      formSuccessMessageClass,
     } = this.state;
     return (
       <div className="contact-container">
@@ -155,7 +160,7 @@ class Contact extends Component {
               type="text"
               placeholder="Subject"
               value={subject}
-              onChange={(e) => this.setState({ subject: e.target.value })}
+              onChange={e => this.setState({ subject: e.target.value })}
             />
             <small className="contact-form-error">{subjectError}</small>
           </div>
@@ -169,17 +174,14 @@ class Contact extends Component {
               cols={30}
               value={message}
               placeholder="Your message"
-              onChange={(e) => this.setState({ message: e.target.value })}
+              onChange={e => this.setState({ message: e.target.value })}
               autoResize={true}
             />
             <small className="contact-form-error">{messageError}</small>
             <br />
-            <br />
             <small>* Required field</small>
+            <div className={formSuccessMessageClass}>{formSuccess}</div>
           </div>
-          <br />
-          <br />
-          <div className="form-success-message">{formSuccess}</div>
           {/* Contact form - Send/Submit button */}
           <Button
             label="Send message"
