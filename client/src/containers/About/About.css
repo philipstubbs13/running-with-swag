@@ -37,8 +37,19 @@
 }
 
 /* Media Queries */
-@media(max-width: 700px) {
+@media(max-width: 861px) {
   .about-container {
-    grid-template-columns: 1fr;
+    grid-template-areas:
+    'title title'
+    'content content'
+    'image image';
+  }
+
+  .about-title h1 {
+    font-size: 22px;
+  }
+
+  .about-title p, .about-content h1 {
+    font-size: 16px;
   }
 }

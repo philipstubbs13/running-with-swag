@@ -11,7 +11,7 @@ function Footer() {
     <div>
       <div className="footer">
         <Panel>
-          <h4>Running with Swag</h4>
+          <h1>Running with Swag</h1>
           <p>A site created by runners, for runners.</p>
           <br />
           <small>Copyright &copy; 2018</small>

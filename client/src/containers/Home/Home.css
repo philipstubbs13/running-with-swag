@@ -85,7 +85,7 @@ img {
 
 
 /* Media Queries */
-@media(max-width: 700px) {
+@media(max-width: 861px) {
     .home-container {
       grid-template-areas:
       'header header header'
@@ -95,5 +95,13 @@ img {
       'events events events'
       'blog blog blog'
       'reviews reviews reviews';
+    }
+
+    .home-header h1 {
+        font-size: 22px;
+    }
+
+    .home-header p, .card p {
+        font-size: 16px;
     }
   }
