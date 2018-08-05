@@ -9,6 +9,7 @@
 
 .about-image {
     max-width: 100%;
+    box-shadow: var(--shadow);
 }
 
 #about-image-2 {
@@ -25,6 +26,7 @@
   grid-area: content;
   padding-right: 30px;
   padding-left: 30px;
+  box-shadow: var(--shadow);
 }
 
 .about-title {
@@ -34,6 +36,7 @@
   padding-right: 30px;
   padding-left: 30px;
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
 /* Media Queries */

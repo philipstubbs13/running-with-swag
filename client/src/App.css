@@ -5,7 +5,8 @@ and can be reused in more than one place across the app. */
   --primary: #ddd;
   --dark: #29648A;
   --light: #fff;
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  /* --shadow: 0 1px 5px rgba(104, 104, 104, 0.8); */
+  --shadow: 0 1px 5px rgba(255, 254, 254, 0.8);
   --hover: #AAABB8;
   --text: #fff;
 }
@@ -46,6 +47,7 @@ body {
   padding: 10px !important;
   border: 0 !important;
   text-transform: uppercase;
+  box-shadow: var(--shadow);
 }
 
 /* CSS used when user hovers over a button in the app. */
