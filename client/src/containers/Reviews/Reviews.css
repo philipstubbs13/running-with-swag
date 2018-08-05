@@ -1,4 +1,4 @@
-/* The overall container for the reviews page. */
+/* The container div for the header of the reviews page. */
 .reviews-header-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -16,6 +16,7 @@
     text-align: center;
 }
 
+/* Small blurb about the reviews page. */
 .reviews-info {
     background-color: var(--dark);
     grid-area: info;
@@ -23,6 +24,7 @@
     color: var(--primary);
 }
 
+/* The container div for the actual review content. */
 .reviews-content-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

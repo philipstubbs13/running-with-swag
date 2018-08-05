@@ -42,12 +42,8 @@ class About extends Component {
           in May 2018, and I have been wanting to create a site like this for quite some
           time now. Now that I have graduated, I thought now would be a good time to start
           it up. This site's development will be ongoing and open source. So, if you are a
-          runner and/or web developer and would like to contribute to this project, contact
-          me using the link below.
+          runner and/or web developer and would like to contribute to this project, don't hesitate to reach out and contact me.
           </p>
-          <Link to="/contact">
-            <Button label="Contact" className="btn home-btn" />
-          </Link>
         </Fieldset>
       </div>
     );
