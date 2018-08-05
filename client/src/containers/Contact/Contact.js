@@ -111,10 +111,11 @@ class Contact extends Component {
       <div className="contact-container">
         {/* General information about contacting us goes here. */}
         <div className="contact-content">
-          <h1><i className="fas fa-envelope"></i> Contact us today</h1>
-          <p>We'd love to hear from you!
-            Contact us if you have a question or comment
-            regarding something you saw on the site.
+          <h1><i className="fas fa-envelope"></i> Contact me today</h1>
+          <p>I'd love to hear from you!
+            Contact me if you have a question or comment
+            regarding something you saw on the site or if you would like
+            to contribute to this open source project.
           </p>
           <p>If you have any ideas to make this site better,
             don't hesitate to reach out. Your feedback is greatly appreciated!

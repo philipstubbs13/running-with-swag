@@ -1,19 +1,39 @@
-
-
 .about-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 30px;
+    grid-template-areas:
+    'image title'
+    'image content';
 }
 
 .about-image {
     max-width: 100%;
-    margin-top: 20px;
+}
+
+#about-image-2 {
+  margin-top: 20px;
+}
+
+.about-image-div {
+  grid-area: image;
 }
 
 .about-content {
   background-color: var(--dark);
   color: var(--primary);
+  grid-area: content;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.about-title {
+  background-color: var(--dark);
+  color: var(--primary);
+  grid-area: title;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
 }
 
 /* Media Queries */

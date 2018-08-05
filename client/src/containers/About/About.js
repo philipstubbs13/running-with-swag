@@ -1,10 +1,5 @@
 // import React
 import React, { Component } from 'react';
-// import UI components from PrimeReact
-import { Fieldset } from 'primereact/fieldset';
-import { Button } from 'primereact/button';
-// import third party linking library to link pages.
-import { Link } from 'react-router-dom';
 // import css
 import './About.css';
 // import images
@@ -17,9 +12,13 @@ class About extends Component {
       <div className="about-container">
         <div className="about-image-div">
           <img src={Runner} alt="runner stretching on bridge" className="about-image" />
-          <img src={Shoes} alt="shoes" className="about-image" />
+          <img src={Shoes} alt="shoes" className="about-image" id="about-image-2" />
         </div>
-        <Fieldset legend="About this site" className="about-content">
+        <div className="about-title">
+          <h1>About Running with Swag</h1>
+          <p>A site created by runners, for runners.</p>
+        </div>
+        <div className="about-content">
           <p>
           I created this site because I love to run. Running is my passion.
           When I run, I feel God's strength in my legs, and that's why I continue
@@ -42,9 +41,10 @@ class About extends Component {
           in May 2018, and I have been wanting to create a site like this for quite some
           time now. Now that I have graduated, I thought now would be a good time to start
           it up. This site's development will be ongoing and open source. So, if you are a
-          runner and/or web developer and would like to contribute to this project, don't hesitate to reach out and contact me.
+          runner and/or web developer and would like to contribute to this project,
+          don't hesitate to reach out and contact me.
           </p>
-        </Fieldset>
+        </div>
       </div>
     );
   }
