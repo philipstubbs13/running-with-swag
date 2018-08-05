@@ -6,14 +6,28 @@ const api = {
   // Grabs races from the RunSignUp site using the the RunSignUp Race API.
   getRaces: function (zipcode, radius, event_type) {
     // API base url
-    const BASEURL = ' http://runsignup.com/Rest/races/?format=json&events=T&race_headings=T&race_links=T&include_waiver=T&include_event_days=T&page=1&results_per_page=50&sort=date+ASC&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&distance_units=K';
+    const BASEURL = ' https://runsignup.com/Rest/races/?format=json&events=T&race_headings=T&race_links=T&include_waiver=T&include_event_days=T&page=1&results_per_page=50&sort=date+ASC&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&distance_units=K';
     // Affiliate token
     const AFLT_TOKEN = process.env.RACE_AFLT_TOKEN;
     // API key
     const APIKEY = '&api_key=' + process.env.RACE_API_KEY;
     // API secret
     const APISECRET = '&api_secret=' + process.env.RACE_API_SECRET;
-    return axios.get(BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + event_type + '&zipcode=' + zipcode + '&radius=' + radius + APIKEY + APISECRET);
+    const myInit = {
+      method: 'HEAD',
+      mode: 'no-cors',
+    };
+    const testURL = BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + event_type + '&zipcode=' + zipcode + '&radius=' + radius + APIKEY + APISECRET;
+    return axios.get(testURL);
+    const myRequest = new Request(testURL, myInit);
+  
+    fetch(myRequest).then(function(response) {
+      return response;
+    }).then(function(response) {
+      console.log(response);
+    }).catch(function(e){
+      console.log(e);
+    });
   },
 
   // Query Tmblr API

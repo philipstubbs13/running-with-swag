@@ -24,8 +24,11 @@ import Contact from './containers/Contact';
 import Reviews from './containers/Reviews';
 // import Events page
 import Events from './containers/Events';
+// import Login page
+import Login from './containers/Login';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -40,6 +43,7 @@ class App extends Component {
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/reviews" component={Reviews} />
                 <Route exact path="/contact" component={Contact} />
+                <Route exact path="/login" component={Login} />
               </Switch>
             </div>
             <Footer />

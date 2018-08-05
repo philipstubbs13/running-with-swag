@@ -11,5 +11,22 @@
     "express": "^4.16.3",
     "mongoose": "^5.2.5",
     "path": "^0.12.7"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seedDB.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "installDeps": "yarn && cd client && yarn",
+    "prepare": "cd client && yarn install && yarn build"
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "nodemon": "^1.18.3"
   }
 }

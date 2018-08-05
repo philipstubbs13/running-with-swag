@@ -1,0 +1,48 @@
+/* The overall container for the reviews page. */
+.reviews-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+    'header header';
+}
+
+/* The overall header for the reviews page. */
+.reviews-page-header {
+    color: white;
+    grid-area: header;
+}
+
+/* The styling for each review card. */
+.review-card {
+    display: grid;
+    grid-gap: 20px;
+    padding: 30px;
+    grid-template-columns: repeat (2, 1fr);
+    background-color: var(--dark);
+    color: var(--light);
+    margin-top: 10px;
+    grid-template-areas:
+    'title title'
+    'image image'
+    'review review';
+}
+
+/* The styling for the title of the review that is posted. */
+.review-title {
+    grid-area: title;
+}
+
+/* The styling for the image associated with the review. */
+.review-image {
+    grid-area: image;
+    max-width: 100%;
+    height: 200px;
+    border: 3px solid #25274D;
+    box-shadow: var(--shadow);
+}
+
+/* The actual text of the review written in paragraph format. */
+.review-text {
+    grid-area: review;
+} 

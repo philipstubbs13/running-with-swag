@@ -1,5 +1,6 @@
 // import React
 import React, { Component } from 'react';
+import axios from 'axios';
 // import UI components from PrimeReact.
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
@@ -22,6 +23,8 @@ class Events extends Component {
       eventTypeError: '',
       races: [],
       visible: false,
+      data: [],
+      error: '',
     };
 
     this.onZipRadiusChange = this.onZipRadiusChange.bind(this);
@@ -31,13 +34,52 @@ class Events extends Component {
   }
 
   componentDidMount() {
-    api.getRaces(55337, 30, 'running_race')
-      .then((res) => {
-        console.log(res.data);
-        this.setState({ races: res.data.races });
-        console.log('Races retrieved from API and stores in state:', this.state.races);
-      });
+    // api.getRaces(55337, 30, 'running_race')
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     this.setState({ races: res.data.races });
+    //     console.log('Races retrieved from API and stores in state:', this.state.races);
+    //   });
+    // API base url
+    const BASEURL = ' https://runsignup.com/Rest/races/?format=json&events=T&race_headings=T&race_links=T&include_waiver=T&include_event_days=T&page=1&results_per_page=50&sort=date+ASC&only_partner_races=F&search_start_date_only=F&only_races_with_results=F&distance_units=K';
+    // Affiliate token
+    const AFLT_TOKEN = process.env.RACE_AFLT_TOKEN;
+    // API key
+    const APIKEY = '&api_key=' + process.env.RACE_API_KEY;
+    // API secret
+    const APISECRET = '&api_secret=' + process.env.RACE_API_SECRET;
+    const myInit = {
+      method: 'HEAD',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      },
+    };
+    const testURL = BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + 'running_race' + '&zipcode=' + '55337' + '&radius=' + 30 + 'A0WzXp5Byj0Y6cwaysxHUZ1CzP9Ybl6E7' + '2GpUF3yO3WbSaDAZbFtRmEwYj6QsoJJG';
+      const myRequest = new Request(testURL, myInit);
+      console.log(testURL);
+  
+    // axios.get(testURL)
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     this.setState({ races: res.data.races });
+    //     console.log('Races retrieved from API and stores in state:', this.state.races);
+    //   });
+
+    fetch(testURL, {
+      method:'GET',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-type':'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Origin': 'https://localhost:3000',
+      },
+      // body:JSON.stringify({title:title, body:body})
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
   }
+
 
   onZipRadiusChange(e) {
     this.setState({ zipRadius: e.value });
