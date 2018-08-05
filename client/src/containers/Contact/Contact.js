@@ -82,12 +82,16 @@ class Contact extends Component {
       // Save message
       this.saveMessage(name, email, subject, message);
       this.setState({
-        formSuccess: 'Thanks for the message! We will get back to you shortly.',
+        formSuccess: 'Thanks for the message! I will get back to you shortly.',
         formSuccessMessageClass: 'form-success-message',
         name: '',
         email: '',
         subject: '',
         message: '',
+        nameError: '',
+        emailError: '',
+        subjectError: '',
+        messageError: '',
       });
 
       // Hide form success message after 5 seconds
