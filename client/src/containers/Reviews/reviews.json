@@ -3,30 +3,40 @@
         "id": 1,
         "title": "Neptune Bottle",
         "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
-        "image": "../../images/bottle.jpg"
+        "link": "https://www.amazon.com/Neptune-Bottle-Vacuum-Insulated-Stainless/dp/B06XK9TWRL",
+        "link_text": "View at Amazon.com",
+        "image": "https://lh3.googleusercontent.com/a4safcpGic3ulTnuXvtCOa3hL3OenRy0V23MD0KmzG7_JPNPVJbu1jmM2VaCCIg3Iaqjx0Dsv1noVMvLtYFAM4GnXuHwcFV8_pbICnkN8iF9nRy3vnpaSCzQTRSAtLCxd7mqI54w5W0xXp8LVzIQuhueR23a_E5cDi05lUd1KgDaGZPBypDaMKY2P4icepyeGQA7Lol_OGiQeRaQheYg9L_zKOuFzUiDIaRaG61D_P8TAk25fasBvGYzTkuh-Z_ME89kTYsEa-15FVNSXd6Ao8H8dSGZwk10YHbZbbLht0NMJ7OLE7jKo8TLqrctWhjbP4p2lA1qoliW1ZL_FBI-irbHHa-ArPygQ0IzUR2nvF9Vw4GVKYU5bJ-Yf6gXv8qpfmeUClbaHHSHvisMi9UXSWwvgPjmCikuKCP3fbrGFojzXlG9fFJ9uF4nW796voPuEeyha2SaWKZBXnGg-0FCbBpHhF2c3q3oRVYriKx9HDMMAYo2I5ZZXyJ8PGyfEqkuqNvB5XulJ8-u8_1In9SCePrKlXl5-vXY8cNKuiccSaL0CKe2E_NBorHZN0kzYj0U4v-c0t84dEpIvBupjC8e8Gec_62Zs9JmcFj09uM=w269-h202-no"
     }, 
     {
         "id": 2,
         "title": "Massage Stick",
         "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
-        "image": "../../images/bottle.jpg"
+        "link": "https://www.walmart.com/ip/Massage-Stick/46106676",
+        "link_text": "View at Walmart.com",
+        "image": "https://lh3.googleusercontent.com/a4safcpGic3ulTnuXvtCOa3hL3OenRy0V23MD0KmzG7_JPNPVJbu1jmM2VaCCIg3Iaqjx0Dsv1noVMvLtYFAM4GnXuHwcFV8_pbICnkN8iF9nRy3vnpaSCzQTRSAtLCxd7mqI54w5W0xXp8LVzIQuhueR23a_E5cDi05lUd1KgDaGZPBypDaMKY2P4icepyeGQA7Lol_OGiQeRaQheYg9L_zKOuFzUiDIaRaG61D_P8TAk25fasBvGYzTkuh-Z_ME89kTYsEa-15FVNSXd6Ao8H8dSGZwk10YHbZbbLht0NMJ7OLE7jKo8TLqrctWhjbP4p2lA1qoliW1ZL_FBI-irbHHa-ArPygQ0IzUR2nvF9Vw4GVKYU5bJ-Yf6gXv8qpfmeUClbaHHSHvisMi9UXSWwvgPjmCikuKCP3fbrGFojzXlG9fFJ9uF4nW796voPuEeyha2SaWKZBXnGg-0FCbBpHhF2c3q3oRVYriKx9HDMMAYo2I5ZZXyJ8PGyfEqkuqNvB5XulJ8-u8_1In9SCePrKlXl5-vXY8cNKuiccSaL0CKe2E_NBorHZN0kzYj0U4v-c0t84dEpIvBupjC8e8Gec_62Zs9JmcFj09uM=w269-h202-no"
     }, 
     {
         "id": 3,
         "title": "Savage Dan Patch Days 5K",
         "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
-        "image": "../../images/bottle.jpg"
+        "link": "http://www.danpatchdays.org/schedule-of-events/5k-pace-1-mile-club-run/",
+        "link_txt": "View race website",
+        "image": "https://lh3.googleusercontent.com/a4safcpGic3ulTnuXvtCOa3hL3OenRy0V23MD0KmzG7_JPNPVJbu1jmM2VaCCIg3Iaqjx0Dsv1noVMvLtYFAM4GnXuHwcFV8_pbICnkN8iF9nRy3vnpaSCzQTRSAtLCxd7mqI54w5W0xXp8LVzIQuhueR23a_E5cDi05lUd1KgDaGZPBypDaMKY2P4icepyeGQA7Lol_OGiQeRaQheYg9L_zKOuFzUiDIaRaG61D_P8TAk25fasBvGYzTkuh-Z_ME89kTYsEa-15FVNSXd6Ao8H8dSGZwk10YHbZbbLht0NMJ7OLE7jKo8TLqrctWhjbP4p2lA1qoliW1ZL_FBI-irbHHa-ArPygQ0IzUR2nvF9Vw4GVKYU5bJ-Yf6gXv8qpfmeUClbaHHSHvisMi9UXSWwvgPjmCikuKCP3fbrGFojzXlG9fFJ9uF4nW796voPuEeyha2SaWKZBXnGg-0FCbBpHhF2c3q3oRVYriKx9HDMMAYo2I5ZZXyJ8PGyfEqkuqNvB5XulJ8-u8_1In9SCePrKlXl5-vXY8cNKuiccSaL0CKe2E_NBorHZN0kzYj0U4v-c0t84dEpIvBupjC8e8Gec_62Zs9JmcFj09uM=w269-h202-no"
     }, 
     {
         "id": 4,
         "title": "Apple Valley Freedom Days 5 Mile Race",
         "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
-        "image": "../../images/bottle.jpg"
+        "link": "https://www.avfreedomdays.com/fun-run-info-registration/",
+        "link_text": "View race website",
+        "image": "https://lh3.googleusercontent.com/a4safcpGic3ulTnuXvtCOa3hL3OenRy0V23MD0KmzG7_JPNPVJbu1jmM2VaCCIg3Iaqjx0Dsv1noVMvLtYFAM4GnXuHwcFV8_pbICnkN8iF9nRy3vnpaSCzQTRSAtLCxd7mqI54w5W0xXp8LVzIQuhueR23a_E5cDi05lUd1KgDaGZPBypDaMKY2P4icepyeGQA7Lol_OGiQeRaQheYg9L_zKOuFzUiDIaRaG61D_P8TAk25fasBvGYzTkuh-Z_ME89kTYsEa-15FVNSXd6Ao8H8dSGZwk10YHbZbbLht0NMJ7OLE7jKo8TLqrctWhjbP4p2lA1qoliW1ZL_FBI-irbHHa-ArPygQ0IzUR2nvF9Vw4GVKYU5bJ-Yf6gXv8qpfmeUClbaHHSHvisMi9UXSWwvgPjmCikuKCP3fbrGFojzXlG9fFJ9uF4nW796voPuEeyha2SaWKZBXnGg-0FCbBpHhF2c3q3oRVYriKx9HDMMAYo2I5ZZXyJ8PGyfEqkuqNvB5XulJ8-u8_1In9SCePrKlXl5-vXY8cNKuiccSaL0CKe2E_NBorHZN0kzYj0U4v-c0t84dEpIvBupjC8e8Gec_62Zs9JmcFj09uM=w269-h202-no"
     },
     {
         "id": 5,
         "title": "Rosemount Leprechaun Days 4 Mile Race",
         "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
-        "image": "../../images/bottle.jpg"
+        "link": "http://wayzatatiming.com/roadraces/2018/Rosemount/4mile.html",
+        "link_text": "View race results",
+        "image": "https://lh3.googleusercontent.com/a4safcpGic3ulTnuXvtCOa3hL3OenRy0V23MD0KmzG7_JPNPVJbu1jmM2VaCCIg3Iaqjx0Dsv1noVMvLtYFAM4GnXuHwcFV8_pbICnkN8iF9nRy3vnpaSCzQTRSAtLCxd7mqI54w5W0xXp8LVzIQuhueR23a_E5cDi05lUd1KgDaGZPBypDaMKY2P4icepyeGQA7Lol_OGiQeRaQheYg9L_zKOuFzUiDIaRaG61D_P8TAk25fasBvGYzTkuh-Z_ME89kTYsEa-15FVNSXd6Ao8H8dSGZwk10YHbZbbLht0NMJ7OLE7jKo8TLqrctWhjbP4p2lA1qoliW1ZL_FBI-irbHHa-ArPygQ0IzUR2nvF9Vw4GVKYU5bJ-Yf6gXv8qpfmeUClbaHHSHvisMi9UXSWwvgPjmCikuKCP3fbrGFojzXlG9fFJ9uF4nW796voPuEeyha2SaWKZBXnGg-0FCbBpHhF2c3q3oRVYriKx9HDMMAYo2I5ZZXyJ8PGyfEqkuqNvB5XulJ8-u8_1In9SCePrKlXl5-vXY8cNKuiccSaL0CKe2E_NBorHZN0kzYj0U4v-c0t84dEpIvBupjC8e8Gec_62Zs9JmcFj09uM=w269-h202-no"
     }
 ]

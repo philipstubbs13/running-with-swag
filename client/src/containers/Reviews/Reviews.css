@@ -1,16 +1,33 @@
 /* The overall container for the reviews page. */
-.reviews-container {
+.reviews-header-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
     grid-template-areas:
-    'header header';
+    'header info info';
 }
 
 /* The overall header for the reviews page. */
 .reviews-page-header {
     color: white;
     grid-area: header;
+    background-color: var(--dark);
+    padding: 30px;
+    text-align: center;
+}
+
+.reviews-info {
+    background-color: var(--dark);
+    grid-area: info;
+    padding: 30px;
+    color: var(--primary);
+}
+
+.reviews-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 20px;
 }
 
 /* The styling for each review card. */
@@ -25,7 +42,8 @@
     grid-template-areas:
     'title title'
     'image image'
-    'review review';
+    'review review'
+    'link link';
 }
 
 /* The styling for the title of the review that is posted. */
@@ -46,3 +64,9 @@
 .review-text {
     grid-area: review;
 } 
+
+/* Styling for review button */
+.review-btn {
+    background-color: #25274D !important;
+    grid-area: link;
+}
