@@ -54,11 +54,11 @@ class Blog extends Component {
           <div className="entries">
             {posts.map(post => (
               <div className="blog-post" key={post.id}>
-                <span className="tags">
+                <ul className="tags">
                   {post.tags.map(tag => (
-                    <span className="blog-tag" key={post.tags.indexOf(tag)}>#{tag}</span>
+                    <li className="blog-tag" key={post.tags.indexOf(tag)}>#{tag}</li>
                   ))}
-                </span>
+                </ul>
                 <div className="blog-summary">
                   <h1>{post.summary}</h1>
                 </div>
@@ -66,7 +66,7 @@ class Blog extends Component {
                   <div dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
                 <a href={post.post_url} target="_blank" rel="noopener noreferrer">
-                  <Button label="Go to blog to like and leave a comment." className="btn read-more-btn" />
+                  <Button label="like and leave a comment" className="btn read-more-btn" />
                 </a>
               </div>
             ))};

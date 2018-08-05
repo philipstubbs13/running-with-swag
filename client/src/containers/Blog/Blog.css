@@ -31,9 +31,8 @@
   padding: 1rem;
   grid-template-columns: 1fr;
   grid-template-areas:
-  'tags tags'
   'summary summary'
-  'content content'
+  'content tags'
   'button button';
 }
 
@@ -83,9 +82,36 @@
   /* CSS for blog tags */
   .blog-tag {
     color: var(--primary);
-    margin-top: 5px;
-    padding: 10px;
-    text-align: center;
-
+    padding: 5px;
+    list-style-type: none;
   }
+
+/* Media Query - 1080px screen or smaller */
+@media(max-width: 1080px) {
+  .about-blog h1, .blog-summary h1 {
+    font-size: 22px;
+  }
+}
+
+/* Media Query - 861px screen or smaller */
+/* Blog page is one column with blogs stacked on top of one another. */
+@media(max-width: 861px) {
+  .blog-container {
+    grid-template-areas:
+    'sidebar sidebar sidebar'
+    'main main main'
+  }
+
+  .blog-post {
+    grid-template-areas:
+    'summary summary'
+    'content content'
+    'tags tags'
+    'button button';
+  }
+
+  .blog-content {
+    font-size: 16px;
+  }
+}
 
