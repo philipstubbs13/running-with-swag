@@ -25,7 +25,8 @@
   grid-gap: 30px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  'name email'
+  'name name'
+  'email email'
   'subject subject'
   'message message'
   'button button'
@@ -95,11 +96,11 @@
   /* Contact form - Fields are stacked on top of one another */
   .contact-form {
     grid-template-areas:
-    'name name name'
-    'email email email'
-    'subject subject subject'
-    'message message message'
-    'button button button';
+    'name name'
+    'email email'
+    'subject subject'
+    'message message'
+    'button button';
   }
 
   /* Fields should take up 100% width of their container */
