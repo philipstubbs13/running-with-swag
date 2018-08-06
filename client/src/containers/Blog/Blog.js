@@ -25,24 +25,24 @@ class Blog extends Component {
     } = this.state;
     api.getPosts()
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         this.setState({ posts: res.data.response.posts });
-        console.log('Posts retrieved from API and stored in state:', posts);
+        // console.log('Posts retrieved from API and stored in state:', posts);
       });
     api.getInfo()
       .then((res) => {
-        console.log(res.data);
-        console.log(res.data.response.blog.likes);
+        // console.log(res.data);
+        // console.log(res.data.response.blog.likes);
         this.setState({
           likes: res.data.response.blog.likes,
           totalposts: res.data.response.blog.posts,
           updated: res.data.response.blog.updated,
           url: res.data.response.blog.url,
         });
-        console.log(likes);
-        console.log(totalposts);
-        console.log(updated);
-        console.log(url);
+        // console.log(likes);
+        // console.log(totalposts);
+        // console.log(updated);
+        // console.log(url);
       });
   }
 

@@ -8,6 +8,8 @@ import { Button } from 'primereact/button';
 import firebase from '../../firebase-config';
 // import css
 import './Contact.css';
+// import image
+import trackImage from '../../images/start_line.jpg';
 
 // Define Contact component.
 class Contact extends Component {
@@ -116,15 +118,17 @@ class Contact extends Component {
         {/* General information about contacting us goes here. */}
         <div className="contact-content">
           <h1>Contact me</h1>
-          <p>I'd love to hear from you!
+          <p>I&apos;d love to hear from you!
             Contact me if you have a question or comment
             regarding something you saw on the site or if you would like
             to contribute to this project.
           </p>
           <p>If you have any ideas to make this site better,
-            don't hesitate to reach out. Your feedback is greatly appreciated!
+            don&apos;t hesitate to reach out. Your feedback is greatly appreciated!
           </p>
         </div>
+        {/* Image on contact page */}
+        <img src={trackImage} alt="race start line" className="contact-image" />
         {/* Contact form */}
         <form className="contact-form">
           {/* Contact form - Name field */}

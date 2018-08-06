@@ -4,10 +4,11 @@
 /* Contact form will be on the right and take up 2 fr units. */
 .contact-container {
   display: grid;
-  grid-gap: 25px;
+  grid-gap: 30px;
   grid-template-columns: 3fr 2fr 1fr;
   grid-template-areas:
-  'content form form';
+  'content form form'
+  'image form form';
 }
 
 /* Contact content information will be on the left. */
@@ -16,6 +17,13 @@
   justify-content: center;
   align-content: center;
   color: var(--text);
+}
+
+/* Image that appears on contact page */
+.contact-image {
+  grid-area: image;
+  margin-top: 0;
+  box-shadow: var(--shadow);
 }
 
 /* Contact form */
@@ -90,6 +98,7 @@
     grid-template-columns: 1fr;
     grid-template-areas:
       'content content content'
+      'image image image'
       'form form form';
   }
 

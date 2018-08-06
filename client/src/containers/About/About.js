@@ -21,7 +21,7 @@ class About extends Component {
         <div className="about-content">
           <p>
           I created this site because I love to run. Running is my passion.
-          When I run, I feel God's strength in my legs, and that's why I continue
+          When I run, I feel God&apos;s strength in my legs, and that&apos;s why I continue
           to train every day so that I can run faster and farther than ever before.
           I have always liked running since I was a kid, but in 2018, I started to train
           and run competitively in different short distance (3-6 mile) races. My ultimate
@@ -40,9 +40,9 @@ class About extends Component {
           I graduated from the University of Minnesota Full Stack Web Development program
           in May 2018, and I have been wanting to create a site like this for quite some
           time now. Now that I have graduated, I thought now would be a good time to start
-          it up. This site's development will be ongoing and open source. So, if you are a
+          it up. This site&apos;s development will be ongoing and open source. So, if you are a
           runner and/or web developer and would like to contribute to this project,
-          don't hesitate to reach out and contact me.
+          don&apos;t hesitate to reach out and contact me.
           </p>
         </div>
       </div>

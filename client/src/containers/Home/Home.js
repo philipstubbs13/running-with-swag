@@ -17,7 +17,10 @@ class Home extends Component {
         {/* Top header on homae page. */}
         <div className="home-header">
           <h1>Running with Swag</h1>
-          <p>A site created by runners, for runners. Check out the latest running events, race reviews, running tips, product reviews, and more.</p>
+          <p>A site created by runners, for runners.
+            Check out the latest running events, race reviews,
+            running tips, product reviews, and more.
+          </p>
         </div>
         <header className="showcase">
           {/* Background image is defined in the Home.css file. */}
@@ -34,8 +37,13 @@ class Home extends Component {
         </Card>
         {/* Contact card */}
         <Card title="Contact us" className="card developer">
-          <p>We’d love to hear from you! Please contact us by clicking the link below and entering your comment or question in the provided form.</p>
-          <p>Don't hesitate to ask a question, drop a comment, or provide feedback regarding running or anything posted on this site.</p>
+          <p>We’d love to hear from you! Please contact us by clicking
+            the link below and entering your comment or question in the
+            provided form.
+          </p>
+          <p>Don&apos;t hesitate to ask a question, drop a comment, or provide
+            feedback regarding running or anything posted on this site.
+          </p>
           <Link to="/contact">
             <Button label="Contact" className="btn home-btn contact-home-btn" />
           </Link>
@@ -58,7 +66,7 @@ class Home extends Component {
           <Link to="/blog">
             <Button label="Read blog" className="btn home-btn" />
           </Link>
-          <p>Read some swaggin' articles about running.
+          <p>Read some swaggin&apos; articles about running.
             Here, you will find race stories, running tips, and more.
           </p>
         </Card>
