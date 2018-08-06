@@ -16,10 +16,16 @@ class Reviews extends Component {
             <h1>Reviews</h1>
           </div>
           <div className="reviews-info">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Inventore sed consequuntur error repudiandae numquam deserunt
-            quisquam repellat libero asperiores earum nam nobis, culpa ratione
-            quam perferendis esse, cupiditate neque quas!
+            <p>
+              Here you will find reviews of different running products
+              I have purchased to help me train for upcoming races.
+              I will also post reviews of races that I have personally run.
+            </p>
+            <p>
+              Note that I am not getting paid to write these reviews. These
+              reviews are based solely on purchases I have made and on my
+              personal racing experiences.
+            </p>
           </div>
         </div>
         <div className="reviews-content-container">

@@ -5,7 +5,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
   'main main sidebar'
-  'main main sidebar'
+  'main main .'
 }
 
 /* Part of the page where the tmblr blog posts will be rendered. */
@@ -84,6 +84,11 @@
     color: var(--primary);
     padding: 5px;
     list-style-type: none;
+  }
+
+  .contribute-blog {
+    font-size: 22px;
+    text-align: center;
   }
 
 /* Media Query - 1080px screen or smaller */

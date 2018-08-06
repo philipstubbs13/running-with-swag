@@ -42,7 +42,7 @@ class About extends Component {
           time now. Now that I have graduated, I thought now would be a good time to start
           it up. This site&apos;s development will be ongoing and open source. So, if you are a
           runner and/or web developer and would like to contribute to this project,
-          don&apos;t hesitate to reach out and contact me.
+          don&apos;t hesitate to contact me.
           </p>
         </div>
       </div>

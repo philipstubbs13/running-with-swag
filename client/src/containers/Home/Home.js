@@ -28,7 +28,7 @@ class Home extends Component {
         {/* Welcome to my site card */}
         <Card title="Welcome" className="card welcome">
           <p>Welcome to <b>Running with Swag</b> - an online community for runners.
-            Whether you are a competitive runner or just run for fun, this is the site for you.
+            Whether you are a competitive runner or just a running enthusiast, this is the place for you.
           </p>
           <p>Click the button below to learn more.</p>
           <Link to="/about">
@@ -36,13 +36,13 @@ class Home extends Component {
           </Link>
         </Card>
         {/* Contact card */}
-        <Card title="Contact us" className="card developer">
-          <p>We’d love to hear from you! Please contact us by clicking
+        <Card title="Contact me" className="card developer">
+          <p>I&apos;d love to hear from you! Contact me by clicking
             the link below and entering your comment or question in the
             provided form.
           </p>
-          <p>Don&apos;t hesitate to ask a question, drop a comment, or provide
-            feedback regarding running or anything posted on this site.
+          <p>Ask a question, drop a comment, or provide
+            feedback about running or anything you see posted on this site.
           </p>
           <Link to="/contact">
             <Button label="Contact" className="btn home-btn contact-home-btn" />

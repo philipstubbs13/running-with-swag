@@ -1,6 +1,8 @@
 // Possible Blog sites to use: Tumblr.
 // import React
 import React, { Component } from 'react';
+// import third party linking library to link pages.
+import { Link } from 'react-router-dom';
 // import UI components from PrimeReact.
 import { Button } from 'primereact/button';
 // import css
@@ -77,10 +79,17 @@ class Blog extends Component {
           <div className="about-blog">
             <h1>About this blog</h1>
             <div className="blog-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
-              sed consequuntur error repudiandae numquam deserunt quisquam repellat
-              libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
-              cupiditate neque quas!
+              <p>
+                The purpose of this blog is to have a common, central place
+                for runners to share and exchange stories, tips, tricks, best practices,
+                videos, training material, and other information related to running.
+              </p>
+              <p>
+                <b>Have something to share? Contact me.</b>
+              </p>
+              <Link to="/contact">
+                <Button label="Contact" className="btn home-btn contact-home-btn" />
+              </Link>
             </div>
           </div>
         </div>
