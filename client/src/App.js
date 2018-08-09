@@ -22,8 +22,8 @@ import Blog from './containers/Blog';
 import Contact from './containers/Contact';
 // import Reviews page
 import Reviews from './containers/Reviews';
-// import Events page
-import Events from './containers/Events';
+// import Races page
+import Races from './containers/Races';
 // import Login page
 import Login from './containers/Login';
 
@@ -38,7 +38,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
-                <Route exact path="/events" component={Events} />
+                <Route exact path="/races" component={Races} />
                 <Route exact path="/blog" component={Blog} />
                 <Route exact path="/reviews" component={Reviews} />
                 <Route exact path="/contact" component={Contact} />

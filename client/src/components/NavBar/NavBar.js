@@ -19,8 +19,8 @@ class NavBar extends Component {
           <Link to="/about">
             <Button label="About" className="btn nav-link" />
           </Link>
-          <Link to="/events">
-            <Button label="Events" className="btn nav-link" />
+          <Link to="/races">
+            <Button label="Races" className="btn nav-link" />
           </Link>
           <Link to="/blog">
             <Button label="Blog" className="btn nav-link" />
