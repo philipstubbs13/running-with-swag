@@ -45,9 +45,9 @@ class Events extends Component {
     // Affiliate token
     const AFLT_TOKEN = process.env.RACE_AFLT_TOKEN;
     // API key
-    const APIKEY = '&api_key=' + process.env.RACE_API_KEY;
+    const APIKEY = `&api_key=${process.env.RACE_API_KEY}`;
     // API secret
-    const APISECRET = '&api_secret=' + process.env.RACE_API_SECRET;
+    const APISECRET = `&api_secret=${process.env.RACE_API_SECRET}`;
     const myInit = {
       method: 'HEAD',
       headers: {
@@ -55,7 +55,10 @@ class Events extends Component {
         'Content-Type': 'application/json',
       },
     };
-    const testURL = BASEURL + '&aflt_token=' + AFLT_TOKEN + '&event_type=' + 'running_race' + '&zipcode=' + '55337' + '&radius=' + 30 + 'A0WzXp5Byj0Y6cwaysxHUZ1CzP9Ybl6E7' + '2GpUF3yO3WbSaDAZbFtRmEwYj6QsoJJG';
+    // Active Network API
+    // http://api.amp.active.com/v2/search?query=running&category=event&start_date=2018-08-05..&near=San%20Diego,CA,US&radius=50&api_key=zhaes29hmjuvydrktdavkqqb
+    const proxyURL = "https://cors-anywhere.herokuapp.com/";
+    const testURL = BASEURL + "&aflt_token=" + AFLT_TOKEN + "&event_type=" + "running_race" + "&zipcode=" + "55337" + "&radius=" + "30" + "A0WzXp5Byj0Y6cwaysxHUZ1CzP9Ybl6E7" + "2GpUF3yO3WbSaDAZbFtRmEwYj6QsoJJG";
       const myRequest = new Request(testURL, myInit);
       console.log(testURL);
   
@@ -66,13 +69,12 @@ class Events extends Component {
     //     console.log('Races retrieved from API and stores in state:', this.state.races);
     //   });
 
-    fetch(testURL, {
+    fetch(proxyURL + testURL, {
       method:'GET',
       headers: {
         'Accept': 'application/json, text/plain, */*',
-        'Content-type':'application/json',
+        'Content-type': 'application/json',
         'Access-Control-Allow-Origin': '*',
-        'Origin': 'https://localhost:3000',
       },
       // body:JSON.stringify({title:title, body:body})
     })

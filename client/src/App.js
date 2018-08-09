@@ -28,7 +28,6 @@ import Events from './containers/Events';
 import Login from './containers/Login';
 
 class App extends Component {
-
   render() {
     return (
       <div className="App">
