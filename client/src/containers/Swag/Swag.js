@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 // import UI components from PrimeReact;
 import { Button } from 'primereact/button';
 // import css
-import './Reviews.css';
+import './Swag.css';
 // import reviews
-import reviews from './reviews.json';
+import swag from './swag.json';
 
-class Reviews extends Component {
+class Swag extends Component {
   render() {
     return (
       <div className="reviews-container">
         <div className="reviews-header-container">
           <div className="reviews-page-header">
-            <h1>Reviews</h1>
+            <h1>Swag</h1>
           </div>
           <div className="reviews-info">
             <p>
@@ -29,13 +29,13 @@ class Reviews extends Component {
           </div>
         </div>
         <div className="reviews-content-container">
-          {reviews.map(review => (
-            <div className="review-card" key={review.id}>
-              <h2 className="review-title">{review.title}</h2>
-              <img src={review.image} className="review-image" alt={review.title} />
-              <div className="review-text">{review.review}</div>
-              <a href={review.link} target="_blank" rel="noopener noreferrer">
-                <Button label={review.link_text} className="btn review-btn" />
+          {swag.map(swag => (
+            <div className="review-card" key={swag.id}>
+              <h2 className="review-title">{swag.title}</h2>
+              <img src={swag.image} className="review-image" alt={swag.title} />
+              <div className="review-text">{swag.review}</div>
+              <a href={swag.link} target="_blank" rel="noopener noreferrer">
+                <Button label={swag.link_text} className="btn review-btn" />
               </a>
             </div>
           ))};
@@ -45,4 +45,4 @@ class Reviews extends Component {
   }
 }
 
-export default Reviews;
+export default Swag;

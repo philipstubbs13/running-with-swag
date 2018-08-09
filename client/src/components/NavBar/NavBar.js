@@ -25,8 +25,8 @@ class NavBar extends Component {
           <Link to="/blog">
             <Button label="Blog" className="btn nav-link" />
           </Link>
-          <Link to="/reviews">
-            <Button label="Reviews" className="btn nav-link" />
+          <Link to="/swag">
+            <Button label="Swag" className="btn nav-link" />
           </Link>
           <Link to="/contact">
             <Button label="Contact" className="btn nav-link" />

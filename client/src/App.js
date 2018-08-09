@@ -21,7 +21,7 @@ import Blog from './containers/Blog';
 // import Contact page
 import Contact from './containers/Contact';
 // import Reviews page
-import Reviews from './containers/Reviews';
+import Swag from './containers/Swag';
 // import Races page
 import Races from './containers/Races';
 // import Login page
@@ -40,7 +40,7 @@ class App extends Component {
                 <Route exact path="/about" component={About} />
                 <Route exact path="/races" component={Races} />
                 <Route exact path="/blog" component={Blog} />
-                <Route exact path="/reviews" component={Reviews} />
+                <Route exact path="/swag" component={Swag} />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/login" component={Login} />
               </Switch>
