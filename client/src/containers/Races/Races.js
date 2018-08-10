@@ -14,18 +14,25 @@ class Races extends Component {
           <h1>Race Stories</h1>
         </div>
         <div className="side">
-          <img src={runnerDude} alt="runner dude" className="showcase" />
         </div>
         <div className="main">
           <div className="race-content">
-            <h1>Race title</h1>
-            <p>August 10, 2018</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+            <h1 className="race-post-title">Race title</h1>
+            <p className="race-post-date">August 10, 2018</p>
+            <img src={runnerDude} alt="runner dude" className="race-post-image" />
+            <p className="race-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
           </div>
           <div className="race-content">
-            <h1>Race title</h1>
-            <p>August 11, 2018</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+            <h1 className="race-post-title">Race title</h1>
+            <p className="race-post-date">August 10, 2018</p>
+            <img src={runnerDude} alt="runner dude" className="race-post-image" />
+            <p className="race-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+          </div>
+          <div className="race-content">
+            <h1 className="race-post-title">Race title</h1>
+            <p className="race-post-date">August 10, 2018</p>
+            <img src={runnerDude} alt="runner dude" className="race-post-image" />
+            <p className="race-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
           </div>
         </div>
       </div>
