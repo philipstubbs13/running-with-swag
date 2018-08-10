@@ -53,8 +53,8 @@ class Home extends Component {
           <Link to="/races">
             <Button label="Race stories" className="btn home-btn" />
           </Link>
-          <p>Each race I run has a unique, interesting story.
-            Read more about my adventures and journey of becoming a runner here.
+          <p>Each race has a unique, interesting story.
+            Read more about my adventures as a runner or share your own race story.
           </p>
         </Card>
         {/* Check out my blog card. */}
