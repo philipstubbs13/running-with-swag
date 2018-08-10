@@ -18,8 +18,6 @@ class Home extends Component {
         <div className="home-header">
           <h1>Running with Swag</h1>
           <p>A site created by runners, for runners.
-            Check out the latest running events, race reviews,
-            running tips, product reviews, and more.
           </p>
         </div>
         <header className="showcase">
@@ -31,7 +29,6 @@ class Home extends Component {
             Whether you are a competitive runner or just a running enthusiast,
             this is the place for you.
           </p>
-          <p>Click the button below to learn more.</p>
           <Link to="/about">
             <Button label="LEARN MORE" className="btn home-btn" />
           </Link>
@@ -68,7 +65,8 @@ class Home extends Component {
             <Button label="Read blog" className="btn home-btn" />
           </Link>
           <p>Read some swaggin&apos; articles about running.
-            Here, you will find race stories, running tips, and more.
+            Here, you will find information on a variety of topics,
+            including running tips, training, injuries, and more.
           </p>
         </Card>
         {/* Check out my product reviews card */}
@@ -78,7 +76,7 @@ class Home extends Component {
           <Link to="/reviews">
             <Button label="Check reviews" className="btn home-btn" />
           </Link>
-          <p>Check out some reviews of the latest races and running swag.
+          <p>Check out some reviews of the latest running swag.
           </p>
         </Card>
       </div>
