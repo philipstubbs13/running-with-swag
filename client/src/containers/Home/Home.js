@@ -51,13 +51,13 @@ class Home extends Component {
         </Card>
         {/* Find races card */}
         <Card className="card events">
-          <i className="fas fa-calendar-alt fa-3x" />
-          <h2>Events</h2>
-          <Link to="/events">
-            <Button label="See events" className="btn home-btn" />
+          <i className="fas fa-road fa-3x" />
+          <h2>Races</h2>
+          <Link to="/races">
+            <Button label="Race stories" className="btn home-btn" />
           </Link>
-          <p>Look for upcoming racing events in your area. 5K, 10K, 15K,
-            half marathon, full marathon, and more.
+          <p>Each race I run has a unique, interesting story.
+            Read more about my adventures and journey of becoming a runner here.
           </p>
         </Card>
         {/* Check out my blog card. */}
