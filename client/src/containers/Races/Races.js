@@ -10,7 +10,9 @@ class Races extends Component {
   render() {
     return (
       <div className="races-container">
-        <h1 className="races-header">Races</h1>
+        <div className="races-header">
+          <h1>Race Stories</h1>
+        </div>
         <div className="side">
           <img src={runnerDude} alt="runner dude" className="showcase" />
         </div>
