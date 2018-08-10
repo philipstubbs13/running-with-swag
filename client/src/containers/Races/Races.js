@@ -19,6 +19,8 @@ class Races extends Component {
       storyError: '',
       image: '',
       imageError: '',
+      name: '',
+      nameError: '',
       formSuccess: '',
       formSuccessMessageClass: '',
     };
@@ -29,7 +31,7 @@ class Races extends Component {
     const {
       title, titleError, story, storyError,
       image, imageError, formSuccess,
-      formSuccessMessageClass,
+      formSuccessMessageClass, name, nameError,
     } = this.state;
     return (
       <div className="races-container">
@@ -40,6 +42,19 @@ class Races extends Component {
           <div className="share-story">
             <h2>Share your racing story</h2>
             <form className="story-form">
+              <div id="name" className="story-form-field">
+                <label htmlFor="name">Name</label>
+                <br />
+                <InputText
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  value={name}
+                  onChange={e => this.setState({ name: e.target.value })}
+                />
+                <small className="story-form-error">{titleError}</small>
+              </div>
               <div id="story-title" className="story-form-field">
                 <label htmlFor="title">Title</label>
                 <br />
