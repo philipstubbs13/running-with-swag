@@ -26,6 +26,70 @@ class Races extends Component {
     };
   }
 
+  // On click handler for when user trys to submit story form
+  handleStorySubmit = (event) => {
+    // Prevent the form from submitting itself.
+    event.preventDefault();
+    // ES6 destructuring
+    const {
+      name, nameError, title, titleError, story,
+      storyError, image, imageError, formSuccess, formSuccessMessageClass,
+    } = this.state;
+
+    // If name field is blank, show validation error
+    if (name === '') {
+      this.setState({
+        nameError: 'Name is required',
+      });
+    }
+
+    // If title field is blank, show validation error
+    if (title === '') {
+      this.setState({
+        titleError: 'Title is required',
+      });
+    }
+
+    // If story field is blank, show validation error
+    if (story === '') {
+      this.setState({
+        storyError: 'Story is required',
+      });
+    }
+
+    // If image field is blank, show validation error
+    if (image === '') {
+      this.setState({
+        imageError: 'Image/photo is required',
+      });
+    } else {
+      // Save story to backend database if form is filled out.
+      // Save story
+      console.log('Story submitted');
+      this.setState({
+        formSuccess: 'Thanks for the message! I will get back to you shortly.',
+        formSuccessMessageClass: 'form-success-message',
+        name: '',
+        title: '',
+        story: '',
+        image: '',
+        nameError: '',
+        titleError: '',
+        imageError: '',
+        storyError: '',
+      });
+
+      // Hide form success message after 5 seconds
+      setTimeout(() => {
+        this.setState({
+          formSuccessMessageClass: '',
+          formSuccess: '',
+        });
+      }, 5000);
+    }
+  }
+
+
   render() {
     // ES6 destructuring
     const {
@@ -53,7 +117,7 @@ class Races extends Component {
                   value={name}
                   onChange={e => this.setState({ name: e.target.value })}
                 />
-                <small className="story-form-error">{titleError}</small>
+                <small className="story-form-error">{nameError}</small>
               </div>
               <div id="story-title" className="story-form-field">
                 <label htmlFor="title">Title</label>
