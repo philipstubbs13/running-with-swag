@@ -133,7 +133,7 @@ class Contact extends Component {
         <form className="contact-form">
           {/* Contact form - Name field */}
           <div id="contact-name">
-            <label htmlFor="name">Name* </label>
+            <label htmlFor="name">Name</label>
             <br />
             <InputText
               id="name"
@@ -147,7 +147,7 @@ class Contact extends Component {
           </div>
           {/* Contact form - Email field */}
           <div id="contact-email">
-            <label htmlFor="email">Email* </label>
+            <label htmlFor="email">Email</label>
             <br />
             <InputText
               id="email"
@@ -161,7 +161,7 @@ class Contact extends Component {
           </div>
           {/* Contact form - Subject field */}
           <div id="contact-subject">
-            <label htmlFor="subject">Subject*</label>
+            <label htmlFor="subject">Subject</label>
             <br />
             <InputText
               id="subject"
@@ -176,7 +176,7 @@ class Contact extends Component {
           <br />
           {/* Contact form - Message field */}
           <div id="contact-message">
-            <label htmlFor="message">Message*</label>
+            <label htmlFor="message">Message</label>
             <br />
             <InputTextarea
               rows={5}
@@ -188,7 +188,6 @@ class Contact extends Component {
             />
             <small className="contact-form-error">{messageError}</small>
             <br />
-            <small>* Required field</small>
             <div className={formSuccessMessageClass}>{formSuccess}</div>
           </div>
           {/* Contact form - Send/Submit button */}

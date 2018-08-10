@@ -12,6 +12,7 @@
     color: var(--primary);
     background-color: var(--dark);
     padding: 20px;
+    text-align: center;
 }
 
 .side {
@@ -64,11 +65,7 @@
     margin-top: 30px;
 }
 
-.story-btn {
-    background-color:
-}
-
-/* Media Query - 700px screen or smaller */
+/* Media Query - 861px screen or smaller */
 /* Races page is one column with content and form stacked on top of one another. */
 @media(max-width: 861px) {
     .races-container {

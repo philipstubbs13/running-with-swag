@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import UI components from PrimeReact.
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
-import  { InputTextarea } from 'primereact/inputtextarea';
+import { InputTextarea } from 'primereact/inputtextarea';
 // import css
 import './Races.css';
 // import image
@@ -170,7 +170,9 @@ class Races extends Component {
               />
             </form>
             <br />
-            <small>All submitted stories are reviewed by site administrator for approval before they are posted to this site.</small>
+            <small>All submitted stories are reviewed by site administrator
+                for approval before they are posted to this site.
+            </small>
           </div>
         </div>
         <div className="main">

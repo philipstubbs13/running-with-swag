@@ -72,7 +72,7 @@ class Home extends Component {
         {/* Check out my product reviews card */}
         <Card className="card reviews">
           <i className="fas fa-star fa-3x" />
-          <h2>Reviews</h2>
+          <h2>Swag</h2>
           <Link to="/reviews">
             <Button label="Check reviews" className="btn home-btn" />
           </Link>
