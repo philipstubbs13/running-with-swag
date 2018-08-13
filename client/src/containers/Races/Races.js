@@ -45,7 +45,7 @@ class Races extends Component {
     event.preventDefault();
     // ES6 destructuring
     const {
-      name, nameError, title, titleError, story,
+      title, titleError, story,
       storyError, image, imageError, formSuccess, formSuccessMessageClass,
     } = this.state;
 
@@ -73,19 +73,13 @@ class Races extends Component {
     } else {
       // Save story to backend database if form is filled out.
       // Save story
-      console.log('Story submitted');
-      console.log('name', user);
-      console.log('title', title);
-      console.log('story', story);
-      console.log('image', image);
       this.saveStory(user, title, story, image);
       this.setState({
-        formSuccess: 'Thanks for the message! I will get back to you shortly.',
+        formSuccess: 'Story posted successfully!',
         formSuccessMessageClass: 'form-success-message',
         title: '',
         story: '',
         image: '',
-        nameError: '',
         titleError: '',
         imageError: '',
         storyError: '',
@@ -174,6 +168,8 @@ class Races extends Component {
                 />
                 <small className="story-form-error">{imageError}</small>
               </div>
+              <br />
+              <div className={formSuccessMessageClass}>{formSuccess}</div>
               <br />
               <Button
                 label="Submit story"
