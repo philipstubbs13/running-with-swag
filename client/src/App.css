@@ -86,6 +86,7 @@ small {
   text-align: center;
   display: grid;
   align-content: center;
+  font-size: 18px;
 }
 
 .login {

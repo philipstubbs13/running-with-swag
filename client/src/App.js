@@ -24,8 +24,6 @@ import Contact from './containers/Contact';
 import Swag from './containers/Swag';
 // import Races page
 import Races from './containers/Races';
-// import Login page
-import Login from './containers/Login';
 // import Firebase
 import firebase, { auth, provider } from './firebase-config';
 // import image
@@ -81,40 +79,41 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div className="entire-page">
-          {this.state.user ?
-            <div>
-            <NavBar />
-            <div className="main-content-section">
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/races" component={Races} />
-                <Route exact path="/blog" component={Blog} />
-                <Route exact path="/swag" component={Swag} />
-                <Route exact path="/contact" component={Contact} />
-              </Switch>
-            </div>
-            </div>
-            :
-            <div className="main-content-section login-container">
-              <div className="login-text">
-                <h1>Welcome to Running with Swag</h1>
-                <p>An online community created by runners, for runners.
-                  Whether you are a competitive runner or just a running enthusiast,
-                  this is the place for you.
-                </p>
-                <div className="login">
-                  <p>Login with Google to continue to site.</p>
-                  <button class="loginBtn loginBtn--google" onClick={this.login}>
-                    Login with Google
-                  </button>
+            {this.state.user
+              ?
+                <div>
+                  <NavBar />
+                  <div className="main-content-section">
+                    <Switch>
+                      <Route exact path="/" component={Home} />
+                      <Route exact path="/about" component={About} />
+                      <Route exact path="/races" component={Races} />
+                      <Route exact path="/blog" component={Blog} />
+                      <Route exact path="/swag" component={Swag} />
+                      <Route exact path="/contact" component={Contact} />
+                    </Switch>
+                  </div>
                 </div>
-              </div>
-              <div className="login-image">
-                <img src={loginImage} alt="runner" id="loginImage" />
-              </div>
-            </div>
-          }
+              :
+                <div className="main-content-section login-container">
+                  <div className="login-text">
+                    <h1>Running with Swag</h1>
+                    <p>An online community created by runners, for runners.
+                      Whether you are a competitive runner or just a running enthusiast,
+                      this is the place for you.
+                    </p>
+                    <div className="login">
+                      <p>Login with Google to continue to site.</p>
+                      <button type="submit" className="loginBtn loginBtn--google" onClick={this.login}>
+                        Login with Google
+                      </button>
+                    </div>
+                  </div>
+                  <div className="login-image">
+                    <img src={loginImage} alt="runner" id="loginImage" />
+                  </div>
+                </div>
+            }
             <Footer />
           </div>
         </BrowserRouter>
