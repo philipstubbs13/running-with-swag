@@ -46,6 +46,10 @@
   grid-area: name;
 }
 
+.name-input {
+  background-color: gray;
+}
+
 /* Contact form - Email field */
 #contact-email {
   grid-area: email;

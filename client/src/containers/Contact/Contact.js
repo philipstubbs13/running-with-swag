@@ -53,6 +53,8 @@ class Contact extends Component {
       subjectError, message, messageError, formSuccess, formSuccessMessageClass,
     } = this.state;
 
+    const { user } = this.props;
+
     // If name field is blank, show validation error
     if (name === '') {
       this.setState({
@@ -82,7 +84,7 @@ class Contact extends Component {
     } else {
       // Save message to backend database if form is filled out.
       // Save message
-      this.saveMessage(name, email, subject, message);
+      this.saveMessage(user, email, subject, message);
       this.setState({
         formSuccess: 'Thanks for the message! I will get back to you shortly.',
         formSuccessMessageClass: 'form-success-message',
@@ -107,6 +109,9 @@ class Contact extends Component {
   }
 
   render() {
+    console.log(this.props.user);
+    const { user } = this.props;
+
     // ES6 destructuring
     const {
       name, nameError, email, emailError,
@@ -133,15 +138,17 @@ class Contact extends Component {
         <form className="contact-form">
           {/* Contact form - Name field */}
           <div id="contact-name">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name (read only)</label>
             <br />
             <InputText
               id="name"
               name="name"
               type="text"
               placeholder="John Smith"
-              value={name}
+              value={user}
               onChange={e => this.setState({ name: e.target.value })}
+              readOnly
+              className="name-input"
             />
             <small className="contact-form-error">{nameError}</small>
           </div>

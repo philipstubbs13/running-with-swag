@@ -88,6 +88,8 @@ class App extends Component {
       });
   }
 
+  // Passing props to a component rendered by react router.
+  // https://tylermcginnis.com/react-router-pass-props-to-components/
   render() {
     return (
       <div className="App">
@@ -113,7 +115,10 @@ class App extends Component {
                       <Route exact path="/races" component={Races} />
                       <Route exact path="/blog" component={Blog} />
                       <Route exact path="/swag" component={Swag} />
-                      <Route exact path="/contact" component={Contact} />
+                      <Route
+                        exact path="/contact"
+                        render={(props) => <Contact {...props} user={this.state.user.displayName || this.state.user.email} />}
+                      />
                     </Switch>
                   </div>
                 </div>
