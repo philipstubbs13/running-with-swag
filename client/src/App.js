@@ -38,18 +38,18 @@ class App extends Component {
     };
 
     this.login = this.login.bind(this);
-    // this.logout = this.logout.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   componentDidMount() {
     // When the user signs in, this checks the Firebase database to see
     // if they were already previously authenticated.
     // If they were, we set their user details back into the state.
-    // auth.onAuthStateChanged((user) => {
-    //   if (user) {
-    //     this.setState({ user });
-    //   }
-    // });
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      }
+    });
   }
 
   // Handles authentication with firebase.
@@ -66,10 +66,24 @@ class App extends Component {
   login() {
     auth.signInWithPopup(provider)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         const user = result.user;
         this.setState({
           user,
+        });
+      });
+  }
+
+  // We call the signOut method on auth,
+  // and then using the Promise API
+  // we remove the user from our application's state.
+  // With this.state.user now equal to null,
+  // the user will see the Log In button instead of the Log Out button.
+  logout() {
+    auth.signOut()
+      .then(() => {
+        this.setState({
+          user: null,
         });
       });
   }
@@ -82,6 +96,15 @@ class App extends Component {
             {this.state.user
               ?
                 <div>
+                  <div className="auth-status">
+                    <div className="profile-info">
+                      Welcome {this.state.user.displayName || this.state.user.email}
+                      <img src={this.state.user.photoURL} />
+                    </div>
+                    <div className="logout">
+                      <button type="submit" onClick={this.logout} className="btn nav-link logout-btn">Log Out</button>
+                    </div>
+                  </div>
                   <NavBar />
                   <div className="main-content-section">
                     <Switch>
