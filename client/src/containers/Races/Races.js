@@ -211,8 +211,9 @@ class Races extends Component {
         <div className="main">
           {stories.map((post) => {
             return (
-              <div className="race-content">
+              <div className="race-content" key={post.id}>
                 <h1 className="race-post-title">{post.title}</h1>
+                <p className="race-post-author">By {post.user}</p>
                 <p className="race-post-date">August 10, 2018</p>
                 <img src={post.image} alt={post.title} className="race-post-image" />
                 <p className="race-post-text">{post.story}</p>

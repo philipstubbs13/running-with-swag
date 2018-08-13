@@ -33,12 +33,17 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
     'title title'
+    'author author'
     'date date'
     'image text';
 }
 
 .race-post-title {
     grid-area: title;
+}
+
+.race-post-author {
+    grid-area: author;
 }
 
 .race-post-date {
