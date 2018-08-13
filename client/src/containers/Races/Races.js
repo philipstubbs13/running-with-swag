@@ -24,7 +24,30 @@ class Races extends Component {
       formSuccess: '',
       formSuccessMessageClass: '',
       storiesRef: firebase.database().ref('stories'),
+      stories: [],
     };
+  }
+
+  componentDidMount() {
+    // Grab stories from firebase database and add them to this.state.stories array.
+    const storiesRef = firebase.database().ref('stories');
+    storiesRef.on('value', (snapshot) => {
+      let stories = snapshot.val();
+      let newState = [];
+      for (const story in stories) {
+        newState.push({
+          id: story,
+          title: stories[story].title,
+          user: stories[story].name,
+          image: stories[story].image,
+          story: stories[story].story,
+        });
+      }
+      this.setState({
+        stories: newState,
+      });
+      console.log(stories);
+    });
   }
 
   // Save story to firebase
@@ -101,7 +124,7 @@ class Races extends Component {
     const {
       title, titleError, story, storyError,
       image, imageError, formSuccess,
-      formSuccessMessageClass,
+      formSuccessMessageClass, stories,
     } = this.state;
 
     const { user } = this.props;
@@ -186,24 +209,16 @@ class Races extends Component {
           </div>
         </div>
         <div className="main">
-          <div className="race-content">
-            <h1 className="race-post-title">Race title</h1>
-            <p className="race-post-date">August 10, 2018</p>
-            <img src={runnerDude} alt="runner dude" className="race-post-image" />
-            <p className="race-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-          </div>
-          <div className="race-content">
-            <h1 className="race-post-title">Race title</h1>
-            <p className="race-post-date">August 10, 2018</p>
-            <img src={runnerDude} alt="runner dude" className="race-post-image" />
-            <p className="race-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-          </div>
-          <div className="race-content">
-            <h1 className="race-post-title">Race title</h1>
-            <p className="race-post-date">August 10, 2018</p>
-            <img src={runnerDude} alt="runner dude" className="race-post-image" />
-            <p className="race-post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-          </div>
+          {stories.map((post) => {
+            return (
+              <div className="race-content">
+                <h1 className="race-post-title">{post.title}</h1>
+                <p className="race-post-date">August 10, 2018</p>
+                <img src={post.image} alt={post.title} className="race-post-image" />
+                <p className="race-post-text">{post.story}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     );
