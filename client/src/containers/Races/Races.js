@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
+// import Firebase
+import firebase from '../../firebase-config';
 // import css
 import './Races.css';
 // import image
@@ -19,11 +21,22 @@ class Races extends Component {
       storyError: '',
       image: '',
       imageError: '',
-      name: '',
-      nameError: '',
       formSuccess: '',
       formSuccessMessageClass: '',
+      storiesRef: firebase.database().ref('stories'),
     };
+  }
+
+  // Save story to firebase
+  saveStory = (name, title, story, image) => {
+    const { storiesRef } = this.state;
+    const newStoryRef = storiesRef.push();
+    newStoryRef.set({
+      name,
+      title,
+      story,
+      image,
+    });
   }
 
   // On click handler for when user trys to submit story form
@@ -36,12 +49,7 @@ class Races extends Component {
       storyError, image, imageError, formSuccess, formSuccessMessageClass,
     } = this.state;
 
-    // If name field is blank, show validation error
-    if (name === '') {
-      this.setState({
-        nameError: 'Name is required',
-      });
-    }
+    const { user } = this.props;
 
     // If title field is blank, show validation error
     if (title === '') {
@@ -66,14 +74,14 @@ class Races extends Component {
       // Save story to backend database if form is filled out.
       // Save story
       console.log('Story submitted');
-      console.log('name', name);
+      console.log('name', user);
       console.log('title', title);
       console.log('story', story);
       console.log('image', image);
+      this.saveStory(user, title, story, image);
       this.setState({
         formSuccess: 'Thanks for the message! I will get back to you shortly.',
         formSuccessMessageClass: 'form-success-message',
-        name: '',
         title: '',
         story: '',
         image: '',
@@ -99,8 +107,11 @@ class Races extends Component {
     const {
       title, titleError, story, storyError,
       image, imageError, formSuccess,
-      formSuccessMessageClass, name, nameError,
+      formSuccessMessageClass,
     } = this.state;
+
+    const { user } = this.props;
+
     return (
       <div className="races-container">
         <div className="races-header">
@@ -111,17 +122,16 @@ class Races extends Component {
             <h2>Share your racing story</h2>
             <form className="story-form">
               <div id="name" className="story-form-field">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name (read only)</label>
                 <br />
                 <InputText
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Enter your name"
-                  value={name}
-                  onChange={e => this.setState({ name: e.target.value })}
+                  value={user}
+                  readOnly
+                  className="name-input"
                 />
-                <small className="story-form-error">{nameError}</small>
               </div>
               <div id="story-title" className="story-form-field">
                 <label htmlFor="title">Title</label>
@@ -174,8 +184,8 @@ class Races extends Component {
               />
             </form>
             <br />
-            <small>All submitted stories are reviewed by site administrator
-                for approval before they are posted to this site.
+            <small>Keep it clean. All submitted stories are reviewed by site administrator
+                for appropriateness.
             </small>
           </div>
         </div>
