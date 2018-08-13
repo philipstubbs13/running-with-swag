@@ -1,8 +1,7 @@
 // Firebase config file
 // Contains all the configs necessary to connect app with Firebase.
 // import Firebase
-import firebase from 'firebase/app';
-import 'firebase/database';
+import firebase from 'firebase';
 
 const config = {
   apiKey: 'AIzaSyDgSkJwhs_SmtTM1MdZQ-SEAOrAPNMkgcw',
@@ -13,4 +12,10 @@ const config = {
   messagingSenderId: '614116817916',
 };
 
+firebase.initializeApp(config);
+// This exports the auth module of Firebase,
+// as well as the Google Auth Provider so that we'll be able to use
+// Google Authentication for sign in anywhere inside of our application
+export const provider = new firebase.auth.GoogleAuthProvider();
+export const auth = firebase.auth();
 export default !firebase.apps.length ? firebase.initializeApp(config) : firebase.app();

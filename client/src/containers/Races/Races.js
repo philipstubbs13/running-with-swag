@@ -66,6 +66,10 @@ class Races extends Component {
       // Save story to backend database if form is filled out.
       // Save story
       console.log('Story submitted');
+      console.log('name', name);
+      console.log('title', title);
+      console.log('story', story);
+      console.log('image', image);
       this.setState({
         formSuccess: 'Thanks for the message! I will get back to you shortly.',
         formSuccessMessageClass: 'form-success-message',
