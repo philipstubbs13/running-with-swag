@@ -28,6 +28,8 @@ import Races from './containers/Races';
 import Login from './containers/Login';
 // import Firebase
 import firebase, { auth, provider } from './firebase-config';
+// import image
+import loginImage from './images/login_image.jpg';
 
 class App extends Component {
   constructor() {
@@ -94,8 +96,23 @@ class App extends Component {
             </div>
             </div>
             :
-            <div className="main-content-section">
-              <button onClick={this.login}>Log In</button> 
+            <div className="main-content-section login-container">
+              <div className="login-text">
+                <h1>Welcome to Running with Swag</h1>
+                <p>An online community created by runners, for runners.
+                  Whether you are a competitive runner or just a running enthusiast,
+                  this is the place for you.
+                </p>
+                <div className="login">
+                  <p>Login with Google to continue to site.</p>
+                  <button class="loginBtn loginBtn--google" onClick={this.login}>
+                    Login with Google
+                  </button>
+                </div>
+              </div>
+              <div className="login-image">
+                <img src={loginImage} alt="runner" id="loginImage" />
+              </div>
             </div>
           }
             <Footer />
