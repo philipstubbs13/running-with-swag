@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
+// Import moment js library to get date when user submits story.
+import moment from 'moment';
 // import Firebase
 import firebase from '../../firebase-config';
 // import css
 import './Races.css';
-// import image
-import runnerDude from '../../images/runner_dude.jpg';
 
 class Races extends Component {
   constructor() {
@@ -32,8 +32,8 @@ class Races extends Component {
     // Grab stories from firebase database and add them to this.state.stories array.
     const storiesRef = firebase.database().ref('stories');
     storiesRef.on('value', (snapshot) => {
-      let stories = snapshot.val();
-      let newState = [];
+      const stories = snapshot.val();
+      const newState = [];
       for (const story in stories) {
         newState.push({
           id: story,
@@ -41,6 +41,7 @@ class Races extends Component {
           user: stories[story].name,
           image: stories[story].image,
           story: stories[story].story,
+          date: stories[story].date,
         });
       }
       this.setState({
@@ -59,6 +60,7 @@ class Races extends Component {
       title,
       story,
       image,
+      date: moment().format('MMM DD YYYY'),
     });
   }
 
@@ -214,11 +216,11 @@ class Races extends Component {
               <div className="race-content" key={post.id}>
                 <h1 className="race-post-title">{post.title}</h1>
                 <p className="race-post-author">By {post.user}</p>
-                <p className="race-post-date">August 10, 2018</p>
+                <p className="race-post-date">{post.date}</p>
                 <img src={post.image} alt={post.title} className="race-post-image" />
                 <p className="race-post-text">{post.story}</p>
               </div>
-            )
+            );
           })}
         </div>
       </div>
