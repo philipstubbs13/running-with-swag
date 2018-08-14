@@ -81,7 +81,7 @@ class Blog extends Component {
             <div className="blog-content">
               <p>
                 The purpose of this blog is to have a common, central place
-                for runners to share and exchange stories, tips, tricks, best practices,
+                to share tips, tricks, best practices,
                 videos, training material, and other information related to running.
               </p>
               <p>

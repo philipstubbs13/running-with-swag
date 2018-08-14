@@ -98,7 +98,7 @@ class App extends Component {
         <BrowserRouter>
           <div className="entire-page">
             {user
-              ?
+              ? (
                 <div>
                   <div className="auth-status">
                     <div className="profile-info">
@@ -122,20 +122,22 @@ class App extends Component {
                       <Route exact path="/blog" component={Blog} />
                       <Route exact path="/swag" component={Swag} />
                       <Route
-                        exact 
+                        exact
                         path="/contact"
-                        render={props => <Contact {...props} user={user.displayName || user.email} />}
+                        render={props =>
+                          <Contact {...props} user={user.displayName || user.email} />}
                       />
                     </Switch>
                   </div>
                 </div>
-              :
+              )
+              : (
                 <div className="main-content-section login-container">
                   <div className="login-text">
                     <h1>Running with Swag</h1>
                     <p>An online community created by runners, for runners.
-                      Whether you are a competitive runner or just a running enthusiast,
-                      this is the place for you.
+                      Whether you are a competitive runner, running enthusiast, or just a beginner,
+                      this site has something for you.
                     </p>
                     <div className="login">
                       <p>Login with Google to continue to site.</p>
@@ -148,7 +150,7 @@ class App extends Component {
                     <img src={loginImage} alt="runner" id="loginImage" />
                   </div>
                 </div>
-            }
+              )}
             <Footer />
           </div>
         </BrowserRouter>

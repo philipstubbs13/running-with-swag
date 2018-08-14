@@ -26,8 +26,8 @@ class Home extends Component {
         {/* Welcome to my site card */}
         <Card title="Welcome" className="card welcome">
           <p>Welcome to <b>Running with Swag</b> - an online community for runners.
-            Whether you are a competitive runner or just a running enthusiast,
-            this is the place for you.
+            Whether you are a competitive runner, running enthusiast, or just a beginner,
+            this site has something for you.
           </p>
           <Link to="/about">
             <Button label="LEARN MORE" className="btn home-btn" />

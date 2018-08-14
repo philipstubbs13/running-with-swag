@@ -23,7 +23,7 @@ class About extends Component {
           I created this site because I love to run. Running is my passion.
           When I run, I feel God&apos;s strength in my legs, and that&apos;s why I continue
           to train every day so that I can run faster and farther than ever before.
-          I have always liked running since I was a kid, but in 2018, I started to train
+          Running has been a big part of my life ever since I was a kid. In 2018, I started to train
           and run competitively in different short distance (3-6 mile) races. My ultimate
           goal is to train my way up to running and finishing a marathon.
           </p>
@@ -41,8 +41,7 @@ class About extends Component {
           in May 2018, and I have been wanting to create a site like this for quite some
           time now. Now that I have graduated, I thought now would be a good time to start
           it up. This site&apos;s development will be ongoing and open source. So, if you are a
-          runner and/or web developer and would like to contribute to this project,
-          don&apos;t hesitate to contact me.
+          runner and/or web developer and would like to contribute, let&apos;s get in touch.
           </p>
         </div>
       </div>
