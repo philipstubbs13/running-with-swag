@@ -17,8 +17,6 @@ class Contact extends Component {
     super();
 
     this.state = {
-      name: '',
-      nameError: '',
       email: '',
       emailError: '',
       subject: '',
@@ -49,18 +47,11 @@ class Contact extends Component {
     event.preventDefault();
     // ES6 destructuring
     const {
-      name, nameError, email, emailError, subject,
+      email, emailError, subject,
       subjectError, message, messageError, formSuccess, formSuccessMessageClass,
     } = this.state;
 
     const { user } = this.props;
-
-    // If name field is blank, show validation error
-    if (name === '') {
-      this.setState({
-        nameError: 'Name is required',
-      });
-    }
 
     // If email field is blank, show validation error
     if (email === '') {
@@ -88,11 +79,9 @@ class Contact extends Component {
       this.setState({
         formSuccess: 'Thanks for the message! I will get back to you shortly.',
         formSuccessMessageClass: 'form-success-message',
-        name: '',
         email: '',
         subject: '',
         message: '',
-        nameError: '',
         emailError: '',
         subjectError: '',
         messageError: '',
@@ -109,12 +98,12 @@ class Contact extends Component {
   }
 
   render() {
-    console.log(this.props.user);
+    // console.log(this.props.user);
     const { user } = this.props;
 
     // ES6 destructuring
     const {
-      name, nameError, email, emailError,
+      email, emailError,
       subject, subjectError, message, messageError, formSuccess,
       formSuccessMessageClass,
     } = this.state;
@@ -144,13 +133,11 @@ class Contact extends Component {
               id="name"
               name="name"
               type="text"
-              placeholder="John Smith"
               value={user}
               onChange={e => this.setState({ name: e.target.value })}
               readOnly
               className="name-input"
             />
-            <small className="contact-form-error">{nameError}</small>
           </div>
           {/* Contact form - Email field */}
           <div id="contact-email">

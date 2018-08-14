@@ -49,9 +49,9 @@ class Home extends Component {
         {/* Find races card */}
         <Card className="card events">
           <i className="fas fa-road fa-3x" />
-          <h2>Races</h2>
+          <h2>Race stories</h2>
           <Link to="/races">
-            <Button label="Race stories" className="btn home-btn" />
+            <Button label="Read stories" className="btn home-btn" />
           </Link>
           <p>Each race has a unique, interesting story.
             Read more about my adventures as a runner or share your own race story.
@@ -73,7 +73,7 @@ class Home extends Component {
         <Card className="card reviews">
           <i className="fas fa-star fa-3x" />
           <h2>Swag</h2>
-          <Link to="/reviews">
+          <Link to="/swag">
             <Button label="Check reviews" className="btn home-btn" />
           </Link>
           <p>Check out some reviews of the latest running swag.

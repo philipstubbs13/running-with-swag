@@ -171,7 +171,7 @@ class Races extends Component {
                   name="story"
                   type="text"
                   rows={10}
-                  autoResize="true"
+                  autoResize={true}
                   placeholder="What's your racing story?"
                   value={story}
                   onChange={e => this.setState({ story: e.target.value })}

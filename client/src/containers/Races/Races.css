@@ -11,8 +11,9 @@
     grid-area: header;
     color: var(--primary);
     background-color: var(--dark);
-    padding: 20px;
+    padding: 5px;
     text-align: center;
+    margin: 0;
 }
 
 .side {
@@ -29,7 +30,7 @@
     padding: 20px;
     margin-top: 20px;
     display: grid;
-    grid-gap: 0px;
+    grid-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
     'title title'
@@ -40,24 +41,29 @@
 
 .race-post-title {
     grid-area: title;
+    margin: 0;
 }
 
 .race-post-author {
     grid-area: author;
+    margin: 0;
+    margin-top: 5px;
 }
 
 .race-post-date {
     grid-area: date;
+    margin: 0;
 }
 
 .race-post-image {
     grid-area: image;
     height: auto;
+    margin: 0;
 }
 
 .race-post-text {
     grid-area: text;
-    padding: 20px;
+    margin: 0;
 }
 
 .share-story {
