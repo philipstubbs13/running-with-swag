@@ -66,6 +66,17 @@
     margin: 0;
 }
 
+.remove-btn {
+    background-color: red !important;
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+.remove-btn:hover {
+    background-color: green !important;
+    color: var(--primary) !important;
+}
+
 .share-story {
     background-color: var(--dark);
     color: var(--primary);

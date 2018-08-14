@@ -25,7 +25,7 @@ import Swag from './containers/Swag';
 // import Races page
 import Races from './containers/Races';
 // import Firebase
-import firebase, { auth, provider } from './firebase-config';
+import { auth, provider } from './firebase-config';
 // import image
 import loginImage from './images/login_image.jpg';
 
@@ -33,7 +33,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      username: '',
       user: null,
     };
 
@@ -91,17 +90,20 @@ class App extends Component {
   // Passing props to a component rendered by react router.
   // https://tylermcginnis.com/react-router-pass-props-to-components/
   render() {
+    // ES6 destructuring
+    const { user } = this.state;
+
     return (
       <div className="App">
         <BrowserRouter>
           <div className="entire-page">
-            {this.state.user
+            {user
               ?
                 <div>
                   <div className="auth-status">
                     <div className="profile-info">
-                      Welcome {this.state.user.displayName || this.state.user.email}
-                      <img src={this.state.user.photoURL} />
+                      Welcome {user.displayName || user.email}
+                      <img src={user.photoURL} alt={user.displayName || user.email} />
                     </div>
                     <div className="logout">
                       <button type="submit" onClick={this.logout} className="btn nav-link logout-btn">Log Out</button>
@@ -113,14 +115,16 @@ class App extends Component {
                       <Route exact path="/" component={Home} />
                       <Route exact path="/about" component={About} />
                       <Route
-                        exact path="/races"
-                        render={(props) => <Races {...props} user={this.state.user.displayName || this.state.user.email} />}
+                        exact
+                        path="/races"
+                        render={props => <Races {...props} user={user.displayName || user.email} />}
                       />
                       <Route exact path="/blog" component={Blog} />
                       <Route exact path="/swag" component={Swag} />
                       <Route
-                        exact path="/contact"
-                        render={(props) => <Contact {...props} user={this.state.user.displayName || this.state.user.email} />}
+                        exact 
+                        path="/contact"
+                        render={props => <Contact {...props} user={user.displayName || user.email} />}
                       />
                     </Switch>
                   </div>

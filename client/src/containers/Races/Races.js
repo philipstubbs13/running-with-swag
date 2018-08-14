@@ -47,7 +47,7 @@ class Races extends Component {
       this.setState({
         stories: newState,
       });
-      console.log(stories);
+      // console.log(stories);
     });
   }
 
@@ -118,6 +118,15 @@ class Races extends Component {
         });
       }, 5000);
     }
+  }
+
+  // Here, instead of grabbing all of the items as we did before when adding a new item,
+  // we instead look up a specific item by its key
+  // (that strange -Kk8lHSMqC5oP6Qai0Vx key from before).
+  // We can then call firebase.database()'s remove method, which strips it from the page.
+  removeStory(storyId) {
+    const storyRef = firebase.database().ref(`/stories/${storyId}`);
+    storyRef.remove();
   }
 
 
@@ -219,6 +228,10 @@ class Races extends Component {
                 <p className="race-post-date">{post.date}</p>
                 <img src={post.image} alt={post.title} className="race-post-image" />
                 <p className="race-post-text">{post.story}</p>
+                <div>
+                  {post.user === user ?
+                    <button className="btn remove-btn" type="submit" onClick={() => this.removeStory(post.id)}>Delete Story</button> : null}
+                </div>
               </div>
             );
           })}
