@@ -36,7 +36,7 @@
     'title title'
     'author author'
     'date date'
-    'image text';
+    'text text';
 }
 
 .race-post-title {
@@ -52,12 +52,6 @@
 
 .race-post-date {
     grid-area: date;
-    margin: 0;
-}
-
-.race-post-image {
-    grid-area: image;
-    height: auto;
     margin: 0;
 }
 
@@ -103,7 +97,6 @@
         grid-template-areas:
         'title'
         'date'
-        'image'
         'text';
     }
 

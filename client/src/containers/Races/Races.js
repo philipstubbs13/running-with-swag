@@ -19,8 +19,6 @@ class Races extends Component {
       titleError: '',
       story: '',
       storyError: '',
-      image: '',
-      imageError: '',
       formSuccess: '',
       formSuccessMessageClass: '',
       storiesRef: firebase.database().ref('stories'),
@@ -39,7 +37,6 @@ class Races extends Component {
           id: story,
           title: stories[story].title,
           user: stories[story].name,
-          image: stories[story].image,
           story: stories[story].story,
           date: stories[story].date,
         });
@@ -52,14 +49,13 @@ class Races extends Component {
   }
 
   // Save story to firebase
-  saveStory = (name, title, story, image) => {
+  saveStory = (name, title, story) => {
     const { storiesRef } = this.state;
     const newStoryRef = storiesRef.push();
     newStoryRef.set({
       name,
       title,
       story,
-      image,
       date: moment().format('MMM DD YYYY'),
     });
   }
@@ -71,7 +67,7 @@ class Races extends Component {
     // ES6 destructuring
     const {
       title, titleError, story,
-      storyError, image, imageError, formSuccess, formSuccessMessageClass,
+      storyError, formSuccess, formSuccessMessageClass,
     } = this.state;
 
     const { user } = this.props;
@@ -88,25 +84,16 @@ class Races extends Component {
       this.setState({
         storyError: 'Story is required',
       });
-    }
-
-    // If image field is blank, show validation error
-    if (image === '') {
-      this.setState({
-        imageError: 'Image/photo is required',
-      });
     } else {
       // Save story to backend database if form is filled out.
       // Save story
-      this.saveStory(user, title, story, image);
+      this.saveStory(user, title, story);
       this.setState({
         formSuccess: 'Story posted successfully!',
         formSuccessMessageClass: 'form-success-message',
         title: '',
         story: '',
-        image: '',
         titleError: '',
-        imageError: '',
         storyError: '',
       });
 
@@ -134,8 +121,7 @@ class Races extends Component {
     // ES6 destructuring
     const {
       title, titleError, story, storyError,
-      image, imageError, formSuccess,
-      formSuccessMessageClass, stories,
+      formSuccess, formSuccessMessageClass, stories,
     } = this.state;
 
     const { user } = this.props;
@@ -189,19 +175,6 @@ class Races extends Component {
                 />
                 <small className="story-form-error">{storyError}</small>
               </div>
-              <div id="story-image" className="story-form-field">
-                <label htmlFor="image">Image</label>
-                <br />
-                <InputText
-                  id="story-image"
-                  name="story-image"
-                  type="text"
-                  placeholder="Upload image"
-                  value={image}
-                  onChange={e => this.setState({ image: e.target.value })}
-                />
-                <small className="story-form-error">{imageError}</small>
-              </div>
               <br />
               <div className={formSuccessMessageClass}>{formSuccess}</div>
               <br />
@@ -226,11 +199,10 @@ class Races extends Component {
                 <h1 className="race-post-title">{post.title}</h1>
                 <p className="race-post-author">By {post.user}</p>
                 <p className="race-post-date">{post.date}</p>
-                <img src={post.image} alt={post.title} className="race-post-image" />
                 <p className="race-post-text">{post.story}</p>
                 <div>
-                  {post.user === user ?
-                    <button className="btn remove-btn" type="submit" onClick={() => this.removeStory(post.id)}>Delete Story</button> : null}
+                  {post.user === user
+                    ? <button className="btn remove-btn" type="submit" onClick={() => this.removeStory(post.id)}>Delete Story</button> : null}
                 </div>
               </div>
             );
