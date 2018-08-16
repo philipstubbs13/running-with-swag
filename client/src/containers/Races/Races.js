@@ -130,6 +130,9 @@ class Races extends Component {
       <div className="races-container">
         <div className="races-header">
           <h1>Race Stories</h1>
+          <p>Each race has a unique, interesting story.
+          Read other&apos;s stories or share your own race story.
+          </p>
         </div>
         <div className="side">
           <div className="share-story">

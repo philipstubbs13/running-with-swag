@@ -3,7 +3,7 @@
     grid-gap: 30px;
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-areas:
-    'side header header'
+    'header main main'
     'side main main';
 }
 
@@ -11,9 +11,13 @@
     grid-area: header;
     color: var(--primary);
     background-color: var(--dark);
-    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-align: center;
     margin: 0;
+    margin-top: 20px;
+    display: grid;
+    align-content: center;
 }
 
 .side {
