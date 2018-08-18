@@ -8,10 +8,10 @@ Running with Swag is an online community created by runners, for runners. Whethe
 * [Screenshots](#screenshots)
 * [About this project](#about-this-project)
   * [How the app is built](#how-the-app-is-built)
-  * [Structure of the project](#project-structure)
   * [App workflow](#workflow)
+  * [Structure of the project](#project-structure)
 * [Getting started](#getting-started)
-* [Deploying the application](#deployment)
+* [Deploying the app](#deployment)
 * [Technologies used to create app](#technologies-used)
   * [Back end technologies](#Backend)
   * [Front end technologies](#Frontend)
@@ -46,8 +46,8 @@ To set up this application locally on your computer, perform the following steps
 
   1. [Clone the repository](#clone-repository)
   2. [Install Node.js](#install-node)
-  3. [Install the project dependencies](#dependencies)
-  4. [Install yarn](#install-yarn)
+  3. [Install yarn](#install-yarn)
+  4. [Install the project dependencies](#dependencies)
   5. [Install MongoDB](#install-mongo)
   6. [Start the React development server](#start-server)
 
