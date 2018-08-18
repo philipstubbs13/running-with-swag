@@ -10,6 +10,8 @@ import moment from 'moment';
 import firebase from '../../firebase-config';
 // import css
 import './Races.css';
+// import image
+import raceImage from '../../images/race.jpg';
 
 class Races extends Component {
   constructor() {
@@ -133,6 +135,7 @@ class Races extends Component {
           <p>Each race has a unique, interesting story.
           Read other&apos;s stories or share your own race story.
           </p>
+          <img src={raceImage} alt="runner" className="race-image" />
         </div>
         <div className="side">
           <div className="share-story">

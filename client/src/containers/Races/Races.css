@@ -85,6 +85,11 @@
     margin-top: 30px;
 }
 
+.race-image {
+    max-width: 100%;
+    box-shadow: var(--shadow);
+}
+
 /* Media Query - 861px screen or smaller */
 /* Races page is one column with content and form stacked on top of one another. */
 @media(max-width: 861px) {
