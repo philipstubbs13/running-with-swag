@@ -76,11 +76,37 @@ I graduated from the University of Minnesota Full Stack Web Development program 
 
 On the front end side, this project is built using React, which is an open-source Javascript library developed at Facebook specifically for the task of developing user interfaces. React relies on a component-based architecture where elements of the user interface are broken into small chunks of code called components. PrimeReact is a UI component framework for React that helps with building these components. Also, The web pages are designed using the css grid layout system
 
-On the back end side, this project is a Node.js app. The app uses Firebase Authentication with a Google sign-in method to authenticate users with the app. Firebase Realtime Database is used to store the race stories users provide on the Races page as well as store messages from the Contact form. Firebase Hosting is used to deploy and host the site. Finally, this site uses the Tmblr API to retrieve blog posts from my Tmblr running blog and display them on the Blog page.
+On the back end side, this project is a Node.js app. The app uses Firebase Authentication with a Google sign-in method to authenticate users with the app. Firebase Realtime Database is used to store the race stories users provide on the Races page as well as store messages from the Contact form. Firebase Hosting is used to deploy and host the site. Finally, this site uses the Tumblr API to retrieve blog posts from my Tumblr running blog and display them on the Blog page.
 
 ### <a name="workflow"></a> App workflow
 
 #### Authentication
+
+When you first visit the app, you will be prompted to log in. To log in, you will need to authenticate with Google. If you don't have a Google account, you will need to create one to use this app. Additional sign-in methods, such as username/password, Facebook, and Twitter, will be added in a future development cycle.
+
+#### Home
+
+After you authenticate, you are taken to the Home page. From this page, you can navigate to all the different pages within the app.
+
+### About
+
+The About page contains an overview of the app and why I created it.
+
+### Races
+
+The Races page displays race stories that I or other users have provided using the form on this page. The race stories are stored in a Firebase realtime database.
+
+### Blog
+
+The Blog page displays a list of blog entries from my Tumblr blog. The app gets the blog entries using axios and the Tumblr API. Here, you will find information on a variety of topics, including running tips, training, injuries,and more.
+
+### Swag
+
+The Swag page includes reviews of different running products I have purchased to help me train for upcoming races. Right now, the data on this page is stored in a JSON file on the front end side. In a future development cycle, this information will be stored in a back end database.
+
+### Contact
+
+The Contact page contains a form that you can use to provide feedback on the site, ask a question, or just send me a message. The contact form is hooked up to Firebase.
 
 ### <a name="project-structure"></a> Structure of the project
 
@@ -94,7 +120,7 @@ After you clone the repository, navigate to the project root directory (running-
     * <b>index.js</b>: The index.js file is the top level file of the React app. In index.js, the App.js file is imported, and the ReactDOM.render method is used to render App.js to the page.
     * <b>components</b>: The Components folder is where the app components that are reused across the app are located. Each file represents a separate component. For example, NavBar.js is the top navigation bar component.
     * <b>containers</b>: Holds all the pages of the app and the child components within those pages. For example, inside of the containers folder, there is a Swag folder. The Swag folder contains a top-level parent container/page called Swag.js.
-    * <b>utils/API.js</b>: Contains axios request to grab blog posts from the Tmblr blog site using the the Tmblr API.
+    * <b>utils/API.js</b>: Contains axios request to grab blog posts from the Tumblr blog site using the the Tumblr API.
     * <b>App.css</b> and <b>index.css</b>: The external css stylesheets for the app.
     * <b>firebase-config.js</b>: contains the Firebase initialization code to connect the app to Firebase.
   * <b>.eslintrc.json</b>: List of rules and their definitions for ESLint.
@@ -212,6 +238,7 @@ This command deploys the project to <https://running-with-swag.firebaseapp.com>.
 * Firebase Realtime Database (<https://firebase.google.com/docs/database/>)
 * Firebase Hosting (<https://firebase.google.com/docs/hosting/>)
 * Firebase Authentication with Google (<https://firebase.google.com/docs/auth/>)
+* Tumblr API (<https://www.tumblr.com/docs/en/api/v2>)
 
 ### <a name="Frontend"></a> Front end technologies
 
@@ -220,9 +247,9 @@ This command deploys the project to <https://running-with-swag.firebaseapp.com>.
 * Javascript (ES6)
 * React (<https://reactjs.org/>)
 * PrimeReact (UI component framework for React - <https://www.primefaces.org/primereact/#/>)
-* CSS Grid for page layout (<https://github.com/crowdfavorite/css-grid>)
+* CSS Grid system for page layout (<https://github.com/crowdfavorite/css-grid>)
 
-### <a name="Other></a> Other technologies
+### <a name="Other"></a> Other technologies
 
 * ESLint
 
