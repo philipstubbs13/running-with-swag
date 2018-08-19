@@ -80,7 +80,34 @@ I graduated from the University of Minnesota Full Stack Web Development program 
 
 ### <a name="project-structure"></a> Structure of the project
 
-After you clone the repository, navigate to the project root directory (MedLog). The project directory structure is set up as follows:
+After you clone the repository, navigate to the project root directory (running-with-swag). The project directory structure is set up as follows:
+
+* <b>client</b>
+  * <b>public</b>: The public folder contains the index.html file. This HTML file is a template. The file is empty. So, if you open it directly in a browser, you will get an empty page. Rather than placing the HTML code directly in index.html, this app uses a React component-based architecture to create, build, and render UI components to the page.
+  * <b>src</b>: The src folder is where the React app components reside.
+    * <b>images</b>: Contains the images used in the app.
+    * <b>App.js</b>: The App.js file is where the app components are imported and rendered, such as the navigation bar, footer, and various pages.
+    * <b>index.js</b>: The index.js file is the top level file of the React app. In index.js, the App.js file is imported, and the ReactDOM.render method is used to render App.js to the page.
+    * <b>components</b>: The Components folder is where the app components that are reused across the app are located. Each file represents a separate component. For example, NavBar.js is the top navigation bar component.
+    * <b>containers</b>: Holds all the pages of the app and the child components within those pages. For example, inside of the containers folder, there is a Swag folder. The Swag folder contains a top-level parent container/page called Swag.js.
+    * <b>utils/API.js</b>: Contains axios request to grab blog posts from the Tmblr blog site using the the Tmblr API.
+    * <b>App.css</b> and <b>index.css</b>: The external css stylesheets for the app.
+    * <b>firebase-config.js</b>: contains the Firebase initialization code to connect the app to Firebase.
+  * <b>.eslintrc.json</b>: List of rules and their definitions for ESLint.
+  * <b>.gitignore</b>: Anything listed inside this file (for example, node_modules) will not be tracked by GitHub when code is committed.
+  * <b>package.json</b>: Lists the project dependencies and their version numbers.
+  * <b>README.md</b>: The README file for Facebook's create-react-app.
+  * <b>yarn.lock</b>: Dependency tree for the project. Lists all the client dependencies and their versions.
+* <b>readme_images</b>: Images used in the project README file.
+* <b>scripts</b>
+  * <b>build.js</b>: Run <b>yarn build</b> in the project root directory to create a production build of the app, which you can use to deploy the app to Firebase.
+  * <b>start-client</b>: Script used to start the React development server.
+* <b>.firebaserc</b>: Hidden file that allows you to quickly switch between projects with 'firebase use'.
+* <b>.gitignore</b>: Anything listed inside this file (for example, node_modules) will not be tracked by GitHub when code is committed.
+* <b>database.rules.json</b>: Contains read/write rules for reading and writing data to the Firebase database.
+* <b>firebase.json</b>: Firebase configuration file required to deploy site.
+* <b>package.json</b>: Lists the project dependencies and their version numbers. It also contains various scripts to start the server, create a production build, etc.
+* <b>yarn.lock</b>: Dependency tree for the project. Lists the project dependencies and their versions.
 
 ## <a name="getting-started"></a> Getting started
 
@@ -173,6 +200,7 @@ This command deploys the project to <https://running-with-swag.firebaseapp.com>.
 
 * [Back end technolgies](#Backend)
 * [Front end technologies](#Frontend)
+* [Other technologies](#Other)
 
 ### <a name ="Backend"></a> Back end technologies
 
@@ -188,6 +216,10 @@ This command deploys the project to <https://running-with-swag.firebaseapp.com>.
 * React (<https://reactjs.org/>)
 * PrimeReact (UI component framework for React - <https://www.primefaces.org/primereact/#/>)
 * CSS Grid for page layout (<https://github.com/crowdfavorite/css-grid>)
+
+### <a name="Other></a> Other technologies
+
+* ESLint
 
 ## <a name="future"></a> Direction for future development
 
