@@ -33,6 +33,8 @@ Running with Swag is an online community created by runners, for runners. Whethe
 <img src="./readme_images/home1.png">
 <br>
 <img src="./readme_images/home2.png">
+<br>
+<img src="./readme_images/home3.png">
 
 ### About page
 
