@@ -142,15 +142,16 @@ For more information about yarn and other installation options, see the yarn doc
 ### <a name ="Backend"></a> Back end technologies
 
 * Node.js (<https://nodejs.org/en/>)
-* Firebase Realtime Database
+* Firebase Realtime Database (<https://firebase.google.com/docs/database/>)
 
 ### <a name="Frontend"></a> Front end technologies
 
-* HTML
+* HTML5
 * CSS
-* Javascript
+* Javascript (ES6)
 * React (<https://reactjs.org/>)
-* PrimeReact
+* PrimeReact (UI component framework for React - <https://www.primefaces.org/primereact/#/>)
+* CSS Grid for page layout (<https://github.com/crowdfavorite/css-grid>)
 
 ## <a name="future"></a> Direction for future development
 
