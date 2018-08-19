@@ -75,9 +75,9 @@ I graduated from the University of Minnesota Full Stack Web Development program 
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 
-On the front end side, this project is built using React, which is an open-source Javascript library developed at Facebook specifically for the task of developing user interfaces. React relies on a component-based architecture where elements of the user interface are broken into small chunks of code called components. PrimeReact is a UI component framework for React that helps with building these components. Also, The web pages are designed using the css grid layout system
+On the front end side, this project is built using React, which is an open-source Javascript library developed at Facebook specifically for the task of developing user interfaces. React relies on a component-based architecture where elements of the user interface are broken into small chunks of code called components. PrimeReact is a UI component framework for React that helps with building these components. Also, the web pages are designed using the css grid layout system
 
-On the back end side, this project is a Node.js app. The app uses Firebase Authentication with a Google sign-in method to authenticate users with the app. Firebase Realtime Database is used to store the race stories users provide on the Races page as well as store messages from the Contact form. Firebase Hosting is used to deploy and host the site. Finally, this site uses the Tumblr API to retrieve blog posts from my Tumblr running blog and display them on the Blog page.
+On the back end side, this project is a Node.js app. The app uses Firebase Authentication with a Google sign-in method to authenticate users with the app. Firebase Realtime Database is used to store the race stories users provide on the Races page as well as store messages from the contact form. Firebase Hosting is used to deploy and host the site. Finally, this site uses the Tumblr API to retrieve blog posts from my Tumblr running blog and display them on the Blog page.
 
 ### <a name="workflow"></a> App workflow
 
@@ -99,7 +99,7 @@ The Races page displays race stories that I or other users have provided using t
 
 ### Blog
 
-The Blog page displays a list of blog entries from my Tumblr blog. The app gets the blog entries using axios and the Tumblr API. Here, you will find information on a variety of topics, including running tips, training, injuries,and more.
+The Blog page displays a list of blog entries from my Tumblr blog. The app gets the blog entries using axios and the Tumblr API. Here, you will find information on a variety of topics, including running tips, training, injuries, and more.
 
 ### Swag
 
@@ -180,17 +180,17 @@ For more information about yarn and other installation options, see the yarn doc
 
 <ul>
   <li><b>axios</b> - a promise based HTTP client for the browser and node.js (https://www.npmjs.com/package/axios)</li>
-  <li><b>classnames</b> - a JavaScript utility for joining class names together (<https://www.npmjs.com/package/classnames>)</li>
-  <li><b>firebase</b> - tools and infrastructure used to develop app (authentication, hosting, and database). (<https://www.npmjs.com/package/firebase>)</li>
-  <li><b>font-awesome</b> - app icon library (<https://www.npmjs.com/package/font-awesome>)</li>
-  <li><b>moment</b> - package used for formatting dates (<https://www.npmjs.com/package/moment>)</li>
-  <li><b>primeicons</b> - font icon library for Prime UI libraries (<https://www.npmjs.com/package/primeicons>)</li>
-  <li><b>primereact</b> - UI component framework for React (<https://www.npmjs.com/package/primereact>)</li>
-  <li><b>prop-types</b> - Used to document the intended types of props passed to components (<https://www.npmjs.com/package/prop-types>)</li>
+  <li><b>classnames</b> - a JavaScript utility for joining class names together (https://www.npmjs.com/package/classnames)</li>
+  <li><b>firebase</b> - tools and infrastructure used to develop app (authentication, hosting, and database). (https://www.npmjs.com/package/firebase)</li>
+  <li><b>font-awesome</b> - app icon library (https://www.npmjs.com/package/font-awesome)</li>
+  <li><b>moment</b> - package used for formatting dates (https://www.npmjs.com/package/moment)</li>
+  <li><b>primeicons</b> - font icon library for Prime UI libraries (https://www.npmjs.com/package/primeicons)</li>
+  <li><b>primereact</b> - UI component framework for React (https://www.npmjs.com/package/primereact)</li>
+  <li><b>prop-types</b> - Used to document the intended types of props passed to components (https://www.npmjs.com/package/prop-types)</li>
   <li><b>react</b> - package for accessing React (https://www.npmjs.com/package/react)</li>
   <li><b>react-dom</b> - serves as the entry point of the DOM-related rendering paths (https://www.npmjs.com/package/react-dom).</li>
   <li><b>react-router</b> - package that provides the core routing functionality (https://www.npmjs.com/package/react-router).</li>
-  <li><b>react-router-dom</b> - a third party routing library (<https://www.npmjs.com/package/react-router-dom>)</li>
+  <li><b>react-router-dom</b> - a third party routing library (https://www.npmjs.com/package/react-router-dom)</li>
   <li><b>react-scripts</b>: package that includes scripts and configuration used by Create React App (https://www.npmjs.com/package/react-scripts)</li>
 </ul>
 
@@ -201,12 +201,12 @@ For more information about yarn and other installation options, see the yarn doc
   <li><b>eslint-config-airbnb</b></li>
   <li><b>eslint-plugin-import</b></li>
   <li><b>eslint-plugin-jsx-a11y</b></li>
-  <li><b>eslint-plugin-react</b</li>
+  <li><b>eslint-plugin-react</b></li>
 </ul>
 
-<p>Version information for each of these packages is available in the <b>package.json</b> file in the project  in the <b>client</b> directory.</p>
+<p>Version information for each of these packages is available in the <b>package.json</b> file in the <b>client</b> directory.</p>
 
-<p>After you clone the repository to a local directory, change directory to the client directorys and run the following command to install the required packages:</p>
+<p>After you clone the repository to a local directory, change directory to the client directory and run the following command to install the required dependencies:</p>
 <pre>yarn install</pre>
 
 ###  <a name="start-server"></a> 5. Start the React development server.
@@ -229,7 +229,7 @@ This installs the globally available firebase command. To update to the latest v
 
 3. Change directory to the <b>running-with-swag/client</b> directory.
 
-4. If you have deployed the app before, there will be a build directory inside <b>running-with-swag/client/</b>. Delete the <b>build</b> directory.
+4. If you have deployed the app before, there will be a build directory inside <b>running-with-swag/client</b>. Delete the <b>build</b> directory.
 
 5. Run the following command to build a clean, production version of the app.
 <pre>yarn build</pre>
