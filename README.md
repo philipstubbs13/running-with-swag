@@ -15,6 +15,7 @@ Running with Swag is an online community created by runners, for runners. Whethe
 * [Technologies used to create app](#technologies-used)
   * [Back end technologies](#Backend)
   * [Front end technologies](#Frontend)
+  * [Other technologies](#Other)
 * [Direction for future development](#future)
 * [Issues](#Issues)
 
@@ -151,8 +152,7 @@ To set up this application locally on your computer, perform the following steps
   2. [Install Node.js](#install-node)
   3. [Install yarn](#install-yarn)
   4. [Install the project dependencies](#dependencies)
-  5. [Install MongoDB](#install-mongo)
-  6. [Start the React development server](#start-server)
+  5. [Start the React development server](#start-server)
 
 ###  <a name="clone-repository"></a> 1. Clone the repository
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
@@ -172,24 +172,44 @@ To be able to install the dependencies and start the application locally, you wi
 To install yarn, run the following command:
 <pre>npm install -g yarn</pre>
 
-For more information about yarn and other installation options, see the yarn documentation: https://yarnpkg.com/en/.
+For more information about yarn and other installation options, see the yarn documentation: <https://yarnpkg.com/en/>.
 
 ### <a name="dependencies"></a> 4. Install the project dependencies
 
 <p>The following packages are dependencies to the project.<p>
 
-<p>Version information for each of these packages is available in the <b>package.json</b> file in the project root directory and in the <b>client</b> directory.</p>
+<ul>
+  <li><b>axios</b> - a promise based HTTP client for the browser and node.js (https://www.npmjs.com/package/axios)</li>
+  <li><b>classnames</b> - a JavaScript utility for joining class names together (<https://www.npmjs.com/package/classnames>)</li>
+  <li><b>firebase</b> - tools and infrastructure used to develop app (authentication, hosting, and database). (<https://www.npmjs.com/package/firebase>)</li>
+  <li><b>font-awesome</b> - app icon library (<https://www.npmjs.com/package/font-awesome>)</li>
+  <li><b>moment</b> - package used for formatting dates (<https://www.npmjs.com/package/moment>)</li>
+  <li><b>primeicons</b> - font icon library for Prime UI libraries (<https://www.npmjs.com/package/primeicons>)</li>
+  <li><b>primereact</b> - UI component framework for React (<https://www.npmjs.com/package/primereact>)</li>
+  <li><b>prop-types</b> - Used to document the intended types of props passed to components (<https://www.npmjs.com/package/prop-types>)</li>
+  <li><b>react</b> - package for accessing React (https://www.npmjs.com/package/react)</li>
+  <li><b>react-dom</b> - serves as the entry point of the DOM-related rendering paths (https://www.npmjs.com/package/react-dom).</li>
+  <li><b>react-router</b> - package that provides the core routing functionality (https://www.npmjs.com/package/react-router).</li>
+  <li><b>react-router-dom</b> - a third party routing library (<https://www.npmjs.com/package/react-router-dom>)</li>
+  <li><b>react-scripts</b>: package that includes scripts and configuration used by Create React App (https://www.npmjs.com/package/react-scripts)</li>
+</ul>
 
-<p>After you clone the repository to a local directory, change directory to the project root directory and run the following command to install the required packages:</p>
+<p>This project also uses ESLint, which includes the following dependencies:</p>
+<ul>
+  <li><b>babel-eslint</b></li>
+  <li><b>eslint</b></li>
+  <li><b>eslint-config-airbnb</b></li>
+  <li><b>eslint-plugin-import</b></li>
+  <li><b>eslint-plugin-jsx-a11y</b></li>
+  <li><b>eslint-plugin-react</b</li>
+</ul>
+
+<p>Version information for each of these packages is available in the <b>package.json</b> file in the project  in the <b>client</b> directory.</p>
+
+<p>After you clone the repository to a local directory, change directory to the client directorys and run the following command to install the required packages:</p>
 <pre>yarn install</pre>
 
-<p>Change directory to the <b>MedLog/client</b> directory and run the following command to install the client dependencies.</p>
-
-<pre>yarn install</pre>
-
-###  <a name="install-mongo"></a> 5. Install MongoDB
-
-###  <a name="start-server"></a> 6. Start the React development server.
+###  <a name="start-server"></a> 5. Start the React development server.
 <p>After performing all of the setup steps in the <b>Getting started</b> section, navigate to the project root directory (<b>running-with-swag</b>) and run the following command to start the React development server.</p>
 <pre>yarn start</pre>
 
