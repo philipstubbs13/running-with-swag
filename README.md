@@ -24,6 +24,44 @@ Running with Swag is an online community created by runners, for runners. Whethe
 
 ## <a name="screenshots"></a> Screenshots
 
+### Login page
+
+<img src="./readme_images/login.png">
+
+### Home page
+
+<img src="./readme_images/home1.png">
+<br>
+<img src="./readme_images/home2.png">
+
+### About page
+
+<img src="./readme_images/about.png">
+
+### Races page
+
+<img src="./readme_images/races1.png">
+<br>
+<img src="./readme_images/races2.png">
+<br>
+<img src="./readme_images/races3.png">
+
+### Blog page
+
+<img src="./readme_images/blog1.png">
+<br>
+<img src="./readme_images/blog2.png">
+
+### Swag page
+
+<img src="./readme_images/swag1.png">
+<br>
+<img src="./readme_images/swag2.png">
+
+### Contact page
+
+<img src="./readme_images/contact.png">
+
 ## <a name="about-this-project"></a> About this project
 
 ### <a name="how-the-app-is-built"></a> How the app is built
