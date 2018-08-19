@@ -74,6 +74,10 @@ I graduated from the University of Minnesota Full Stack Web Development program 
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 
+On the front end side, this project is built using React, which is an open-source Javascript library developed at Facebook specifically for the task of developing user interfaces. React relies on a component-based architecture where elements of the user interface are broken into small chunks of code called components. PrimeReact is a UI component framework for React that helps with building these components. Also, The web pages are designed using the css grid layout system
+
+On the back end side, this project is a Node.js app. The app uses Firebase Authentication with a Google sign-in method to authenticate users with the app. Firebase Realtime Database is used to store the race stories users provide on the Races page as well as store messages from the Contact form. Firebase Hosting is used to deploy and host the site. Finally, this site uses the Tmblr API to retrieve blog posts from my Tmblr running blog and display them on the Blog page.
+
 ### <a name="workflow"></a> App workflow
 
 #### Authentication
@@ -207,6 +211,7 @@ This command deploys the project to <https://running-with-swag.firebaseapp.com>.
 * Node.js (<https://nodejs.org/en/>)
 * Firebase Realtime Database (<https://firebase.google.com/docs/database/>)
 * Firebase Hosting (<https://firebase.google.com/docs/hosting/>)
+* Firebase Authentication with Google (<https://firebase.google.com/docs/auth/>)
 
 ### <a name="Frontend"></a> Front end technologies
 
