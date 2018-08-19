@@ -140,6 +140,35 @@ For more information about yarn and other installation options, see the yarn doc
 
 ## <a name="deployment"></a> Deploying the app
 
+This app is deployed to Firebase using Firebase Hosting. For more information on hosting with Firebase, see <https://firebase.google.com/docs/hosting/>. To deploy the app, you will need to build a production version of the app as well as have the Firebase CLI installed.
+
+1. If not already installed, install the Firebase CLI by running the following command:
+<pre>npm install -g firebase-tools</pre>
+
+This installs the globally available firebase command. To update to the latest version, simply re-run the same command.
+
+2. To connect your local machine to your Firebase account and obtain access to the Firebase project, run the following command:
+<pre>firebase login</pre>
+
+3. Change directory to the <b>running-with-swag/client</b> directory.
+
+4. If you have deployed the app before, there will be a build directory inside <b>running-with-swag/client/</b>. Delete the <b>build</b> directory.
+
+5. Run the following command to build a clean, production version of the app.
+<pre>yarn build</pre>
+<p>This command creates a directory called <b>build</b> inside of the <b>client</b> directory.</p>
+
+6. Chnage directory to the project root directory (<b>running-with-swag</b>).
+
+7. Commit changes to git (if not done already).
+
+8. Run the following command to deploy your changes:
+<pre>
+firebase deploy
+</pre>
+
+This command deploys the project to <https://running-with-swag.firebaseapp.com>.
+
 ## <a name="technologies-used"></a> Technologies used to create app
 
 * [Back end technolgies](#Backend)
@@ -149,7 +178,7 @@ For more information about yarn and other installation options, see the yarn doc
 
 * Node.js (<https://nodejs.org/en/>)
 * Firebase Realtime Database (<https://firebase.google.com/docs/database/>)
-* Firebase Hosting (<https://firebase.google.com/docs/hosting/s>)
+* Firebase Hosting (<https://firebase.google.com/docs/hosting/>)
 
 ### <a name="Frontend"></a> Front end technologies
 

@@ -1,7 +1,4 @@
 const express = require('express');
-var cors = require('cors')
-const path = require('path');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 // const routes = require('./routes');
 // const User = require('./models/User')
@@ -10,11 +7,11 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 // Yes, the app uses express.
 const app = express();
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
-app.use(cors())
+// app.use(cors())
 
-app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*"); res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); next(); });
+// app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*"); res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); next(); });
 
 // Configure body parser for axios requests
 app.use(bodyParser.urlencoded({ extended: true }));
