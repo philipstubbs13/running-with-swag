@@ -143,6 +143,7 @@ For more information about yarn and other installation options, see the yarn doc
 
 * Node.js (<https://nodejs.org/en/>)
 * Firebase Realtime Database (<https://firebase.google.com/docs/database/>)
+* Firebase Hosting (<https://firebase.google.com/docs/hosting/s>)
 
 ### <a name="Frontend"></a> Front end technologies
 
@@ -158,6 +159,11 @@ For more information about yarn and other installation options, see the yarn doc
 Source code will be developed over time to handle bug fixes and new features.
 
 The following is a list of potential enhancements for future code development.
+
+* Add a running events page where runners can search for a list of upcoming races in their area.
+* Add additional sign-in methods, including username/password, Facebook, and Twitter.
+* Use Firebase Storage to allow runners to upload images to site.
+* Add feature that allows runners to create and share local running events.
 
 ## <a name ="Issues"></a> Issues
 
